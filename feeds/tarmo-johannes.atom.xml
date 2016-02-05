@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>CsoundQt</title><link href="http://csoundqt.github.io/" rel="alternate"></link><link href="http://csoundqt.github.io/feeds/tarmo-johannes.atom.xml" rel="self"></link><id>http://csoundqt.github.io/</id><updated>2016-02-05T12:33:00+01:00</updated><entry><title>CsoundQt at Github</title><link href="http://csoundqt.github.io/csoundqt-in-github.html" rel="alternate"></link><updated>2016-02-05T12:33:00+01:00</updated><author><name>Tarmo Johannes</name></author><id>tag:csoundqt.github.io,2016-02-05:csoundqt-in-github.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;CsoundQt has now its organisation account at Github.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;sources&lt;/strong&gt; can be found at &lt;a class="reference external" href="https://github.com/CsoundQt/CsoundQt"&gt;https://github.com/CsoundQt/CsoundQt&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;NB! If you ever used to pull the CsoundQt sources from git, please update your remote address:&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;tt class="docutils literal"&gt;$ git remote &lt;span class="pre"&gt;set-url&lt;/span&gt; origin &lt;span class="pre"&gt;https://github.com/CsoundQt/CsoundQt&lt;/span&gt;&lt;/tt&gt;&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The &lt;strong&gt;web-page&lt;/strong&gt; is moved to &lt;a class="reference external" href="http://csoundqt.github.io/"&gt;http://csoundqt.github.io/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;To improve the web-site, add news or edit content, please have a look for instructions at&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/CsoundQt/csoundqt.github.io/blob/master/README.md"&gt;https://github.com/CsoundQt/csoundqt.github.io/blob/master/README.md&lt;/a&gt;&lt;/p&gt;
+</summary><category term="website"></category></entry></feed>
