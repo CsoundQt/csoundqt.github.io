@@ -5,10 +5,11 @@ Lang: en
 Getting the sources
 --------
 
-The source files for CsoundQt can be browsed and downloaded from Sourceforge:
-[https://sourceforge.net/p/qutecsound/code/ci/master/tree/](https://sourceforge.net/p/qutecsound/code/ci/master/tree/)
+The source files for CsoundQt can be browsed and downloaded from Github:
+[https://github.com/CsoundQt/CsoundQt](https://github.com/CsoundQt/CsoundQt)
 
-You can also find source releases in the Files section.
+You can also find source releases in the Files section of [SourceForge](http://sourceforge.net/projects/qutecsound/files/CsoundQt/).
+
 
 Building
 -----
@@ -35,7 +36,7 @@ You can build optional support for PythonQt:
 The PythonQt librarycan be put in the same base directory as the CsoundQt sources, where it will be found and used. You must build the PythonQt libraries before using them. CsoundQt currently requires PythonQt >= 2.0.1.
 
 There are also some detailed descriptions about building CsoundQt in
-the [Csound Wiki](http://sourceforge.net/p/csound/wiki/Home/).
+the [Csound Wiki](https://github.com/csound/csound/wiki).
 
 Translating
 ---

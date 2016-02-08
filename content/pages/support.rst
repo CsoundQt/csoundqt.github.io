@@ -19,11 +19,13 @@ However there are two excellent chapters in the `Csound FLOSS manual <http://en.
 
 Wiki
 ----
-The `CsoundQt Wiki <https://sourceforge.net/p/qutecsound/wiki/Home/>`_ is open for contributions. Have a look at the `old CsoundQt Wiki <http://sourceforge.net/apps/mediawiki/qutecsound/>`_, but please avoid adding information there as it might be removed in the future.
+The `CsoundQt Wiki <https://github.com/CsoundQt/CsoundQt/wiki>`_ is open for contributions.
+There are some helpful articles in `Csound wiki <https://github.com/csound/csound/wiki>`_ 
+
 
 Bug and feature reports
 -----------------------
-Errors can be filed and wishes for enhancements desciribed at `issues tracker <https://github.com/mantaraya36/CsoundQt/issues>`_. 
+Errors can be filed and wishes for enhancements desciribed at `issues tracker <https://github.com/CsoundQt/CsoundQt/issues>`_. 
 
 
 Video tutorials
