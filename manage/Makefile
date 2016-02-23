@@ -54,7 +54,6 @@ clean:
 	rm  -rf $(OUTPUTDIR)/images/
 	rm  -rf $(OUTPUTDIR)/pages/
 	rm  -rf $(OUTPUTDIR)/tag/
-	rm  -rf $(OUTPUTDIR)/theme/
 	
 regenerate: clean
 	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
