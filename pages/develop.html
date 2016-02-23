@@ -58,29 +58,9 @@
 <a href="https://github.com/CsoundQt/CsoundQt">https://github.com/CsoundQt/CsoundQt</a></p>
 <p>You can also find source releases in the Files section of <a href="http://sourceforge.net/projects/qutecsound/files/CsoundQt/">SourceForge</a>.</p>
 <h2>Building</h2>
-<p>To build CsoundQt you need <a href="http://qt-project.org/">Qt</a> (version 4.8 or 5.0+), Csound. The <a href="http://www.mega-nerd.com/libsndfile/">libsndfile</a> library will allow recording the realtime output of Csound to a file. From version 0.7 onwards, CsoundQt can be built with PythonQt support. Global MIDI I/O and control of the CsoundQt widgets can also be enabled through the <a href="http://www.music.mcgill.ca/~gary/rtmidi/">RtMidi</a> library.</p>
-<p>The easiest way to build CsoundQt is to open its qcs.pro file in QtCreator and build it there.
-CsoundQt uses qmake to build, so you can build on the command line with:</p>
-<div class="highlight"><pre>$ qmake
-$ make
-</pre></div>
-
-
-<p>The qmake project file will attempt to find the dependencies in standard locations. You can specify the locations manually and give additional options for building. Consult the qcs.pro file.</p>
-<p>It is highly recommended you build <a href="http://www.music.mcgill.ca/~gary/rtmidi/">RtMidi</a> support, as it will make MIDI I/O more stable than relying on Csound's MIDI modules which appear to have some reentrancy issues. RtMidi version 2.0.1 or greater is required. You can build support for RtMidi control of Widgets by enabling the RtMidi library using:</p>
-<div class="highlight"><pre>$ qmake CONFIG+<span class="o">=</span>rtmidi
-</pre></div>
-
-
-<p>The RtMidi library can be put in the same base directory as the CsoundQt sources, where it will be found and used. It should not be necessary to build the RtMidi library to use it, although some users have reported that they have had to do that before building CsoundQt.</p>
-<p>You can build optional support for PythonQt:</p>
-<div class="highlight"><pre>$ qmake CONFIG+<span class="o">=</span>pythonqt
-</pre></div>
-
-
-<p>The PythonQt librarycan be put in the same base directory as the CsoundQt sources, where it will be found and used. You must build the PythonQt libraries before using them. CsoundQt currently requires PythonQt &gt;= 2.0.1.</p>
+<p>We try to provide a set of build instructions in <a href="https://github.com/CsoundQt/CsoundQt/blob/master/BUILDING.md">BUILDING.md</a>.</p>
 <p>There are also some detailed descriptions about building CsoundQt in
-the <a href="https://github.com/csound/csound/wiki">Csound Wiki</a>.</p>
+the <a href="https://github.com/CsoundQt/CsoundQt/wiki">CsoundQt Wiki</a>.</p>
 <h2>Translating</h2>
 <p>Translating CsoundQt is very easy. Just let me know you want to translate into a certain language, and I'll generate the tranlsation file. Then you can translate it with Qt Linguist, which is a very easy to use program, which will assist you in the translation. When you're done, just send the finished translation.
 You can get QtLinguist with the Qt SDK, or as an individual program here:
