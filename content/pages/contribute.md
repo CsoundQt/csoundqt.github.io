@@ -18,7 +18,17 @@ It is even more valuable if you **build CsoundQt yourself**. It is not that hard
 Contribute to improve the code, examples or design
 ------------------
 
-CsoundQt's sources are hosted in github. If you would like to add an example, correct some mistakes or work on improving or extending the source code, the best way is **forking the repository and making pull requests**:
+CsoundQt's sources are hosted in **[Github](https://github.com/CsoundQt/CsoundQt)**. Since version 0.9.2 the latest stable release is kept in ***master*** branch, the newest modifications and fixes in ***develop*** branch. To contribute to the development, please check out the *develop* branch. In Github you cans select the branch from menu (*Branch: master/develop*), in your computer use command
+
+    $ git checkout -b develop origin/develop
+
+to activate the develop branch firt time. 
+To change between the branches use command *git checkout <branchname \>*
+
+    $ git checkout develop # or: git checkout master
+
+
+If you would like to add an example, correct some mistakes or work on improving or extending the source code, the best way is **forking the repository and making pull requests**:
 
 1)Sign up or sign in to **Github**: <https://github.com/>
 
@@ -30,8 +40,9 @@ CsoundQt's sources are hosted in github. If you would like to add an example, co
 
 * you need git versioning system software and some knowledge how to use it. See <https://git-scm.com/>
 * getting the sources from github to your computer is called "cloning" in git terms. Go to the direcotry where you want to have the local repository and execute in terminal:
-
-    `$ git clone https://github.com/tarmoj/CsoundQt.git # replace it with your address, of course` 
+```
+    $ git clone https://github.com/tarmoj/CsoundQt.git # replace it with your address, of course
+``` 
 
 * When your changes are done, you need to commit the changes to your local repository (it is easy to do in QtCreator in Tools->Git->Local repository->Commit). For command line see <https://git-scm.com/docs/git-commit> For example:
 ```
@@ -40,13 +51,13 @@ CsoundQt's sources are hosted in github. If you would like to add an example, co
     
 ```
 * Sending your changes to the remote repository (i.e the one by your account in Github) is called **pushing**:
-
-    `$ git push`
-    
+```
+    $ git push
+```    
 * Next time you want to get the newest version from github again (if there has been is a change), you don't need to clone, just getting the change information is called **pulling**:
-
-    `$ git pull`
-    
+```
+    $ git pull
+```    
 5) To integrate your changes to the main CsoundQt repo, you need to do so called **pull request** -  it means that the manager(s) of the main repo get infomration about your work and  can merge it easily to the main sources and everybody can enjoy the result of your effort. Just click on the **"Pull request"** button on your Github repo's main page, add a comment and send it.
 
 &nbsp; 
