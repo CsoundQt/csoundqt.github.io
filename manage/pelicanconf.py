@@ -34,3 +34,16 @@ PLUGINS = [
  ]
 
 STATIC_PATHS = ['images']
+
+DISPLAY_PAGES_ON_MENU = False
+DISPLAY_CATEGORIES_ON_MENU = False
+
+MENUITEMS = (
+    ('About', '/pages/about.html'),
+    ('Building', '/pages/building.html'),
+    ('Contribute', '/pages/contribute.html'),
+    ('Documentation', '/pages/documentation.html'),
+    ('Download', '/pages/download.html'),
+    ('People', '/pages/people.html'),
+    ('Help', '/pages/help.html'),
+)
