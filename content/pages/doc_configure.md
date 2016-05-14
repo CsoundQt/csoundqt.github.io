@@ -8,7 +8,7 @@ To open the configuration panel simply push the 'Configure' button. The configur
 
 ### **Run**   
 
-![](|filename|/images/10a_01_run.png)   
+![run tab](|filename|/images/10a_01_run.png)   
 
 The settings at the top of the “Run” tab allow the user to define the command-line flags with which Csound is invoked. 
 
@@ -154,7 +154,7 @@ These options determine CsoundQt's behaviour if you push the *Run* button (or se
 
 ### **General** 
 
-![](|filename|/images/10a_02_general.png)
+![general tab](|filename|/images/10a_02_general.png)
 
    
  
@@ -233,7 +233,7 @@ There are some mixed options at the bottom of this tab:
 
 ### **Widgets** 
 
-![](|filename|/images/10a_03_widgets.png)   
+![widgets tab](|filename|/images/10a_03_widgets.png)   
  
 
 **Enable Widgets** 
@@ -288,7 +288,7 @@ There are some mixed options at the bottom of this tab:
 
 ### **Editor** 
 
-![](|filename|/images/10a_04_editor.png)   
+![editor tab](|filename|/images/10a_04_editor.png)   
 
 Only one option needs some explanation:   
 
@@ -299,7 +299,7 @@ Only one option needs some explanation:
 
 ### **Environment** 
 
-![](|filename|/images/10a_05_environment_1.png)   
+![environment tab](|filename|/images/10a_05_environment_1.png)   
 
 There are some important settings here, along with some only for developers. We will focus on the options which can be important for all users. 
 
@@ -340,7 +340,7 @@ There are some important settings here, along with some only for developers. We 
 
 ### **External Programs** 
 
-![](|filename|/images/10a_06_external.png)   
+![external tab](|filename|/images/10a_06_external.png)   
 
 Should be self-explanatory. 'Dot' is the executable from [www.graphviz.org.](www.graphviz.org) It is used in CsoundQt for the Code Graph Viewer (View -> View Code Graph).  
  	
@@ -349,7 +349,7 @@ Should be self-explanatory. 'Dot' is the executable from [www.graphviz.org.](www
 
 This tab is useful as it allows the user to define a default template for new CSDs. Something like this can be a great timesaver: 
 
-![](|filename|/images/10a_07_template.png)   
+![template tab](|filename|/images/10a_07_template.png)   
 
   
 
