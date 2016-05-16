@@ -54,7 +54,41 @@
     <h1>Editor</h1>
     
 
-    <p>coming soon ...</p>
+    <p>You can find a short description of all Menu Items in the <a href="csoundqt-menus.html">Menu</a> section of this documentation. This page focusses on some features of the CsoundQt Editor.</p>
+<h2>Code completion</h2>
+<p>When you type, for instance, the letters "tab", you will see different options for code completion:</p>
+<p><img alt="code completion" src="../images/doc_editor_01.png" /></p>
+<p>Choose one of them with the mouse or the arrow key. You have two choices now:<br />
+— <strong>tab</strong> will only complete the opcode name;<br />
+— <strong>return</strong> will also insert the arguments with the names found in the manual.</p>
+<p>Any of your own variable names will offer self-completion, too.</p>
+<h2>Access to the Csound Manual</h2>
+<p>When you select any opcode (double-click on it), or have the cursor in it, you can get the corresponding page of the Canonical Csound Manual by selecting <em>Help &gt; Shop Opcode Entry</em> (or Shift+F1).</p>
+<p>You can also find a short info about the opcode at the bottom of the Editor's panel.</p>
+<h2>Code Graph</h2>
+<p>Select <em>Examples &gt; Getting Started &gt; Toots &gt; Toot 1</em>, and then <em>View &gt; View Code Graph</em>. You should see this drawing:</p>
+<p><img alt="code graph" src="../images/doc_editor_02.png" /></p>
+<p>It is not perfect, but quite useful to show the signal flow for simple csd files. If it is not working, try to set the graphviz dot application in <em>Configure &gt; External Programs &gt; Dot</em>.</p>
+<h2>Inspector</h2>
+<p>When you click on the <em>Inspector</em> button (or <em>View &gt; Inspector</em>), you get a panel which is quite useful for extended Csound code:</p>
+<p><img alt="inspector" src="../images/doc_editor_03.png" /></p>
+<p>You can navigate easily to any part of the code, or in the score.</p>
+<h2>Split View</h2>
+<p>Instead of the usual raw-text mode, CsoundQt offers a split view for both, the orchestra and the score. Go to <em>View &gt; Split View</em>, and you will see the score changed to a spread-sheet-like view, and the tags (CsOptions etc) disappeared. You can choose which sections to show or to hide:</p>
+<p><img alt="split view" src="../images/doc_editor_04.png" /></p>
+<h2>Recompile / Evaluate Python Code</h2>
+<p>Since Csound 6, it is possible to change any instrument definition while Csound is running. CsoundQt provides an easy way of recompiling. This be your Csound code:</p>
+<div class="highlight"><pre>instr 1
+    schedkwhen metro(1), 0, 0, 2, 0, 1
+endin
+instr 2
+    prints &quot;Hallo\n&quot;
+endin
+schedule(1,0,1000)
+</pre></div>
+
+
+<p>Run this code and change the print statement in instrument 2 from "Hallo\n" to "HalloHallo\n" or whatever. Nothing will happen, as Csound needs a command to recompile instrument 2. Now place the cursor anywhere in instrument 2, go to the Edit menu, and select <em>Evaluate Section</em>. You will see a message in the console: "Csound code evaluated.", and after this message you will see the new printout.</p>
 
        </div><!-- /.row -->
     </div><!-- /.container -->

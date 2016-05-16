@@ -54,7 +54,135 @@
     <h1>Widgets</h1>
     
 
-    <p>coming soon ...</p>
+    <p>CsoundQt offers a set of widgets to create a Graphical User Interface. Widgets can be used to show what happens in a real-time performance of Csound, or to control the performance itself. If CsoundQt is built with RtMidi, a widget can directly be connected with any MIDI controller.</p>
+<p>You will find a built-in documentation of the widget in CsoundQt's Examples &gt; Widgets. It is recommended to read and click it in addition to the description here.</p>
+<h2>How to Create a Widget</h2>
+<p>Open the widget panel (push the "Widgets" button or go to View &gt; Widgets) and right-click in it. You get a submenu:</p>
+<p><img alt="widgets submenu" src="../images/doc_widgets_01.png" /></p>
+<p>Choose a widget, for instance a SpinBox. You will get a new panel with the properties of the widget:</p>
+<p><img alt="widgets properties" src="../images/doc_widgets_02.png" /></p>
+<ul>
+<li><strong>x/y</strong> — absolute position in the panel in pixel  </li>
+<li><strong>Width/Height</strong> — size of the widget in pixel  </li>
+<li><strong>Min/Max</strong> — minimum/maximum number the widget can return  </li>
+<li><strong>Channel name</strong> — a name for the communication between Csound and a widget  </li>
+<li><strong>Resolution</strong> — the smallest resolution of the numbers (if set to 1, you will only get integers)  </li>
+<li><strong>Text</strong> — the current value (usually set by the user in real-time)  </li>
+<li><strong>Text Color / Background Color</strong> — clicking on these buttons opens a dialog for setting colors  </li>
+</ul>
+<h2>Edit and Play Mode</h2>
+<p>Once you clicked OK, you will see the SpinBox in the widget panel. If you want to change the position, go to <em>Edit &gt; Widget Edit Mode</em> (or Ctrl+E).</p>
+<p><img alt="edit mode" src="../images/doc_widgets_03.png" /></p>
+<p>If Edit Mode is on, you can move the widgets or change their size by dragging the right bottom corner. </p>
+<p>Like in <a href="http://puredata.info">PD</a> or <a href="http://cycling74.com/max">Max</a>, you can toggle all the time between Edit and Play Mode. If you want to change any of the preferences, double-click on a widget in Edit Mode, or right-click on it in Play Mode (and choose <em>Properties</em>).</p>
+<p>In Play Mode, you can change the widget values by the mouse and/or the computer keyboard. Note that a new value for the SpinBox will only be active when you hit the Return key.</p>
+<h2>Get Values from a Widget</h2>
+<p>Widgets communicate with Csound via a channel name. As shown above, you set the channel name in the widgets properties. Choose a meaningful name:</p>
+<p><img alt="channel name" src="../images/doc_widgets_04.png" /></p>
+<p>You can receive the values from a widget via two opcodes: <code>invalue</code> or <code>chnget</code>. If the widget channel is "frequency" (you type it blank but it is a string), the lines of Csound code would be either</p>
+<div class="highlight"><pre>kFreq invalue &quot;frequency&quot;
+</pre></div>
+
+
+<p>or</p>
+<div class="highlight"><pre>kFreq chnget &quot;frequency&quot;
+</pre></div>
+
+
+<p>Most of the widgets return numbers, but some (LineEdit and Button) can return strings. In this case, the Csound code will be something like this:</p>
+<div class="highlight"><pre>S_file invalue &quot;filename&quot;
+S_file chnget &quot;filename&quot;
+</pre></div>
+
+
+<p>Whether you use <a href="http://csound.github.io/docs/manual/invalue.html">invalue</a> or <a href="http://csound.github.io/docs/manual/chnget.html">chnget</a>, is more or less up to your preferences. Both are slightly different implemented (have a look at the Csound Manual for details). For passing long strings to Csound, <code>chnget</code> is currently preferable.</p>
+<p>The k-Variables in Csound, which get the numbers of any widget, will usually be smoothed, to avoid jumps or sudden transitions (in particular for amplitudes). This can be done easily with the <code>port</code> opcode. This is a typical code:</p>
+<div class="highlight"><pre>kDb invalue &quot;db&quot; ;receive dB value from a widget
+kDb port kDb, .1 ;smoothes the transitions
+out aSound * ampdb(kDb) ;applies as volume
+</pre></div>
+
+
+<h2>Reserved Channels</h2>
+<p>There are some channels which carry some particular functionality. They all start with the underscore character. The first four are for Control/Transport (and usually have no receiver in the Csound code), whereas <em>_Browse</em> and <em>_MBrowse</em> will pass a string to Csound.</p>
+<ul>
+<li><strong>_Play</strong> — If the value of this channel is 1, CsoundQt will play the current csd file (similar to pressing the <em>Run</em> button).  </li>
+<li><strong>_Pause</strong> — If the value of this channel is 1, CsoundQt will pause/resume the performance (= <em>Pause</em> button).  </li>
+<li><strong>_Stop</strong> — If the value of this channel is 1, CsoundQt will terminate the performance (= <em>Stop</em> button).  </li>
+<li>
+<p><strong>_Render</strong> — If the value of this channel is 1, CsoundQt will render the current csd to an audio file (= <em>Render</em> button).</p>
+</li>
+<li>
+<p><strong>_Browse</strong> — Use a button widget in the <em>value</em> mode. When a button is set to this channel, clicking on it (in Play Mode) will open a <em>Select File</em> dialog. You can choose here any file, and it will be saved in a string variable. You can also use this channel more than once by adding anything; for instance <strong>_Browse1</strong> and <strong>_Browse2</strong> will store two different file names.  </p>
+</li>
+<li><strong>_MBrowse</strong> — The behaviour is similar to <em>_Browse</em>, but you can select here more than one file. Ths paths will be seperated by a | character. The following lines of Csound code show a possible result:<br />
+    chn_S "_MBrowse", 2 ;declares channel for input
+    instr Receive_Filenames
+        S_files chnget "_MBrowse"
+        puts S_files, 1
+    endin
+    -&gt; /home/jh/Desktop/7chnls.aiff|/home/jh/Desktop/abend1.wav|/home/jh/Desktop/BratscheStereo.aiff|/home/jh/Desktop/chirp40-1300Hz.wav</li>
+</ul>
+<h2>Presets</h2>
+<p>A preset is another reserved channel. Its goal is to store and recall a widget snapshot. The most simple and intuitive way to store and recall presets is to right-click in the widget panel, and the choose <em>Store Widget</em>. There is also a build-in example: Examples &gt; Widgets &gt; Presets.</p>
+<h2>Pass Values to a Widget</h2>
+<p>Widgets can also be used to show values which are changing in Csound, as visual feedback for the user or performer. Any k-variable can be shown by many widgets, like sliders, displays or spin boxes. Just set the widget channel to any useful name, and insert either <code>outvalue</code> or <code>chnset</code> in the Csound code, for instance:</p>
+<div class="highlight"><pre>kDb randomi -30, -10, 1/2, 3
+outvalue &quot;db&quot;, kDb
+chnset kDb, &quot;db&quot;
+</pre></div>
+
+
+<h2>Widget Types Overview</h2>
+<p>This is a short description, followed by a screenshot from the buildin widget examples.</p>
+<h3>Slider</h3>
+<p>The standard widget, well known in all Audio GUIs. It can be either vertical or horizontal.<br />
+<img alt="slider" src="../images/doc_widgets_07.png" /></p>
+<h3>Label</h3>
+<p>A textbox for comments or similar.<br />
+<img alt="label" src="../images/doc_widgets_05.png" /></p>
+<h3>Display</h3>
+<p>Can display any value from Csound (numbers or strings).<br />
+<img alt="display" src="../images/doc_widgets_06.png" /></p>
+<h3>ScrollNumber</h3>
+<p>Number box whichs values are changed by mouse scrolling.<br />
+<img alt="scroll number" src="../images/doc_widgets_08.png" /></p>
+<h3>LineEdit</h3>
+<p>A text field which can be used either for user input (passed to Csound as a string), or display any string (for instance a file name which is received by the _Browse reserved channel).<br />
+<img alt="line edit" src="../images/doc_widgets_09.png" /></p>
+<h3>SpinBox</h3>
+<p>A number box either for user input (via type/return or the scroll bar), or to show any Csound k-value.<br />
+<img alt="spin box" src="../images/doc_widgets_10.png" /></p>
+<h3>Button</h3>
+<p>A button can either fire an event (trigger an instrument or create a function table), or pass a value when pushed. A <em>latch</em> option transforms a button to a toggle.<br />
+<img alt="button" src="../images/doc_widgets_11.png" /></p>
+<h3>Knob</h3>
+<p>Similar functionality as slider, just different design.<br />
+<img alt="knob" src="../images/doc_widgets_12.png" /></p>
+<h3>Checkbox</h3>
+<p>Sends 1/0 if checked/unchecked. So the behaviour is actually the same as a button in latch mode.<br />
+<img alt="checkbox" src="../images/doc_widgets_13.png" /></p>
+<h3>Menu</h3>
+<p>Shows names, but returns numbers (starting from zero) for the different items.<br />
+<img alt="menu" src="../images/doc_widgets_14.png" /></p>
+<h3>Controller</h3>
+<p>A widget with many possibilities. Can be used as x/y pad, or as slider, or as signal display.<br />
+<img alt="controller" src="../images/doc_widgets_15.png" /></p>
+<h3>Console</h3>
+<p>Displays the output of the Csound console in a widget.<br />
+<img alt="console" src="../images/doc_widgets_16.png" /></p>
+<h3>Graph</h3>
+<p>Displays Csound's function tables, and FFT analysis, too.<br />
+<img alt="graph" src="../images/doc_widgets_17.png" /></p>
+<h3>Scope</h3>
+<p>Displays Csound's audio output, and some more ...<br />
+<img alt="scope" src="../images/doc_widgets_18.png" /></p>
+<h3>Virtual Keyboard</h3>
+<p>This widget is not under the <em>Create Widget</em> submenu, as it is not part of the widget panel. It is created by pushing the <em>Keyboard</em> button, and pops up as independent panel. It can substitute an external MIDI keyboard.<br />
+<img alt="midi keyboard" src="../images/doc_widgets_19.png" /></p>
+<h2>MIDI Integration</h2>
+<p>If your CsoundQt has been compiled with RtMidi support, you can assign any MIDI controller directly to any widget. Just open the properties and type in MIDI channel and Controller Number, or use the MIDI Learn functionality.<br />
+<img alt="midi learn" src="../images/doc_widgets_20.png" /></p>
 
        </div><!-- /.row -->
     </div><!-- /.container -->

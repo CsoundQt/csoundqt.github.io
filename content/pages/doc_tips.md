@@ -8,7 +8,11 @@ Lang: en
 
 +    Another frequent reason for crashes or hangs are **problems with the Audio or MIDI settings**. Open the *Configure* panel, and have a look at the *Run* tab. Try to set the *MIDI Input Device* to **none** (also the *Output Device*), and **uncheck** *Use Csound MIDI modules*. For **Audio**, check whether the *RT Audio Module* is set properly (try portaudio if you are not sure). Set the *Audio Input Device* and *Output Device* to -adc (input) and -odac (output). See the [Configure Doc Page](configuring-csoundqt.html) for more info.
 
++    If you experience bad crashes and none of the receipes helped, try **Help > Reset Preferences**.
+
 +    If the build-in **Manual** is not visible, go to *Configure -> Environment -> HTML Doc Directory*, push the "..." button and set the directory to where your Csound Manual is. 
+
++    Sometimes for a new installation of CsoundQt, the keyboard shortcuts are missing. In this case, go to **Edit > Set Keyboard Shortcuts**, and click *Restore Defaults*.
 
 ###Usage
 

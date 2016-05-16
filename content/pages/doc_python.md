@@ -162,7 +162,7 @@ Calling the method without any arguments, it refers to the currently active csd.
         print ' File Path = %s' % q.getFilePath(index)
         index += 1
 
-Which returns for instance:
+Which returns for instance:  
     index = 0
     File Name = /home/jh/Joachim/Stuecke/30Carin/csound/130328.csd
     File Path = /home/jh/Joachim/Stuecke/30Carin/csound
