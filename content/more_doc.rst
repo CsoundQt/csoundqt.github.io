@@ -5,6 +5,7 @@ Better Documentation
 :slug: new_doc
 :author: Joachim Heintz
 :tags: doc
+:summary: New descriptions at the `Documentation site <http://csoundqt.github.io/pages/documentation.html>`_
 
 The documentation for CsoundQt has been updated and improved. Check out the items on `Documentation <http://csoundqt.github.io/pages/documentation.html>`_:
 
