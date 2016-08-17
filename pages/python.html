@@ -309,13 +309,13 @@ i 1 0 10 ;will be overwritten by the python score generator
 <p>The following code will now insert 30 score events in the score section:</p>
 <div class="highlight"><pre><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">uniform</span>
 <span class="n">numScoEvents</span> <span class="o">=</span> <span class="mi">30</span>
-<span class="n">sco</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+<span class="n">sco</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 <span class="k">for</span> <span class="n">ScoEvent</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numScoEvents</span><span class="p">):</span>
     <span class="n">start</span> <span class="o">=</span> <span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
     <span class="n">dur</span> <span class="o">=</span> <span class="mi">2</span><span class="o">**</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
     <span class="n">db1</span><span class="p">,</span> <span class="n">db2</span> <span class="o">=</span> <span class="p">[</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">36</span><span class="p">,</span> <span class="o">-</span><span class="mi">12</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">)]</span>
     <span class="n">oct1</span><span class="p">,</span> <span class="n">oct2</span> <span class="o">=</span> <span class="p">[</span><span class="n">uniform</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">)]</span>
-    <span class="n">scoLine</span> <span class="o">=</span> <span class="s">&#39;i 1 </span><span class="si">%f</span><span class="s"> </span><span class="si">%f</span><span class="s"> </span><span class="si">%f</span><span class="s"> </span><span class="si">%f</span><span class="s"> </span><span class="si">%d</span><span class="s"> </span><span class="si">%d</span><span class="se">\n</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">dur</span><span class="p">,</span> <span class="n">oct1</span><span class="p">,</span> <span class="n">oct2</span><span class="p">,</span> <span class="n">db1</span><span class="p">,</span> <span class="n">db2</span><span class="p">)</span>
+    <span class="n">scoLine</span> <span class="o">=</span> <span class="s1">&#39;i 1 </span><span class="si">%f</span><span class="s1"> </span><span class="si">%f</span><span class="s1"> </span><span class="si">%f</span><span class="s1"> </span><span class="si">%f</span><span class="s1"> </span><span class="si">%d</span><span class="s1"> </span><span class="si">%d</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">dur</span><span class="p">,</span> <span class="n">oct1</span><span class="p">,</span> <span class="n">oct2</span><span class="p">,</span> <span class="n">db1</span><span class="p">,</span> <span class="n">db2</span><span class="p">)</span>
     <span class="n">sco</span> <span class="o">=</span> <span class="n">sco</span> <span class="o">+</span> <span class="n">scoLine</span>
 <span class="n">q</span><span class="o">.</span><span class="n">setSco</span><span class="p">(</span><span class="n">sco</span><span class="p">)</span>
 </pre></div>
@@ -607,7 +607,7 @@ MYFLT (C++ object at: 0x35d1c58)
 <div class="highlight"><pre><span class="kn">from</span> <span class="nn">PythonQt.Qt</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">inpdia</span> <span class="o">=</span> <span class="n">QInputDialog</span><span class="p">()</span>
-<span class="n">myInt</span> <span class="o">=</span> <span class="n">inpdia</span><span class="o">.</span><span class="n">getInt</span><span class="p">(</span><span class="n">inpdia</span><span class="p">,</span><span class="s">&quot;Example 1&quot;</span><span class="p">,</span><span class="s">&quot;How many?&quot;</span><span class="p">)</span>
+<span class="n">myInt</span> <span class="o">=</span> <span class="n">inpdia</span><span class="o">.</span><span class="n">getInt</span><span class="p">(</span><span class="n">inpdia</span><span class="p">,</span><span class="s2">&quot;Example 1&quot;</span><span class="p">,</span><span class="s2">&quot;How many?&quot;</span><span class="p">)</span>
 <span class="k">print</span> <span class="n">myInt</span>
 </pre></div>
 
@@ -626,12 +626,12 @@ py&gt; myInt
 
 <span class="k">def</span> <span class="nf">again</span><span class="p">():</span>
     <span class="n">inpdia</span> <span class="o">=</span> <span class="n">QInputDialog</span><span class="p">()</span>
-    <span class="n">myInt</span> <span class="o">=</span> <span class="n">inpdia</span><span class="o">.</span><span class="n">getInt</span><span class="p">(</span><span class="n">inpdia</span><span class="p">,</span><span class="s">&quot;Example 1&quot;</span><span class="p">,</span><span class="s">&quot;How many?&quot;</span><span class="p">)</span>
+    <span class="n">myInt</span> <span class="o">=</span> <span class="n">inpdia</span><span class="o">.</span><span class="n">getInt</span><span class="p">(</span><span class="n">inpdia</span><span class="p">,</span><span class="s2">&quot;Example 1&quot;</span><span class="p">,</span><span class="s2">&quot;How many?&quot;</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">myInt</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">print</span> <span class="s">&quot;If you continue to enter &#39;1&#39; I will come back again and again.&quot;</span>
+        <span class="k">print</span> <span class="s2">&quot;If you continue to enter &#39;1&#39; I will come back again and again.&quot;</span>
         <span class="n">again</span><span class="p">()</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">print</span> <span class="s">&quot;Thanks - Leaving now.&quot;</span>
+        <span class="k">print</span> <span class="s2">&quot;Thanks - Leaving now.&quot;</span>
 <span class="n">again</span><span class="p">()</span>
 </pre></div>
 
@@ -651,7 +651,7 @@ py&gt; myInt
 <span class="p">}}</span>
 
 <span class="n">giNumber</span> <span class="n">pyevali</span> <span class="p">{{</span>
-<span class="n">dia</span><span class="o">.</span><span class="n">getDouble</span><span class="p">(</span><span class="n">dia</span><span class="p">,</span><span class="s">&quot;CS question&quot;</span><span class="p">,</span><span class="s">&quot;Enter number: &quot;</span><span class="p">)</span>
+<span class="n">dia</span><span class="o">.</span><span class="n">getDouble</span><span class="p">(</span><span class="n">dia</span><span class="p">,</span><span class="s2">&quot;CS question&quot;</span><span class="p">,</span><span class="s2">&quot;Enter number: &quot;</span><span class="p">)</span>
 <span class="p">}}</span> <span class="p">;</span> <span class="n">get</span> <span class="n">the</span> <span class="n">number</span> <span class="kn">from</span> <span class="nn">Qt</span> <span class="nn">dialog</span>
 
 <span class="n">instr</span> <span class="mi">1</span>
@@ -731,45 +731,45 @@ i 1 0 4 &quot;huhuu&quot;
 <p>Now copy this Python code into your Python Scratch Pad and evaluate it. Then type anything in the "type here" box and push the "insert" button. After pushing "play", the string will be played. You can also send the string as real-time event, to different instruments, in different durations.</p>
 <div class="highlight"><pre><span class="kn">from</span> <span class="nn">PythonQt.Qt</span> <span class="kn">import</span> <span class="o">*</span>
 
-<span class="c"># FUNCTIONS==============================</span>
+<span class="c1"># FUNCTIONS==============================</span>
 
-<span class="k">def</span> <span class="nf">insert</span><span class="p">():</span> <span class="c"># read input from UI and insert a line to score of csd file, open in CsoundQt with index csdIndex</span>
-    <span class="n">scoreLine</span> <span class="o">=</span> <span class="s">&quot;f0 3600</span><span class="se">\n</span><span class="s">&quot;</span> <span class="o">+</span> <span class="s">&quot;i &quot;</span> <span class="o">+</span> <span class="n">instrSpinBox</span><span class="o">.</span><span class="n">text</span> <span class="o">+</span> <span class="s">&quot; 0 &quot;</span> <span class="o">+</span> <span class="n">durSpinBox</span><span class="o">.</span><span class="n">text</span> <span class="o">+</span> <span class="s">&#39; &quot;&#39;</span> <span class="o">+</span> <span class="n">par1LineEdit</span><span class="o">.</span><span class="n">text</span> <span class="o">+</span> <span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">&quot;</span>
+<span class="k">def</span> <span class="nf">insert</span><span class="p">():</span> <span class="c1"># read input from UI and insert a line to score of csd file, open in CsoundQt with index csdIndex</span>
+    <span class="n">scoreLine</span> <span class="o">=</span> <span class="s2">&quot;f0 3600</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;i &quot;</span> <span class="o">+</span> <span class="n">instrSpinBox</span><span class="o">.</span><span class="n">text</span> <span class="o">+</span> <span class="s2">&quot; 0 &quot;</span> <span class="o">+</span> <span class="n">durSpinBox</span><span class="o">.</span><span class="n">text</span> <span class="o">+</span> <span class="s1">&#39; &quot;&#39;</span> <span class="o">+</span> <span class="n">par1LineEdit</span><span class="o">.</span><span class="n">text</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2">&quot;</span>
     <span class="k">print</span> <span class="n">scoreLine</span>
     <span class="n">q</span><span class="o">.</span><span class="n">setSco</span><span class="p">(</span><span class="n">scoreLine</span><span class="p">,</span> <span class="n">csdIndex</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">play</span><span class="p">():</span> <span class="c"># play file with index csdIndex</span>
-    <span class="k">print</span> <span class="s">&quot;PLAY&quot;</span>
+<span class="k">def</span> <span class="nf">play</span><span class="p">():</span> <span class="c1"># play file with index csdIndex</span>
+    <span class="k">print</span> <span class="s2">&quot;PLAY&quot;</span>
     <span class="n">q</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="n">csdIndex</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">send</span><span class="p">():</span> <span class="c"># read input from UI send live event</span>
-    <span class="n">scoreLine</span> <span class="o">=</span> <span class="s">&quot;i &quot;</span> <span class="o">+</span> <span class="n">instrSpinBox</span><span class="o">.</span><span class="n">text</span> <span class="o">+</span> <span class="s">&quot; 0 &quot;</span> <span class="o">+</span> <span class="n">durSpinBox</span><span class="o">.</span><span class="n">text</span> <span class="o">+</span> <span class="s">&#39; &quot;&#39;</span> <span class="o">+</span> <span class="n">par1LineEdit</span><span class="o">.</span><span class="n">text</span> <span class="o">+</span> <span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">&quot;</span>
+<span class="k">def</span> <span class="nf">send</span><span class="p">():</span> <span class="c1"># read input from UI send live event</span>
+    <span class="n">scoreLine</span> <span class="o">=</span> <span class="s2">&quot;i &quot;</span> <span class="o">+</span> <span class="n">instrSpinBox</span><span class="o">.</span><span class="n">text</span> <span class="o">+</span> <span class="s2">&quot; 0 &quot;</span> <span class="o">+</span> <span class="n">durSpinBox</span><span class="o">.</span><span class="n">text</span> <span class="o">+</span> <span class="s1">&#39; &quot;&#39;</span> <span class="o">+</span> <span class="n">par1LineEdit</span><span class="o">.</span><span class="n">text</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2">&quot;</span>
     <span class="k">print</span> <span class="n">scoreLine</span>
     <span class="n">q</span><span class="o">.</span><span class="n">sendEvent</span><span class="p">(</span><span class="n">csdIndex</span><span class="p">,</span> <span class="n">scoreLine</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">stopAndClose</span><span class="p">():</span> <span class="c">#stop csdIndex, close UI</span>
-    <span class="k">print</span> <span class="s">&quot;STOP&quot;</span>
+<span class="k">def</span> <span class="nf">stopAndClose</span><span class="p">():</span> <span class="c1">#stop csdIndex, close UI</span>
+    <span class="k">print</span> <span class="s2">&quot;STOP&quot;</span>
     <span class="n">q</span><span class="o">.</span><span class="n">stop</span><span class="p">(</span><span class="n">csdIndex</span><span class="p">)</span>
     <span class="n">window</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
 
 
-<span class="c"># MAIN ====================================</span>
+<span class="c1"># MAIN ====================================</span>
 
-<span class="n">window</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">()</span> <span class="c"># window as main widget</span>
-<span class="n">layout</span> <span class="o">=</span> <span class="n">QGridLayout</span><span class="p">(</span><span class="n">window</span><span class="p">)</span> <span class="c"># use gridLayout - the most flexible one - to place the widgets in a table-like structure</span>
+<span class="n">window</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">()</span> <span class="c1"># window as main widget</span>
+<span class="n">layout</span> <span class="o">=</span> <span class="n">QGridLayout</span><span class="p">(</span><span class="n">window</span><span class="p">)</span> <span class="c1"># use gridLayout - the most flexible one - to place the widgets in a table-like structure</span>
 <span class="n">window</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span>
-<span class="n">window</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="s">&quot;PythonQt inteface example&quot;</span><span class="p">)</span>
+<span class="n">window</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="s2">&quot;PythonQt inteface example&quot;</span><span class="p">)</span>
 
-<span class="n">instrLabel</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="s">&quot;Select instrument&quot;</span><span class="p">)</span>
-<span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">instrLabel</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="c"># first row, first column</span>
+<span class="n">instrLabel</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="s2">&quot;Select instrument&quot;</span><span class="p">)</span>
+<span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">instrLabel</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># first row, first column</span>
 
 <span class="n">instrSpinBox</span> <span class="o">=</span> <span class="n">QSpinBox</span><span class="p">(</span><span class="n">window</span><span class="p">)</span>
 <span class="n">instrSpinBox</span><span class="o">.</span><span class="n">setMinimum</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">instrSpinBox</span><span class="o">.</span><span class="n">setMaximum</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">instrSpinBox</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c"># first row, second column</span>
+<span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">instrSpinBox</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># first row, second column</span>
 
-<span class="n">durLabel</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="s">&quot;Duration: &quot;</span><span class="p">)</span>
-<span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">durLabel</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>  <span class="c"># etc</span>
+<span class="n">durLabel</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="s2">&quot;Duration: &quot;</span><span class="p">)</span>
+<span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">durLabel</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># etc</span>
 
 <span class="n">durSpinBox</span> <span class="o">=</span> <span class="n">QSpinBox</span><span class="p">(</span><span class="n">window</span><span class="p">)</span>
 <span class="n">durSpinBox</span><span class="o">.</span><span class="n">setMinimum</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -777,36 +777,36 @@ i 1 0 4 &quot;huhuu&quot;
 <span class="n">durSpinBox</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">durSpinBox</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
-<span class="n">par1Label</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="s">&quot;Enter string for parameter 1: &quot;</span><span class="p">)</span>
+<span class="n">par1Label</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="s2">&quot;Enter string for parameter 1: &quot;</span><span class="p">)</span>
 <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">par1Label</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
 
 <span class="n">par1LineEdit</span> <span class="o">=</span> <span class="n">QLineEdit</span><span class="p">(</span><span class="n">window</span><span class="p">)</span>
-<span class="n">par1LineEdit</span><span class="o">.</span><span class="n">setMaxLength</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span> <span class="c"># don&#39;t allow too long strings</span>
-<span class="n">par1LineEdit</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="s">&quot;type here&quot;</span><span class="p">)</span>
+<span class="n">par1LineEdit</span><span class="o">.</span><span class="n">setMaxLength</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span> <span class="c1"># don&#39;t allow too long strings</span>
+<span class="n">par1LineEdit</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="s2">&quot;type here&quot;</span><span class="p">)</span>
 <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">par1LineEdit</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="n">insertButton</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s">&quot;Insert&quot;</span><span class="p">,</span><span class="n">window</span><span class="p">)</span>
+<span class="n">insertButton</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s2">&quot;Insert&quot;</span><span class="p">,</span><span class="n">window</span><span class="p">)</span>
 <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">insertButton</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
 
-<span class="n">playButton</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s">&quot;Play&quot;</span><span class="p">,</span><span class="n">window</span><span class="p">)</span>
+<span class="n">playButton</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s2">&quot;Play&quot;</span><span class="p">,</span><span class="n">window</span><span class="p">)</span>
 <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">playButton</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="n">sendButton</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s">&quot;Send event&quot;</span><span class="p">,</span><span class="n">window</span><span class="p">)</span>
+<span class="n">sendButton</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s2">&quot;Send event&quot;</span><span class="p">,</span><span class="n">window</span><span class="p">)</span>
 <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">sendButton</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
 
-<span class="n">closeButton</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s">&quot;Close&quot;</span><span class="p">,</span><span class="n">window</span><span class="p">)</span>
+<span class="n">closeButton</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s2">&quot;Close&quot;</span><span class="p">,</span><span class="n">window</span><span class="p">)</span>
 <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">closeButton</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="c"># connect buttons and functions  ================</span>
-<span class="c">#NB! function names must be  without parenthesis!</span>
-<span class="c"># number and type of arguments of the signal and slot (called function) must match</span>
+<span class="c1"># connect buttons and functions  ================</span>
+<span class="c1">#NB! function names must be  without parenthesis!</span>
+<span class="c1"># number and type of arguments of the signal and slot (called function) must match</span>
 
-<span class="n">insertButton</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">SIGNAL</span><span class="p">(</span><span class="s">&quot;clicked()&quot;</span><span class="p">),</span><span class="n">insert</span> <span class="p">)</span> <span class="c"># when clicked, run function insert()</span>
-<span class="n">playButton</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">SIGNAL</span><span class="p">(</span><span class="s">&quot;clicked()&quot;</span><span class="p">),</span><span class="n">play</span><span class="p">)</span>  <span class="c">#etc</span>
-<span class="n">sendButton</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">SIGNAL</span><span class="p">(</span><span class="s">&quot;clicked()&quot;</span><span class="p">),</span><span class="n">send</span><span class="p">)</span>
-<span class="n">closeButton</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">SIGNAL</span><span class="p">(</span><span class="s">&quot;clicked()&quot;</span><span class="p">),</span><span class="n">stopAndClose</span><span class="p">)</span>
+<span class="n">insertButton</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">SIGNAL</span><span class="p">(</span><span class="s2">&quot;clicked()&quot;</span><span class="p">),</span><span class="n">insert</span> <span class="p">)</span> <span class="c1"># when clicked, run function insert()</span>
+<span class="n">playButton</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">SIGNAL</span><span class="p">(</span><span class="s2">&quot;clicked()&quot;</span><span class="p">),</span><span class="n">play</span><span class="p">)</span>  <span class="c1">#etc</span>
+<span class="n">sendButton</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">SIGNAL</span><span class="p">(</span><span class="s2">&quot;clicked()&quot;</span><span class="p">),</span><span class="n">send</span><span class="p">)</span>
+<span class="n">closeButton</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">SIGNAL</span><span class="p">(</span><span class="s2">&quot;clicked()&quot;</span><span class="p">),</span><span class="n">stopAndClose</span><span class="p">)</span>
 
-<span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> <span class="c"># show the window and wait for clicks on buttons</span>
+<span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> <span class="c1"># show the window and wait for clicks on buttons</span>
 </pre></div>
 
 
