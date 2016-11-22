@@ -12,3 +12,5 @@ Lang: en
 ###[Live Event Sheet](live-event-sheet.html) — Real-time instrument events in CsoundQt
 ###[PythonQt](python.html) — Integrated Python to expand CsoundQt's functionality
 ###[Utilities](utilities.html) — Run Csound Utilities in CsoundQt
+
+###[Html5 support](html5-support.html) -  use CsoundQt with <html> section in csd or independent html files

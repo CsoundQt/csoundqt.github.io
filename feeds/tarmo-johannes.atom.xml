@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>CsoundQt</title><link href="http://csoundqt.github.io/" rel="alternate"></link><link href="http://csoundqt.github.io/feeds/tarmo-johannes.atom.xml" rel="self"></link><id>http://csoundqt.github.io/</id><updated>2016-08-16T00:00:00+02:00</updated><entry><title>Version 0.9.2.2 Released</title><link href="http://csoundqt.github.io/release0922.html" rel="alternate"></link><updated>2016-08-16T00:00:00+02:00</updated><author><name>Tarmo Johannes</name></author><id>tag:csoundqt.github.io,2016-08-16:release0922.html</id><summary type="html">&lt;p&gt;The source code can be downloaded from: &lt;a class="reference external" href="https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.2.2"&gt;https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.2.2&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>CsoundQt</title><link href="http://csoundqt.github.io/" rel="alternate"></link><link href="http://csoundqt.github.io/feeds/tarmo-johannes.atom.xml" rel="self"></link><id>http://csoundqt.github.io/</id><updated>2016-11-22T00:00:00+01:00</updated><entry><title>Version 0.9.3 Released</title><link href="http://csoundqt.github.io/release093.html" rel="alternate"></link><updated>2016-11-22T00:00:00+01:00</updated><author><name>Tarmo Johannes</name></author><id>tag:csoundqt.github.io,2016-11-22:release093.html</id><summary type="html">&lt;p&gt;The source code and binaries can be downloaded from: &lt;a class="reference external" href="https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.3"&gt;https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.3&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Version 0.9.3  introduces some new features, fixes a number of bugs and although not in the final release, the new qt based html5 support is available for testing from branch &lt;em&gt;qthtml&lt;/em&gt;.
+For instructions how to use the branch see
+&lt;a class="reference external" href="https://github.com/CsoundQt/CsoundQt/wiki/Checking-out-develop,-qthtml-or-other-branch"&gt;https://github.com/CsoundQt/CsoundQt/wiki/Checking-out-develop,-qthtml-or-other-branch&lt;/a&gt;&lt;/p&gt;
+&lt;div class="section" id="new-features"&gt;
+&lt;h2&gt;New features&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Table editor for GEN07 tables&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="youtube youtube-16x9"&gt;&lt;iframe src="https://www.youtube.com/embed/uJCbcca0Bd4" allowfullscreen seamless frameBorder="0"&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;ul class="simple"&gt;
+&lt;li&gt;Improved and extended Insert/Update CabbageText -  conversion of CsoundQt widgets into &amp;lt; Cabbage&amp;gt; definition.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="youtube youtube-16x9"&gt;&lt;iframe src="https://www.youtube.com/embed/ijdCoU0ccsI" allowfullscreen seamless frameBorder="0"&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;ul class="simple"&gt;
+&lt;li&gt;Experimental html5 support based on Qt libraries -  no CEF dependency any more, available also on OSX and Linux.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="youtube youtube-16x9"&gt;&lt;iframe src="https://www.youtube.com/embed/zH5UkgUuzX0" allowfullscreen seamless frameBorder="0"&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class="section" id="fixes"&gt;
+&lt;h2&gt;Fixes&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Fixed wrong widgets behaviour if MIDI channel is 0 and widget's CC and Channel are unset.&lt;/li&gt;
+&lt;li&gt;Support for building both with older and newer Csound source code (CS_APIVERSION 4)&lt;/li&gt;
+&lt;li&gt;Numerous fixes in examples, correction of spelling errors&lt;/li&gt;
+&lt;li&gt;Better colour for word completion box&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Tarmo Johannes &lt;a class="reference external" href="mailto:trmjhnns&amp;#64;gmail.com"&gt;trmjhnns&amp;#64;gmail.com&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="release"></category></entry><entry><title>Version 0.9.2.2 Released</title><link href="http://csoundqt.github.io/release0922.html" rel="alternate"></link><updated>2016-08-16T00:00:00+02:00</updated><author><name>Tarmo Johannes</name></author><id>tag:csoundqt.github.io,2016-08-16:release0922.html</id><summary type="html">&lt;p&gt;The source code can be downloaded from: &lt;a class="reference external" href="https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.2.2"&gt;https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.2.2&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Version 0.9.2.2 is a bug-fix release.&lt;/p&gt;
 &lt;div class="section" id="fixes"&gt;
 &lt;h2&gt;Fixes&lt;/h2&gt;
