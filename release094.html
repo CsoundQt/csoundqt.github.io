@@ -58,39 +58,72 @@
 
             <header>
               <h2 class="entry-title">
-                <a href="/release0922.html" rel="bookmark"
-                   title="Permalink to Version 0.9.2.2 Released">Version 0.9.2.2 Released</a></h2>
+                <a href="/release094.html" rel="bookmark"
+                   title="Permalink to Version 0.9.4 Released">Version 0.9.4 Released</a></h2>
            
             </header>
             <footer class="post-info">
-              <abbr class="published" title="2016-08-16T00:00:00+02:00">
-                Tue 16 August 2016
+              <abbr class="published" title="2017-05-20T00:00:00+02:00">
+                Sat 20 May 2017
               </abbr>
               <address class="vcard author">
                 By <a class="url fn" href="/author/tarmo-johannes.html">Tarmo Johannes</a>
               </address>
             </footer><!-- /.post-info -->
             <div class="entry-content">
-              <p>The source code can be downloaded from: <a class="reference external" href="https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.2.2">https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.2.2</a></p>
-<p>Version 0.9.2.2 is a bug-fix release.</p>
+              <p>Glad about the new release!</p>
+<p>The source code and binaries can be downloaded from: <a class="reference external" href="https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.4">https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.4</a></p>
+<p>Version 0.9.4 fixes a number of bugs and adds some new convenience features. The author of most of the commits is <strong>Tarmo Johannes</strong>, the full-screen option of different panels has been written by <strong>Michael Gogins</strong>.</p>
+<p>See demo: .. youtube:: XIhGq2KBzo</p>
+<div class="section" id="new-features">
+<h2>New features</h2>
+<ul>
+<li><p class="first"><strong>Options are saved in runtime</strong> (on applying configuration changes in Confifuration dialog; opening or creating new documents), not only on exit -  so the settings are not lost if CsoundQt crashes.</p>
+</li>
+<li><dl class="first docutils">
+<dt>It is possible to set <strong>different panels to full screen</strong> (editor, manual, widgets and html panels) especially useful for smaller screens. Default shortcuts are:</dt>
+<dd><ul class="first last simple">
+<li>Crtl-Alt-0 (Alt-Cmd-0 for Mac): editor</li>
+<li>Crtl-Alt-1: help</li>
+<li>Ctrl-Alt-2: widgets</li>
+<li>Crtl-Alt-3: html panel</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>To activate the new shortcuts, you must reset the shorcuts in <em>Edit-&gt;Set Keyboard Shortcuts-&gt;Restore Defaults</em> or set them in the shortcuts editor by your own preference.</p>
+<ul>
+<li><p class="first">Handling <strong>Live Event Sheet windows is more flexible</strong>: you can open the  LE controller, create or open necessary LE sheets, then close LE conroller and keep working with the LE windows as you need.</p>
+</li>
+<li><p class="first">In Configuration-&gt;Editor there is now an option to set <strong>editor's background colour</strong>. The same colour is used also for Inspector, Scratchpad and Python Console. The font-color cannot be changed (for now) due to fixed higlighting colors of different keywords.   The background color of Console panel can be set from Configure-&gt;General.</p>
+</li>
+<li><p class="first"><strong>&quot;Add chn_k declaration&quot;</strong> in widgets' cotext menu - now it easy to add the chn_k lines for widget's channel to be used with chnget/chnset opcode.</p>
+</li>
+<li><p class="first">Added <strong>support for jack midi</strong> as Csound module (listing jack clients requires Csound 6.09)</p>
+</li>
+<li><p class="first">Experimental support for <strong>choosing midi module for internal RT-midi</strong> (Linux only): add line</p>
+<blockquote>
+<p>RunrtMidiApi=UNIX_JACK</p>
+</blockquote>
+</li>
+</ul>
+<p>or</p>
+<blockquote>
+RunrtMidiApi=LINUX_ALSA</blockquote>
+<p>to configuration file <cite>($HOME/.config/csound/qutecsound.conf)</cite>.</p>
+</div>
 <div class="section" id="fixes">
 <h2>Fixes</h2>
 <ul class="simple">
-<li>Fixed serious error on Linux that made CsoundQt crash when STK-opcode plugin was present but RAWWAVE_PATH was not set (typical when Csound was installed with package manager).</li>
-<li>Work and improvements on html5 support (Michael Gogins)</li>
-<li>Fixed build failure with Csound debugger enabled (Felipe Sateler)</li>
-<li>Work on different examples + some new examples (Joachim Heintz)</li>
-<li>Fixed Configuration dialog resizing so it cannot be out of screen any more</li>
-<li>Fixed crash on closing first tabs and using midi (midi-listeners' corrected removal, issue #211)</li>
-<li>Corrected auto-completion of functions (like int, ampdb etc issue #214)</li>
-<li>Removed (most of) lines causing &quot;Slot not found&quot; messages in command line output.</li>
-</ul>
-</div>
-<div class="section" id="miscellaneous">
-<h2>Miscellaneous</h2>
-<ul class="simple">
-<li>Thorough documentation on CsoundQt web-page <a class="reference external" href="http://csoundqt.github.io/pages/documentation.html">http://csoundqt.github.io/pages/documentation.html</a> (by Joachim Heintz)</li>
-<li>Link to the documentation in Help menu (shortcut F1)</li>
+<li>MIDI interfaces for CsoundQt internal MIDI are stored now by name, not port number -  this fixes error of opening wrong ports on nexts restart of the program when MIDI setting has changed. Also if the order of the MIDI devices has changed, the correct dvice is used for input/output.</li>
+<li>Fixed non-visible font color of widget channels on widget panel in editing mode.</li>
+<li>Fixed bug of black console background color on OSX 10.12</li>
+<li>Toolbar positions are saved and restored correctly</li>
+<li>Support for building with PuthonQt3.1 (OSX)</li>
+<li>Better switching between internal RT-midi and Csound midi modules.</li>
+<li>Fixed crash on using more than 255 tables.</li>
+<li>Latched event button with negative duration and named instrument (like 'i &quot;sound&quot; 0 -1') stops the sound correctly on release (requires Csound 6.09 to work).</li>
 </ul>
 <p>Tarmo Johannes <a class="reference external" href="mailto:trmjhnns&#64;gmail.com">trmjhnns&#64;gmail.com</a></p>
 </div>
