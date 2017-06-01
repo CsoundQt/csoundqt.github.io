@@ -13,7 +13,11 @@ The source code and binaries can be downloaded from: https://github.com/CsoundQt
 Version 0.9.4 fixes a number of bugs and adds some new convenience features. The author of most of the commits is **Tarmo Johannes**, the full-screen option of different panels has been written by **Michael Gogins**. 
 
 
-See demo: .. youtube:: XIhGq2KBzo
+See demo: 
+
+.. youtube:: _XIhGq2KBzo
+
+
 
 
 New features

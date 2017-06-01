@@ -2,8 +2,8 @@
 <feed xmlns="http://www.w3.org/2005/Atom"><title>CsoundQt</title><link href="/" rel="alternate"></link><link href="/feeds/tarmo-johannes.atom.xml" rel="self"></link><id>/</id><updated>2017-05-20T00:00:00+02:00</updated><entry><title>Version 0.9.4 Released</title><link href="/release094.html" rel="alternate"></link><updated>2017-05-20T00:00:00+02:00</updated><author><name>Tarmo Johannes</name></author><id>tag:,2017-05-20:release094.html</id><summary type="html">&lt;p&gt;Glad about the new release!&lt;/p&gt;
 &lt;p&gt;The source code and binaries can be downloaded from: &lt;a class="reference external" href="https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.4"&gt;https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.4&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Version 0.9.4 fixes a number of bugs and adds some new convenience features. The author of most of the commits is &lt;strong&gt;Tarmo Johannes&lt;/strong&gt;, the full-screen option of different panels has been written by &lt;strong&gt;Michael Gogins&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;See demo: .. youtube:: XIhGq2KBzo&lt;/p&gt;
-&lt;div class="section" id="new-features"&gt;
+&lt;p&gt;See demo:&lt;/p&gt;
+&lt;div class="youtube youtube-16x9"&gt;&lt;iframe src="https://www.youtube.com/embed/_XIhGq2KBzo" allowfullscreen seamless frameBorder="0"&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;div class="section" id="new-features"&gt;
 &lt;h2&gt;New features&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p class="first"&gt;&lt;strong&gt;Options are saved in runtime&lt;/strong&gt; (on applying configuration changes in Confifuration dialog; opening or creating new documents), not only on exit -  so the settings are not lost if CsoundQt crashes.&lt;/p&gt;
