@@ -58,7 +58,12 @@ Most of the widgets return numbers, but some (LineEdit and Button) can return st
     S_file invalue "filename"
     S_file chnget "filename"
 
-Whether you use [invalue](http://csound.github.io/docs/manual/invalue.html) or [chnget](http://csound.github.io/docs/manual/chnget.html), is more or less up to your preferences. Both are slightly different implemented (have a look at the Csound Manual for details). For passing long strings to Csound, `chnget` is currently preferable.
+Whether you use [invalue](http://csound.github.io/docs/manual/invalue.html) or [chnget](http://csound.github.io/docs/manual/chnget.html), is more or less up to your preferences. Both are slightly different implemented (have a look at the Csound Manual for details). For passing long strings to Csound, `chnget` is currently preferable. Also, the chnget/chnset system is much more effective for CsoundQt files which use a lot of widgets. Remember to declare the channels in the header of your csd file, for instance:
+
+    chn_S "filename", 3
+    chn_k "frequency", 3
+
+In the widget's submenu you will find an item "add chn_k to csd" which does this job for you. This declaration is in particular necessary if you want to receive the current values of the widgets on startup.
 
 The k-Variables in Csound, which get the numbers of any widget, will usually be smoothed, to avoid jumps or sudden transitions (in particular for amplitudes). This can be done easily with the `port` opcode. This is a typical code:
 
