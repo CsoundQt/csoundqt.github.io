@@ -4,17 +4,16 @@
 
         <title>Editor</title>
         <meta charset="utf-8" />
-        <link href="http://csoundqt.github.io/../feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="CsoundQt Full Atom Feed" />
 
 
         <!-- Mobile viewport optimized: j.mp/bplateviewport -->
         <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
 
-        <link rel="stylesheet" type="text/css" href="../theme/gumby.css" />
-        <link rel="stylesheet" type="text/css" href="../theme/style.css" />
-        <link rel="stylesheet" type="text/css" href="../theme/pygment.css" />
+        <link rel="stylesheet" type="text/css" href="/theme/gumby.css" />
+        <link rel="stylesheet" type="text/css" href="/theme/style.css" />
+        <link rel="stylesheet" type="text/css" href="/theme/pygment.css" />
 
-        <script src="../theme/js/libs/modernizr-2.6.2.min.js"></script>
+        <script src="/theme/js/libs/modernizr-2.6.2.min.js"></script>
 
 
 
@@ -31,14 +30,14 @@
         <div class="row">
 
           <header id="banner" class="body">
-                  <h1><a href="..">CsoundQt <strong></strong></a></h1>
+                  <h1><a href="">CsoundQt <strong></strong></a></h1>
           </header><!-- /#banner -->
 
             <div id="navigation" class="navbar row">
               <a href="#" gumby-trigger="#navigation &gt; ul" class="toggle"><i class="icon-menu"></i></a>
              
               <ul class="columns">
-                <li><a href="..">Home</a></li>
+                <li><a href="">Home</a></li>
 
                 <li><a href="/pages/about.html">About</a></li>
                 <li><a href="/pages/building.html">Building</a></li>
@@ -57,7 +56,7 @@
     <p>You can find a short description of all Menu Items in the <a href="csoundqt-menus.html">Menu</a> section of this documentation. This page focusses on some features of the CsoundQt Editor.</p>
 <h2>Code completion</h2>
 <p>When you type, for instance, the letters "tab", you will see different options for code completion:</p>
-<p><img alt="code completion" src="../images/doc_editor_01.png" /></p>
+<p><img alt="code completion" src="/images/doc_editor_01.png" /></p>
 <p>Choose one of them with the mouse or the arrow key. You have two choices now:<br />
 — <strong>tab</strong> will only complete the opcode name;<br />
 — <strong>return</strong> will also insert the arguments with the names found in the manual.</p>
@@ -67,18 +66,18 @@
 <p>You can also find a short info about the opcode at the bottom of the Editor's panel.</p>
 <h2>Code Graph</h2>
 <p>Select <em>Examples &gt; Getting Started &gt; Toots &gt; Toot 1</em>, and then <em>View &gt; View Code Graph</em>. You should see this drawing:</p>
-<p><img alt="code graph" src="../images/doc_editor_02.png" /></p>
+<p><img alt="code graph" src="/images/doc_editor_02.png" /></p>
 <p>It is not perfect, but quite useful to show the signal flow for simple csd files. If it is not working, try to set the graphviz dot application in <em>Configure &gt; External Programs &gt; Dot</em>.</p>
 <h2>Inspector</h2>
 <p>When you click on the <em>Inspector</em> button (or <em>View &gt; Inspector</em>), you get a panel which is quite useful for extended Csound code:</p>
-<p><img alt="inspector" src="../images/doc_editor_03.png" /></p>
+<p><img alt="inspector" src="/images/doc_editor_03.png" /></p>
 <p>You can navigate easily to any part of the code, or in the score.</p>
 <h2>Split View</h2>
 <p>Instead of the usual raw-text mode, CsoundQt offers a split view for both, the orchestra and the score. Go to <em>View &gt; Split View</em>, and you will see the score changed to a spread-sheet-like view, and the tags (CsOptions etc) disappeared. You can choose which sections to show or to hide:</p>
-<p><img alt="split view" src="../images/doc_editor_04.png" /></p>
+<p><img alt="split view" src="/images/doc_editor_04.png" /></p>
 <h2>Recompile / Evaluate Python Code</h2>
 <p>Since Csound 6, it is possible to change any instrument definition while Csound is running. CsoundQt provides an easy way of recompiling. This be your Csound code:</p>
-<div class="highlight"><pre><span></span>instr 1
+<div class="highlight"><pre>instr 1
     schedkwhen metro(1), 0, 0, 2, 0, 1
 endin
 instr 2
@@ -125,9 +124,9 @@ schedule(1,0,1000)
     </div>
 
 
-  <script src="../theme/js/libs/jquery-1.9.1.min.js"></script>
-  <script src="../theme/js/libs/gumby.min.js"></script>
-  <script src="../theme/js/plugins.js"></script>
+  <script src="/theme/js/libs/jquery-1.9.1.min.js"></script>
+  <script src="/theme/js/libs/gumby.min.js"></script>
+  <script src="/theme/js/plugins.js"></script>
 
 </body>
 </html>
