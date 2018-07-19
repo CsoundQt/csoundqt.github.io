@@ -11,7 +11,7 @@ The CsoundQt icon was made by Daniel Prieto.
 Translation
 -----------
 
-Spanish translation: Andrés Cabrera
+Spanish translation: Andrés Cabrera and Guillermo Senna 
 
 French translation: François Pinot
 
