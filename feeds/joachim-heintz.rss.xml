@@ -1,16 +1,3 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>CsoundQt</title><link>http://csoundqt.github.io/</link><description></description><lastBuildDate>Wed, 18 May 2016 00:00:00 +0200</lastBuildDate><item><title>Better Documentation</title><link>http://csoundqt.github.io/new_doc.html</link><description>&lt;p&gt;The documentation for CsoundQt has been updated and improved. Check out the items on &lt;a class="reference external" href="http://csoundqt.github.io/pages/documentation.html"&gt;Documentation&lt;/a&gt;:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://csoundqt.github.io/pages/overview.html"&gt;Overview&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://csoundqt.github.io/pages/csoundqt-menus.html"&gt;Menus&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://csoundqt.github.io/pages/configuring-csoundqt.html"&gt;Configure&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://csoundqt.github.io/pages/tips-and-tricks.html"&gt;Tips and Tricks&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://csoundqt.github.io/pages/editor.html"&gt;Editor&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://csoundqt.github.io/pages/widgets.html"&gt;Widgets&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://csoundqt.github.io/pages/run.html"&gt;Run&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://csoundqt.github.io/pages/live-event-sheet.html"&gt;Live Event Sheet&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://csoundqt.github.io/pages/python.html"&gt;PythonQt&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://csoundqt.github.io/pages/utilities.html"&gt;Utilities&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Thanks for reporting mistakes and suggestions to the &lt;a class="reference external" href="https://github.com/CsoundQt/CsoundQt/issues"&gt;CsoundQt Tracker&lt;/a&gt;!&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Joachim Heintz</dc:creator><pubDate>Wed, 18 May 2016 00:00:00 +0200</pubDate><guid isPermaLink="false">tag:csoundqt.github.io,2016-05-18:new_doc.html</guid><category>doc</category></item></channel></rss>
+<rss version="2.0"><channel><title>CsoundQt - Joachim Heintz</title><link>/</link><description></description><lastBuildDate>Wed, 18 May 2016 00:00:00 +0200</lastBuildDate><item><title>Better Documentation</title><link>/new_doc.html</link><description>&lt;p class="first last"&gt;New descriptions at the &lt;a class="reference external" href="http://csoundqt.github.io/pages/documentation.html"&gt;Documentation site&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Joachim Heintz</dc:creator><pubDate>Wed, 18 May 2016 00:00:00 +0200</pubDate><guid isPermaLink="false">tag:None,2016-05-18:/new_doc.html</guid><category>doc</category></item></channel></rss>

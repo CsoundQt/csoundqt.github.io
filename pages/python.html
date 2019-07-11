@@ -4,17 +4,16 @@
 
         <title>Python</title>
         <meta charset="utf-8" />
-        <link href="http://csoundqt.github.io/../feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="CsoundQt Full Atom Feed" />
 
 
         <!-- Mobile viewport optimized: j.mp/bplateviewport -->
         <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
 
-        <link rel="stylesheet" type="text/css" href="../theme/gumby.css" />
-        <link rel="stylesheet" type="text/css" href="../theme/style.css" />
-        <link rel="stylesheet" type="text/css" href="../theme/pygment.css" />
+        <link rel="stylesheet" type="text/css" href="/theme/gumby.css" />
+        <link rel="stylesheet" type="text/css" href="/theme/style.css" />
+        <link rel="stylesheet" type="text/css" href="/theme/pygment.css" />
 
-        <script src="../theme/js/libs/modernizr-2.6.2.min.js"></script>
+        <script src="/theme/js/libs/modernizr-2.6.2.min.js"></script>
 
 
 
@@ -31,14 +30,14 @@
         <div class="row">
 
           <header id="banner" class="body">
-                  <h1><a href="..">CsoundQt <strong></strong></a></h1>
+                  <h1><a href="">CsoundQt <strong></strong></a></h1>
           </header><!-- /#banner -->
 
             <div id="navigation" class="navbar row">
               <a href="#" gumby-trigger="#navigation &gt; ul" class="toggle"><i class="icon-menu"></i></a>
              
               <ul class="columns">
-                <li><a href="..">Home</a></li>
+                <li><a href="">Home</a></li>
 
                 <li><a href="/pages/about.html">About</a></li>
                 <li><a href="/pages/building.html">Building</a></li>
@@ -57,7 +56,7 @@
     <p><em>(This page has been taken from <a href="http://floss.booktype.pro/csound/c-python-in-csoundqt/">chapter 12C</a> in the <a href="http://floss.booktype.pro/csound/">Csound FLOSS Manual</a>.)</em></p>
 <p>If CsoundQt is built with PythonQt support,  it enables a lot of new possibilities, mostly in three main fields: interaction with the CsoundQt interface, interaction with widgets and using classes from Qt libraries to build custom interfaces in python.</p>
 <p>If you start CsoundQt and can open the panels "Python Console" and "Python Scratch Pad", you are ready to go. </p>
-<p><img alt="python scratch pad" src="../images/12C_00.png" /></p>
+<p><img alt="python scratch pad" src="/images/12C_00.png"></p>
 <h2>The CsoundQt Python Object</h2>
 <p>As CsoundQt has formerly been called QuteCsound, this name can still be found in the sources. The QuteCsound object (called PyQcsObject in the sources) is the interface for scripting CsoundQt. All declarations of the class can be found in the file pyqcsobject.h in the sources.</p>
 <p>It enables the control of a large part of CsoundQt's possibilities from the python interpreter, the python scratchpad, from scripts or from inside of a running Csound file via Csound's python opcodes.</p>
@@ -74,7 +73,7 @@
 <p>If you have CsoundQt running on your computer, you should type the following code examples in the Python Console (if only one line) or the Python Scratch Pad (if more than one line of code).</p>
 <h3>Create or Load a csd File</h3>
 <p>Type <code>q.newDocument('cs_floss_1.csd')</code> in your Python Console and hit the Return key. This will create a new csd file named "cs_floss_1.csd" in your working directory. And it also returns an integer (in the screenshot below: 3) as index for this file. </p>
-<p><img alt="csd file generation" src="../images/12C_01.png" /></p>
+<p><img alt="csd file generation" src="/images/12C_01.png"></p>
 <p>If you close this file and then execute the line <code>q.loadDocument('cs_floss_1.csd')</code>, you should see the file again as tab in CsoundQt.</p>
 <p>Let us have a look how these two methods <code>newDocument</code> and <code>loadDocument</code> are described in the sources:</p>
 <div class="highlight"><pre><span></span>int newDocument(QString name)
@@ -153,7 +152,7 @@ i 1 0 10
 
 
 <p>Now get the index of these two tabs in executing <code>q.getDocument('cs_floss_1.csd')</code> resp. <code>q.getDocument('cs_floss_2.csd')</code> . This will show something like this:</p>
-<p><img alt="csd index" src="../images/12C_02.png" /></p>
+<p><img alt="csd index" src="/images/12C_02.png"></p>
 <p>So in my case the indices are 3 and 4.5  Now you can start, pause and stop any of these files with tasks like these:</p>
 <div class="highlight"><pre><span></span>q.play(3)
 q.play(4)
@@ -163,7 +162,7 @@ q.stop(4)
 
 
 <p>If you have checked "Allow simultaneous play" in CsoundQt's Configure-&gt;General ...</p>
-<p><img alt="allow simultaneous" src="../images/12C_03.png" /></p>
+<p><img alt="allow simultaneous" src="/images/12C_03.png"></p>
 <p>.. you should be able to run both csds simultaneously. To stop all running files, use:</p>
 <div class="highlight"><pre><span></span>q.stopAll()
 </pre></div>
@@ -194,7 +193,7 @@ while q.getFileName(index):
 </pre></div>
 
 
-<p>Which returns for instance:<br />
+<p>Which returns for instance:<br>
     index = 0
     File Name = /home/jh/Joachim/Stuecke/30Carin/csound/130328.csd
     File Path = /home/jh/Joachim/Stuecke/30Carin/csound
@@ -330,9 +329,9 @@ i 1 0 10 ;will be overwritten by the python score generator
 
 
 <p>The properties dialog of the label pops up. Type "Hello Label!" or something like this as text. </p>
-<p><img alt="hello label" src="../images/12C_04.png" /></p>
+<p><img alt="hello label" src="/images/12C_04.png"></p>
 <p>When you click "Ok", you will see the label widget in the panel, and a strange unicode string as return value in the Python Console: </p>
-<p><img alt="strange unicode" src="../images/12C_05.png" /></p>
+<p><img alt="strange unicode" src="/images/12C_05.png"></p>
 <p>The string <em>u'{3a171aa2-4cf8-4f05-9f30-172863909f56}'</em> is a "universally unique identifier" (uuid). Each widget can be accessed by this ID. </p>
 <h3>Specifying the Common Properties as Arguments</h3>
 <p>Instead of having a live talk with the properties dialog, we can specify all properties as arguments for the createNewLabel method:</p>
@@ -341,7 +340,7 @@ i 1 0 10 ;will be overwritten by the python score generator
 
 
 <p>This should be the result: </p>
-<p><img alt="set props" src="../images/12C_06.png" /></p>
+<p><img alt="set props" src="/images/12C_06.png"></p>
 <p>A new label has been created—without opening the properties dialog—at position x=200 y=1008 with the name "second_label". If you want to create a widget not in the active document, but in another tab, you can also specify the tab index. This command will create a widget at the same position and with the same name in the first tab:</p>
 <div class="highlight"><pre><span></span>q.createNewLabel(200, 100, &quot;second_label&quot;, 0)
 </pre></div>
@@ -353,13 +352,13 @@ i 1 0 10 ;will be overwritten by the python score generator
 </pre></div>
 
 
-<p><img alt="create display" src="../images/12C_07.png" /></p>
+<p><img alt="create display" src="/images/12C_07.png"></p>
 <p>And this sets the text to a new string:</p>
 <div class="highlight"><pre><span></span>q.setWidgetProperty(&quot;disp_chan_01&quot;, &quot;QCS_label&quot;, &quot;Hey Joe!&quot;)
 </pre></div>
 
 
-<p><img alt="create text" src="../images/12C_08.png" /></p>
+<p><img alt="create text" src="/images/12C_08.png"></p>
 <p>The <code>setWidgetProperty</code> method needs the ID of a widget first. This can be expressed either as channel name ("disp_chan_01") as in the command above, or as uuid. As I got the string <em>u'{a71c0c67-3d54-4d4a-88e6-8df40070a7f5}'</em> as uuid, I can also write:</p>
 <div class="highlight"><pre><span></span>q.setWidgetProperty(u&#39;{a71c0c67-3d54-4d4a-88e6-8df40070a7f5}&#39;, &quot;QCS_label&quot;, &quot;Hey Joeboe!&quot;)
 </pre></div>
@@ -370,7 +369,7 @@ i 1 0 10 ;will be overwritten by the python score generator
 </pre></div>
 
 
-<p><img alt="fontsize" src="../images/12C_09.png" /></p>
+<p><img alt="fontsize" src="/images/12C_09.png"></p>
 <h3>Getting the Property Names and Values</h3>
 <p>You may have asked how to know that the visible text of a Display widget is called "QCS_label" and the fontsize "QCS_fontsize". If you do not know the name of a property, ask CsoundQt for it via the function <code>listWidgetProperties</code>:</p>
 <div class="highlight"><pre><span></span>py&gt; q.listWidgetProperties(&quot;disp_chan_01&quot;)
@@ -414,7 +413,7 @@ for property in properties:
 </pre></div>
 
 
-<p><img alt="widget uuid" src="../images/12C_10.png" /></p>
+<p><img alt="widget uuid" src="/images/12C_10.png"></p>
 <p>As always, the uuid strings of other csd tabs can be accessed via the index. </p>
 <h3>Some Examples for Creating and Modifying Widgets</h3>
 <p>Create a new slider with the channel name "level" at position 10,10 in the (already open but not necessarily active) document "test.csd":</p>
@@ -510,7 +509,7 @@ py&gt; q.setWidgetProperty(&quot;message&quot;, &quot;QCS_label&quot;, &quot;Non
 
 <h3>Presets</h3>
 <p>Now right-click in the widget panel and choose Store Preset -&gt; New Preset: </p>
-<p><img alt="preset" src="../images/12C_11.png" /></p>
+<p><img alt="preset" src="/images/12C_11.png"></p>
 <p>You can (but need not) enter a name for the preset. The important thing here is the number of the preset (here 0). - Now change the value of the slider and the text of the display widget. Save again as preset, now being preset 1. - Now execute this:</p>
 <div class="highlight"><pre><span></span>q.loadPreset(0)
 </pre></div>
@@ -972,9 +971,9 @@ void registerProcessCallback(QString func, int skipPeriods = 0, int index = -1)
     </div>
 
 
-  <script src="../theme/js/libs/jquery-1.9.1.min.js"></script>
-  <script src="../theme/js/libs/gumby.min.js"></script>
-  <script src="../theme/js/plugins.js"></script>
+  <script src="/theme/js/libs/jquery-1.9.1.min.js"></script>
+  <script src="/theme/js/libs/gumby.min.js"></script>
+  <script src="/theme/js/plugins.js"></script>
 
 </body>
 </html>

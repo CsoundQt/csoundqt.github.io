@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>CsoundQt</title><link href="http://csoundqt.github.io/" rel="alternate"></link><link href="http://csoundqt.github.io/feeds/joachim-heintz.atom.xml" rel="self"></link><id>http://csoundqt.github.io/</id><updated>2016-05-18T00:00:00+02:00</updated><entry><title>Better Documentation</title><link href="http://csoundqt.github.io/new_doc.html" rel="alternate"></link><published>2016-05-18T00:00:00+02:00</published><updated>2016-05-18T00:00:00+02:00</updated><author><name>Joachim Heintz</name></author><id>tag:csoundqt.github.io,2016-05-18:new_doc.html</id><summary type="html">&lt;p&gt;The documentation for CsoundQt has been updated and improved. Check out the items on &lt;a class="reference external" href="http://csoundqt.github.io/pages/documentation.html"&gt;Documentation&lt;/a&gt;:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>CsoundQt - Joachim Heintz</title><link href="/" rel="alternate"></link><link href="/feeds/joachim-heintz.atom.xml" rel="self"></link><id>/</id><updated>2016-05-18T00:00:00+02:00</updated><entry><title>Better Documentation</title><link href="/new_doc.html" rel="alternate"></link><published>2016-05-18T00:00:00+02:00</published><updated>2016-05-18T00:00:00+02:00</updated><author><name>Joachim Heintz</name></author><id>tag:None,2016-05-18:/new_doc.html</id><summary type="html">&lt;p class="first last"&gt;New descriptions at the &lt;a class="reference external" href="http://csoundqt.github.io/pages/documentation.html"&gt;Documentation site&lt;/a&gt;&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;The documentation for CsoundQt has been updated and improved. Check out the items on &lt;a class="reference external" href="http://csoundqt.github.io/pages/documentation.html"&gt;Documentation&lt;/a&gt;:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://csoundqt.github.io/pages/overview.html"&gt;Overview&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://csoundqt.github.io/pages/csoundqt-menus.html"&gt;Menus&lt;/a&gt;&lt;/li&gt;
@@ -13,4 +14,4 @@
 &lt;li&gt;&lt;a class="reference external" href="http://csoundqt.github.io/pages/utilities.html"&gt;Utilities&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Thanks for reporting mistakes and suggestions to the &lt;a class="reference external" href="https://github.com/CsoundQt/CsoundQt/issues"&gt;CsoundQt Tracker&lt;/a&gt;!&lt;/p&gt;
-</summary><category term="doc"></category></entry></feed>
+</content><category term="doc"></category></entry></feed>
