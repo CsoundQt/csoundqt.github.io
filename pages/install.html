@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-        <title>Download</title>
+        <title>Install</title>
         <meta charset="utf-8" />
 
 
@@ -40,24 +40,39 @@
                 <li><a href="..">Home</a></li>
 
                 <li><a href="/pages/about.html">About</a></li>
-                <li><a href="/pages/building.html">Building</a></li>
-                <li><a href="/pages/contribute.html">Contribute</a></li>
+                <li><a href="/pages/install.html">Install</a></li>
                 <li><a href="/pages/documentation.html">Documentation</a></li>
-                <li><a href="/pages/download.html">Download</a></li>
+                <li><a href="/pages/contribute.html">Contribute</a></li>
                 <li><a href="/pages/people.html">People</a></li>
                 <li><a href="/pages/help.html">Help</a></li>
 
               </ul>
             </div>
 
-    <h1>Download</h1>
+    <h1>Install</h1>
     
 
-    <p>CsoundQt installers for Mac and Windows are here:
-&lt;<a class="reference external" href="https://github.com/CsoundQt/CsoundQt/releases">https://github.com/CsoundQt/CsoundQt/releases</a>&gt;</p>
-<p>For Debian / Ubuntu, there is a recent CsoundQt package at <a class="reference external" href="https://packages.debian.org/unstable/csoundqt">Debian Unstable</a>. You can download and install it in the usual way (dpkg -i).</p>
-<p>CsoundQt can be built with QtCreator on all platforms. Instructions are in the <a class="reference external" href="https://github.com/CsoundQt/CsoundQt/wiki">CsoundQt Wiki</a>.</p>
-
+    <h2>Install Csound First!</h2>
+<p>CsoundQt is a frontend for Csound, so <strong>Csound needs to be installed first.</strong><br>
+<a href="https://csound.com/download"><em>-&gt; Csound download page</em></a></p>
+<h2>Mac</h2>
+<ol>
+<li>Download the <strong>CsoundQt-[Version Number]-MacOS.dmg</strong> from <a href="https://github.com/CsoundQt/CsoundQt/releases">https://github.com/CsoundQt/CsoundQt/releases</a>.<br>
+<em>NOTE: Choose the plain version (without "pythonqt") for normal use.</em>  </li>
+<li>Open the <em>.dmg</em> and drag the green CsoundQt application into the Applications folder.</li>
+</ol>
+<h2>Windows</h2>
+<ol>
+<li>Download the <strong>CsoundQt-[Version Number]-Win64.zip</strong> from <a href="https://github.com/CsoundQt/CsoundQt/releases">https://github.com/CsoundQt/CsoundQt/releases</a>.  </li>
+<li>Unzip the file.  </li>
+<li>Go to the <em>bin</em> folder.  </li>
+<li>Select and copy the whole content of the <em>bin</em> folder.  </li>
+<li>Go to <em>C: -&gt; Program Files -&gt; Csound6_x64 -&gt; bin</em> and paste all the copied files here.  </li>
+<li>Send "CsoundQt-d-html-cs6.exe" from this folder as a shortcut to your desktop if you like. </li>
+</ol>
+<h2>Linux</h2>
+<p>CsoundQt binaries are in most of the package managers.</p>
+<p>These binaries might be built without <em>RtMidi</em> and/or without <em>PythonQt</em> support. If you need to work with it, you should <strong>build CsoundQt</strong>. Instructions can be found at <a href="https://github.com/CsoundQt/CsoundQt/wiki">https://github.com/CsoundQt/CsoundQt/wiki</a> and in the <a href="https://github.com/CsoundQt/CsoundQt/blob/master/BUILDING.md">BUILDING.md</a> file in the sources.</p>
 
        </div><!-- /.row -->
     </div><!-- /.container -->

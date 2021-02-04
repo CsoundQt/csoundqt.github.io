@@ -61,8 +61,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 html {
-  font-size: 16px;
-  line-height: 1.625em;
+  font-size: 18px;
+  line-height: 1.5em;
 }
 
 html * {
@@ -73,7 +73,7 @@ html * {
 
 body {
   background: white;
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-weight: 400;
   color: #555555;
   position: relative;
@@ -94,10 +94,10 @@ html, body {
 }
 
 .ie9 {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
 }
 .ie9 * {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
 }
 
 .hide {
@@ -132,8 +132,8 @@ html, body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Open Sans";
-  font-weight: 300;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
   color: #444444;
   text-rendering: optimizeLegibility;
   padding-top: 0.273em;
@@ -150,8 +150,8 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   }
 }
 h1 {
-  font-size: 68px;
-  font-size: 4.25rem;
+  font-size: 42px;
+  font-size: 2.625rem;
 }
 h1.xlarge {
   font-size: 110px;
@@ -167,18 +167,18 @@ h1.absurd {
 }
 
 h2 {
-  font-size: 42px;
-  font-size: 2.625rem;
-}
-
-h3 {
   font-size: 30px;
   font-size: 1.875rem;
 }
 
+h3 {
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+
 h4 {
-  font-size: 26px;
-  font-size: 1.625rem;
+  font-size: 20px;
+  font-size: 1.125rem;
 }
 
 h5 {
@@ -214,9 +214,9 @@ h6 {
   
   ======================================================*/
 p {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   font-size: 1rem;
   margin-bottom: 13px;
   line-height: 1.625em;
@@ -308,7 +308,7 @@ em {
 }
 
 strong {
-  font-weight: 700;
+  font-weight: 600;
   line-height: inherit;
 }
 

@@ -40,10 +40,9 @@ DISPLAY_CATEGORIES_ON_MENU = False
 
 MENUITEMS = (
     ('About', '/pages/about.html'),
-    ('Building', '/pages/building.html'),
-    ('Contribute', '/pages/contribute.html'),
+    ('Install', '/pages/install.html'),
     ('Documentation', '/pages/documentation.html'),
-    ('Download', '/pages/download.html'),
+    ('Contribute', '/pages/contribute.html'),
     ('People', '/pages/people.html'),
     ('Help', '/pages/help.html'),
 )
