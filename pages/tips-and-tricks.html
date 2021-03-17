@@ -61,6 +61,17 @@
 <p>Another frequent reason for crashes or hangs are <strong>problems with the Audio or MIDI settings</strong>. Open the <em>Configure</em> panel, and have a look at the <em>Run</em> tab. Try to set the <em>MIDI Input Device</em> to <strong>none</strong> (also the <em>Output Device</em>), and <strong>uncheck</strong> <em>Use Csound MIDI modules</em>. For <strong>Audio</strong>, check whether the <em>RT Audio Module</em> is set properly (try portaudio if you are not sure). Set the <em>Audio Input Device</em> and <em>Output Device</em> to -adc (input) and -odac (output). See the <a href="configuring-csoundqt.html">Configure Doc Page</a> for more info.</p>
 </li>
 <li>
+<p>If this error message appears ...<br>
+<code>*** PortAudio: error: -9998: Invalid number of channels</code><br>
+     ... it can have different reasons and fixes:  </p>
+<ul>
+<li>You are using stereo output, but the input device (for instance internal microphone on a Mac) is only mono.<br>
+       Fix: Either disable audio input, or add the line <code>nchnls_i = 1</code> to your .csd file.  </li>
+<li>You are using more channels in your .csd file than you have available in your sound card.<br>
+       Fix: Reduce the <em>nchnls</em> to what is possible, or use Jack.</li>
+</ul>
+</li>
+<li>
 <p>If you experience bad crashes and none of the receipes helped, try <strong>Help &gt; Reset Preferences</strong>.</p>
 </li>
 <li>
