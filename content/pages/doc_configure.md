@@ -115,7 +115,9 @@ These options determine CsoundQt's behaviour if you push the *Run* button (or se
 
 > This option selects the device you are using for real-time input, for instance from a microphone. (Note that you must have ticked "Use CsoundQt options" if you want Csound to use your selection.)   
 > The usual (and most stable) choice here is *adc*. In this case Csound will use the device which has been selected as standard by your operating system.   
-> If you want to use another device instead, click on the button at the right side. You will find a list of available devices and can choose one of them. 
+> If you want to use another device instead, click on the button at the right side. You will find a list of available devices and can choose one of them.  
+> If you don't have realtime input, choose "no input".  
+> NOTE: The portaudio module usually requires the same number of input and output channels. Some computers have 2 output channels but a microphone with only 1 input channel. In this case you will get the error: `*** PortAudio: error: -9998: Invalid number of channels`. Use `nchnls_i = 1` in your csd header in this case.
  
 
 **Output device** 

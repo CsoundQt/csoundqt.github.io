@@ -2,6 +2,10 @@
 :date: 2013-09-20
 :lang: en
 
+Trouble shooting
+----------------
+Have a look at the `Tips and Tricks <https://csoundqt.github.io/pages/tips-and-tricks.html>`_ site in the `Documentation pages <|filename|doc.md>`_ if you experience an issue with CsoundQt.
+
 
 Mailing list
 ------------
