@@ -76,13 +76,13 @@
 <p><img alt="split view" src="../images/doc_editor_04.png"></p>
 <h2>Recompile / Evaluate Python Code</h2>
 <p>Since Csound 6, it is possible to change any instrument definition while Csound is running. CsoundQt provides an easy way of recompiling. This be your Csound code:</p>
-<div class="highlight"><pre><span></span><span class="n">instr</span> <span class="mi">1</span>
-    <span class="n">schedkwhen</span> <span class="n">metro</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
-<span class="n">endin</span>
-<span class="n">instr</span> <span class="mi">2</span>
-    <span class="n">prints</span> <span class="ss">&quot;Hallo\n&quot;</span>
-<span class="n">endin</span>
-<span class="n">schedule</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>
+<div class="highlight"><pre><span></span>instr 1
+    schedkwhen metro(1), 0, 0, 2, 0, 1
+endin
+instr 2
+    prints &quot;Hallo\n&quot;
+endin
+schedule(1,0,1000)
 </pre></div>
 
 

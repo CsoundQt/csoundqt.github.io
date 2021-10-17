@@ -1,18 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>CsoundQt - Tarmo Johannes</title><link href="http://csoundqt.github.io/" rel="alternate"></link><link href="http://csoundqt.github.io/feeds/tarmo-johannes.atom.xml" rel="self"></link><id>http://csoundqt.github.io/</id><updated>2019-07-11T00:00:00+02:00</updated><entry><title>Version 0.9.6 Released</title><link href="http://csoundqt.github.io/release096.html" rel="alternate"></link><published>2019-07-11T00:00:00+02:00</published><updated>2019-07-11T00:00:00+02:00</updated><author><name>Tarmo Johannes</name></author><id>tag:csoundqt.github.io,2019-07-11:/release096.html</id><summary type="html">&lt;p&gt;The source code and binaries can be downloaded from: &lt;a href="https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.6"&gt;https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.6&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>CsoundQt - Tarmo Johannes</title><link href="http://csoundqt.github.io/" rel="alternate"></link><link href="http://csoundqt.github.io/feeds/tarmo-johannes.atom.xml" rel="self"></link><id>http://csoundqt.github.io/</id><updated>2020-07-03T00:00:00+02:00</updated><entry><title>Version 0.9.8.1 Released</title><link href="http://csoundqt.github.io/release098.html" rel="alternate"></link><published>2020-07-03T00:00:00+02:00</published><updated>2020-07-03T00:00:00+02:00</updated><author><name>Tarmo Johannes</name></author><id>tag:csoundqt.github.io,2020-07-03:/release098.html</id><summary type="html">&lt;p&gt;&lt;img alt="" src="https://i.imgur.com/dStJTsQ.png"&gt;&lt;/p&gt;
+&lt;p&gt;Version 0.9.8 is a major release, with multiple changes. Author of most of the improvements is &lt;strong&gt;Edoardo Mogillansky&lt;/strong&gt;. Greatest thanks!&lt;/p&gt;
+&lt;p&gt;There is an update with some fixes, v0.9.8.1, see the list of fixes below, that is meant for the final use.  &lt;/p&gt;
+&lt;p&gt;The source and binaries …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="" src="https://i.imgur.com/dStJTsQ.png"&gt;&lt;/p&gt;
+&lt;p&gt;Version 0.9.8 is a major release, with multiple changes. Author of most of the improvements is &lt;strong&gt;Edoardo Mogillansky&lt;/strong&gt;. Greatest thanks!&lt;/p&gt;
+&lt;p&gt;There is an update with some fixes, v0.9.8.1, see the list of fixes below, that is meant for the final use.  &lt;/p&gt;
+&lt;p&gt;The source and binaries can be downloaded from: &lt;a href="https://github.com/CsoundQt/CsoundQt/releases/tag/v0.9.8.1"&gt;https://github.com/CsoundQt/CsoundQt/releases/tag/v0.9.8.1&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This version of &lt;strong&gt;CsoundQt&lt;/strong&gt; works with &lt;strong&gt;csound&lt;/strong&gt; &lt;code&gt;6.14&lt;/code&gt; or higher&lt;/p&gt;
+&lt;h3&gt;New in version 0.9.8:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;New icon theme based on KDE's &lt;em&gt;"breeze"&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;New color themes (for text, background and syntax highlighting): classic, light, dark.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;New flat style and features for the knob widget&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;New "Table Plot" widget allows to efficiently plot tables in real time&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Graph widget (spectrum, signal display) has been &lt;strong&gt;highly optimized&lt;/strong&gt;, drawing is between &lt;strong&gt;10x and 20x faster&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Graph widget fixed for the use together with display opcode. Many display instances can be used simultaneously for one or multiple widgets without any loss in performance.&lt;/li&gt;
+&lt;li&gt;Graph widget for tables &lt;strong&gt;optimized for big tables and soundfiles&lt;/strong&gt;,  detects the actual size of the graph and does not draw superfluous points&lt;/li&gt;
+&lt;li&gt;Spectrogram widget now reacts to different sample rates, gained a better grid and zoom. It can be customized to show/hide grid, scrollbars, menu, etc.&lt;/li&gt;
+&lt;li&gt;Spectrogram widget can control the zoom with keyboard shortcuts (+, -). Also scrollbars can be hidden (user can scroll with scrollwheel/arrow keys). &lt;/li&gt;
+&lt;li&gt;Spectrum graph: a graph can bow be frozen; &lt;strong&gt;clicking on a peak will show the peaks frequency 
+    with resolution independent of the fft size&lt;/strong&gt; of the corresponding dispfft &lt;/li&gt;
+&lt;li&gt;New icon / new splashscreen&lt;/li&gt;
+&lt;li&gt;Meter / Controller widget gained many options to control its aspect (border, line width, background, etc)&lt;/li&gt;
+&lt;li&gt;New action to test the audio setup&lt;/li&gt;
+&lt;li&gt;Text labels allow to set a vertical alignment&lt;/li&gt;
+&lt;li&gt;New settings dialogs, allows to use the current system sample rate and set the
+  number of channels without the need to modify the .csd&lt;/li&gt;
+&lt;li&gt;Help panel received a more streamlined look&lt;/li&gt;
+&lt;li&gt;More streamlined toolbar, removed toolbar buttons which are not commonly used
+  (these can still be reached from the menus), icon size can be set in the preferences, toolbar can be locked&lt;/li&gt;
+&lt;li&gt;Many widgets gained the possibility to set their value by double-clicking (knob, scroll number)&lt;/li&gt;
+&lt;li&gt;Now it is possible to move the widgets with the keyboard in edit mode. The arrow keys move the
+  widgets within a grid of 5 pixels (with the alt key widgets are nudged by 1 pixel).&lt;/li&gt;
+&lt;li&gt;More nuanced syntax highlighting&lt;/li&gt;
+&lt;li&gt;Syntax highlighting for user defined opcodes. The work for this lays the ground for features like autocomplete and code hints for UDOs.&lt;/li&gt;
+&lt;li&gt;Button widget can set the size of the font&lt;/li&gt;
+&lt;li&gt;Checkbox can be resized if the platform allows this (works on linux and windows, macOS uses native checkboxes which are fixed in size)&lt;/li&gt;
+&lt;li&gt;Added a setting to control the update rate of the gui.&lt;/li&gt;
+&lt;li&gt;New "Spectrum Analyzer" utility example&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Initial support for color schemes, allowing csoundqt to use a dark theme matching the os&lt;/strong&gt; (not yet available in this release). &lt;/li&gt;
+&lt;li&gt;New action "goto line"&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Race condition fixed which would cause CsoundQt to crash when started/stopped in very fast succession&lt;/li&gt;
+&lt;li&gt;Locking issues fixed which prevented CsoundQt to stop properly when a graph widget was used.&lt;/li&gt;
+&lt;li&gt;Saving issues where fixed. New option to prevent CsoundQt from asking if user wants to save a temporary file before playing.&lt;/li&gt;
+&lt;li&gt;in macOS startup delay has been somewhat reduced.&lt;/li&gt;
+&lt;li&gt;Wrong rendering for the Meter / Controller widget fixed is macOS&lt;/li&gt;
+&lt;li&gt;Better font defaults for the different platforms&lt;/li&gt;
+&lt;li&gt;CTRL-F now searches in manual if help dock is focused.&lt;/li&gt;
+&lt;li&gt;Search bar is made visible and focused when clicked on search icon in the help widget&lt;/li&gt;
+&lt;li&gt;Fixed a bug where activating the widgets panel when the widgets are in a separate window would
+  result in an empty widgets panel or, worse, a crash.&lt;/li&gt;
+&lt;li&gt;Fixed selection and dragging of widgets. Now responds to usual keyboard modifiers, such as CTRL toggling selection, and shift adding an item to a selection, etc.&lt;/li&gt;
+&lt;li&gt;Changing rt audio module now clears the device selection&lt;/li&gt;
+&lt;li&gt;Fixes last used dir in linux falling back to /tmp&lt;/li&gt;
+&lt;li&gt;macOS: fix to background color in widgets panel&lt;/li&gt;
+&lt;li&gt;Better options for selecting an audio device if jack is selected as module (now the default does not connect to other ports other than the system)&lt;/li&gt;
+&lt;li&gt;In the config dialog, if jack is not running then this is shown in the menu and jack can't be selected&lt;/li&gt;
+&lt;li&gt;scope now has much lower latency&lt;/li&gt;
+&lt;li&gt;native toolbar in macOS&lt;/li&gt;
+&lt;li&gt;Less intrusive line numbers, adjust colors to the color theme&lt;/li&gt;
+&lt;li&gt;Each platform has own defaults for fonts, sizes, etc., resulting in a better first time experience&lt;/li&gt;
+&lt;li&gt;Lots of fixes in syntax highlighting&lt;/li&gt;
+&lt;li&gt;Audio device is reset to default whenever the audio backend is modified&lt;/li&gt;
+&lt;li&gt;Full-screen issues have been mostly resolved. Window state is remembered.&lt;/li&gt;
+&lt;li&gt;Graph widget would cause a crash when adding a new table if a spectrum display was selected. This was fixed.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Atsa&lt;/code&gt; defaults were corrected&lt;/li&gt;
+&lt;li&gt;Latched button acting wrong on event with negative duration fixed&lt;/li&gt;
+&lt;li&gt;Application paths were fixed for macOS&lt;/li&gt;
+&lt;li&gt;Toolbar rendering problems in mac were fixed, reverting back from using mac's unified toolbar. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h2&gt;Fixes in 0.9.8.1&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;toolbar in mac now renders correctly, better padding&lt;/li&gt;
+&lt;li&gt;virtual keyboard back in toolbar&lt;/li&gt;
+&lt;li&gt;table plot not longer upside down&lt;/li&gt;
+&lt;li&gt;graph widget changes tables as advertised when given a negative number&lt;/li&gt;
+&lt;li&gt;macOS: many keyboard shortcuts now work out of the box&lt;/li&gt;
+&lt;/ul&gt;</content><category term="release"></category></entry><entry><title>Version 0.9.6 Released</title><link href="http://csoundqt.github.io/release096.html" rel="alternate"></link><published>2019-07-11T00:00:00+02:00</published><updated>2019-07-11T00:00:00+02:00</updated><author><name>Tarmo Johannes</name></author><id>tag:csoundqt.github.io,2019-07-11:/release096.html</id><summary type="html">&lt;p&gt;The source code and binaries can be downloaded from: &lt;a href="https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.6"&gt;https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.6&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;version 0.9.6 introduces &lt;strong&gt;HTML support&lt;/strong&gt; on all supported platforms, enables &lt;strong&gt;exporting widgets to QML code&lt;/strong&gt; (to be used with &lt;a href="https://github.com/tarmoj/CsoundRemote/"&gt;CsoundRemote&lt;/a&gt;) and   fixes a number of bugs.&lt;/p&gt;
 &lt;p&gt;See release notes …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The source code and binaries can be downloaded from: &lt;a href="https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.6"&gt;https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.6&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;version 0.9.6 introduces &lt;strong&gt;HTML support&lt;/strong&gt; on all supported platforms, enables &lt;strong&gt;exporting widgets to QML code&lt;/strong&gt; (to be used with &lt;a href="https://github.com/tarmoj/CsoundRemote/"&gt;CsoundRemote&lt;/a&gt;) and   fixes a number of bugs.&lt;/p&gt;
 &lt;p&gt;See release notes:&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/CsoundQt/CsoundQt/blob/develop/release_notes/Release%20notes%200.9.6.md"&gt;https://github.com/CsoundQt/CsoundQt/blob/develop/release_notes/Release%20notes%200.9.6.md&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Tarmo Johannes trmjhnns@gmail.com&lt;/p&gt;</content><category term="misc"></category><category term="release"></category></entry><entry><title>Version 0.9.5 Released</title><link href="http://csoundqt.github.io/release095.html" rel="alternate"></link><published>2017-11-22T00:00:00+01:00</published><updated>2017-11-22T00:00:00+01:00</updated><author><name>Tarmo Johannes</name></author><id>tag:csoundqt.github.io,2017-11-22:/release095.html</id><summary type="html">&lt;p&gt;The source code and binaries can be downloaded from: &lt;a class="reference external" href="https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.5"&gt;https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.5&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Tarmo Johannes trmjhnns@gmail.com&lt;/p&gt;</content><category term="release"></category></entry><entry><title>Version 0.9.5 Released</title><link href="http://csoundqt.github.io/release095.html" rel="alternate"></link><published>2017-11-22T00:00:00+01:00</published><updated>2017-11-22T00:00:00+01:00</updated><author><name>Tarmo Johannes</name></author><id>tag:csoundqt.github.io,2017-11-22:/release095.html</id><summary type="html">&lt;p&gt;The source code and binaries can be downloaded from: &lt;a class="reference external" href="https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.5"&gt;https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.5&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Version 0.9.5 fixes a number of bugs -  especially the nasty copy-paste problem on Windows is now fixed -  and adds new way to handle the work with panels and tabs …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The source code and binaries can be downloaded from: &lt;a class="reference external" href="https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.5"&gt;https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.5&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Version 0.9.5 fixes a number of bugs -  especially the nasty copy-paste problem on Windows is now fixed -  and adds new way to handle the work with panels and tabs.&lt;/p&gt;
 &lt;p&gt;See demo:&lt;/p&gt;
 &lt;div class="youtube youtube-16x9"&gt;&lt;iframe src="https://www.youtube.com/embed/xqQWWa_A0N4" allowfullscreen seamless frameBorder="0"&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;p&gt;And release notes:&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://github.com/CsoundQt/CsoundQt/blob/master/release_notes/Release%20notes%200.9.5.md"&gt;https://github.com/CsoundQt/CsoundQt/blob/master/release_notes/Release%20notes%200.9.5.md&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Tarmo Johannes &lt;a class="reference external" href="mailto:trmjhnns&amp;#64;gmail.com"&gt;trmjhnns&amp;#64;gmail.com&lt;/a&gt;&lt;/p&gt;
-</content><category term="misc"></category><category term="release"></category></entry><entry><title>Version 0.9.4 Released</title><link href="http://csoundqt.github.io/release094.html" rel="alternate"></link><published>2017-05-20T00:00:00+02:00</published><updated>2017-05-20T00:00:00+02:00</updated><author><name>Tarmo Johannes</name></author><id>tag:csoundqt.github.io,2017-05-20:/release094.html</id><summary type="html">&lt;p&gt;Glad about the new release!&lt;/p&gt;
+</content><category term="release"></category></entry><entry><title>Version 0.9.4 Released</title><link href="http://csoundqt.github.io/release094.html" rel="alternate"></link><published>2017-05-20T00:00:00+02:00</published><updated>2017-05-20T00:00:00+02:00</updated><author><name>Tarmo Johannes</name></author><id>tag:csoundqt.github.io,2017-05-20:/release094.html</id><summary type="html">&lt;p&gt;Glad about the new release!&lt;/p&gt;
 &lt;p&gt;The source code and binaries can be downloaded from: &lt;a class="reference external" href="https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.4"&gt;https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.4&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Version 0.9.4 fixes a number of bugs and adds some new convenience features. The author of most of the commits is &lt;strong&gt;Tarmo Johannes&lt;/strong&gt;, the …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Glad about the new release!&lt;/p&gt;
 &lt;p&gt;The source code and binaries can be downloaded from: &lt;a class="reference external" href="https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.4"&gt;https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.4&lt;/a&gt;&lt;/p&gt;
@@ -69,7 +150,7 @@ RunrtMidiApi=LINUX_ALSA&lt;/blockquote&gt;
 &lt;/ul&gt;
 &lt;p&gt;Tarmo Johannes &lt;a class="reference external" href="mailto:trmjhnns&amp;#64;gmail.com"&gt;trmjhnns&amp;#64;gmail.com&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
-</content><category term="misc"></category><category term="release"></category></entry><entry><title>Version 0.9.3 Released</title><link href="http://csoundqt.github.io/release093.html" rel="alternate"></link><published>2016-11-22T00:00:00+01:00</published><updated>2016-11-22T00:00:00+01:00</updated><author><name>Tarmo Johannes</name></author><id>tag:csoundqt.github.io,2016-11-22:/release093.html</id><summary type="html">&lt;p&gt;The source code and binaries can be downloaded from: &lt;a class="reference external" href="https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.3"&gt;https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.3&lt;/a&gt;&lt;/p&gt;
+</content><category term="release"></category></entry><entry><title>Version 0.9.3 Released</title><link href="http://csoundqt.github.io/release093.html" rel="alternate"></link><published>2016-11-22T00:00:00+01:00</published><updated>2016-11-22T00:00:00+01:00</updated><author><name>Tarmo Johannes</name></author><id>tag:csoundqt.github.io,2016-11-22:/release093.html</id><summary type="html">&lt;p&gt;The source code and binaries can be downloaded from: &lt;a class="reference external" href="https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.3"&gt;https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.3&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Version 0.9.3  introduces some new features, fixes a number of bugs and although not in the final release, the new qt based html5 support is available for testing from …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The source code and binaries can be downloaded from: &lt;a class="reference external" href="https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.3"&gt;https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.3&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Version 0.9.3  introduces some new features, fixes a number of bugs and although not in the final release, the new qt based html5 support is available for testing from branch &lt;em&gt;qthtml&lt;/em&gt;.
 For instructions how to use the branch see
@@ -96,7 +177,7 @@ For instructions how to use the branch see
 &lt;/ul&gt;
 &lt;p&gt;Tarmo Johannes &lt;a class="reference external" href="mailto:trmjhnns&amp;#64;gmail.com"&gt;trmjhnns&amp;#64;gmail.com&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
-</content><category term="misc"></category><category term="release"></category></entry><entry><title>Version 0.9.2.2 Released</title><link href="http://csoundqt.github.io/release0922.html" rel="alternate"></link><published>2016-08-16T00:00:00+02:00</published><updated>2016-08-16T00:00:00+02:00</updated><author><name>Tarmo Johannes</name></author><id>tag:csoundqt.github.io,2016-08-16:/release0922.html</id><summary type="html">&lt;p&gt;The source code can be downloaded from: &lt;a class="reference external" href="https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.2.2"&gt;https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.2.2&lt;/a&gt;&lt;/p&gt;
+</content><category term="release"></category></entry><entry><title>Version 0.9.2.2 Released</title><link href="http://csoundqt.github.io/release0922.html" rel="alternate"></link><published>2016-08-16T00:00:00+02:00</published><updated>2016-08-16T00:00:00+02:00</updated><author><name>Tarmo Johannes</name></author><id>tag:csoundqt.github.io,2016-08-16:/release0922.html</id><summary type="html">&lt;p&gt;The source code can be downloaded from: &lt;a class="reference external" href="https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.2.2"&gt;https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.2.2&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Version 0.9.2.2 is a bug-fix release.&lt;/p&gt;
 &lt;div class="section" id="fixes"&gt;
 &lt;h2&gt;Fixes&lt;/h2&gt;
@@ -124,7 +205,7 @@ For instructions how to use the branch see
 &lt;/ul&gt;
 &lt;p&gt;Tarmo Johannes &lt;a class="reference external" href="mailto:trmjhnns&amp;#64;gmail.com"&gt;trmjhnns&amp;#64;gmail.com&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
-</content><category term="misc"></category><category term="release"></category></entry><entry><title>Version 0.9.2.1 Released</title><link href="http://csoundqt.github.io/release0921.html" rel="alternate"></link><published>2016-04-11T00:00:00+02:00</published><updated>2016-04-11T00:00:00+02:00</updated><author><name>Tarmo Johannes</name></author><id>tag:csoundqt.github.io,2016-04-11:/release0921.html</id><summary type="html">&lt;p&gt;The source and upcoming binaries can be downloaded from: &lt;a class="reference external" href="https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.2.1"&gt;https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.2.1&lt;/a&gt;&lt;/p&gt;
+</content><category term="release"></category></entry><entry><title>Version 0.9.2.1 Released</title><link href="http://csoundqt.github.io/release0921.html" rel="alternate"></link><published>2016-04-11T00:00:00+02:00</published><updated>2016-04-11T00:00:00+02:00</updated><author><name>Tarmo Johannes</name></author><id>tag:csoundqt.github.io,2016-04-11:/release0921.html</id><summary type="html">&lt;p&gt;The source and upcoming binaries can be downloaded from: &lt;a class="reference external" href="https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.2.1"&gt;https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.2.1&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Version 0.9.2.1 is a bug-fix release, adding also a few new features.&lt;/p&gt;
 &lt;p&gt;See a short demo&lt;/p&gt;
 &lt;div class="youtube youtube-16x9"&gt;&lt;iframe src="https://www.youtube.com/embed/xmUiAxs1EwI" allowfullscreen seamless frameBorder="0"&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;div class="section" id="new-in-version-0-9-2-1"&gt;
@@ -178,7 +259,7 @@ For instructions how to use the branch see
 &lt;/div&gt;
 &lt;p&gt;Tarmo Johannes &lt;a class="reference external" href="mailto:trmjhnns&amp;#64;gmail.com"&gt;trmjhnns&amp;#64;gmail.com&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
-</content><category term="misc"></category><category term="release"></category></entry><entry><title>Version 0.9.2 Released</title><link href="http://csoundqt.github.io/release092.html" rel="alternate"></link><published>2016-03-07T00:00:00+01:00</published><updated>2016-03-07T00:00:00+01:00</updated><author><name>Tarmo Johannes</name></author><id>tag:csoundqt.github.io,2016-03-07:/release092.html</id><summary type="html">&lt;p&gt;The source and upcoming binaries can be downloaded from: &lt;a class="reference external" href="https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.2"&gt;https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.2&lt;/a&gt;&lt;/p&gt;
+</content><category term="release"></category></entry><entry><title>Version 0.9.2 Released</title><link href="http://csoundqt.github.io/release092.html" rel="alternate"></link><published>2016-03-07T00:00:00+01:00</published><updated>2016-03-07T00:00:00+01:00</updated><author><name>Tarmo Johannes</name></author><id>tag:csoundqt.github.io,2016-03-07:/release092.html</id><summary type="html">&lt;p&gt;The source and upcoming binaries can be downloaded from: &lt;a class="reference external" href="https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.2"&gt;https://github.com/CsoundQt/CsoundQt/releases/tag/0.9.2&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Version 0.9.2 is mostly a bug-fix release, adding also a number of new convenience features.&lt;/p&gt;
 &lt;p&gt;See a short demo&lt;/p&gt;
 &lt;div class="youtube youtube-16x9"&gt;&lt;iframe src="https://www.youtube.com/embed/q_1SUT1wD6o" allowfullscreen seamless frameBorder="0"&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;div class="section" id="new-in-version-0-9-2"&gt;
@@ -227,7 +308,7 @@ For instructions how to use the branch see
 &lt;li&gt;Fixed indentation (many Tab presses actually create tabs)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</content><category term="misc"></category><category term="release"></category></entry><entry><title>CsoundQt at Github</title><link href="http://csoundqt.github.io/csoundqt-in-github.html" rel="alternate"></link><published>2016-02-05T12:33:00+01:00</published><updated>2016-02-05T12:33:00+01:00</updated><author><name>Tarmo Johannes</name></author><id>tag:csoundqt.github.io,2016-02-05:/csoundqt-in-github.html</id><summary type="html">&lt;p class="first last"&gt;CsoundQt sources and website moved.&lt;/p&gt;
+</content><category term="release"></category></entry><entry><title>CsoundQt at Github</title><link href="http://csoundqt.github.io/csoundqt-in-github.html" rel="alternate"></link><published>2016-02-05T12:33:00+01:00</published><updated>2016-02-05T12:33:00+01:00</updated><author><name>Tarmo Johannes</name></author><id>tag:csoundqt.github.io,2016-02-05:/csoundqt-in-github.html</id><summary type="html">&lt;p class="first last"&gt;CsoundQt sources and website moved.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;&lt;strong&gt;CsoundQt has now its organisation account at Github.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;The &lt;strong&gt;sources&lt;/strong&gt; can be found at &lt;a class="reference external" href="https://github.com/CsoundQt/CsoundQt"&gt;https://github.com/CsoundQt/CsoundQt&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;NB! If you ever used to pull the CsoundQt sources from git, please update your remote address:&lt;/em&gt;&lt;/p&gt;
@@ -238,4 +319,4 @@ For instructions how to use the branch see
 &lt;p&gt;The &lt;strong&gt;web-page&lt;/strong&gt; is moved to &lt;a class="reference external" href="http://csoundqt.github.io/"&gt;http://csoundqt.github.io/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;To improve the web-site, add news or edit content, please have a look for instructions at&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://github.com/CsoundQt/csoundqt.github.io/blob/master/README.md"&gt;https://github.com/CsoundQt/csoundqt.github.io/blob/master/README.md&lt;/a&gt;&lt;/p&gt;
-</content><category term="misc"></category><category term="website"></category></entry></feed>
+</content><category term="website"></category></entry></feed>

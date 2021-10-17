@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+        <title>CsoundQt</title>
+        <meta charset="utf-8" />
+
+
+        <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+        <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+
+        <link rel="stylesheet" type="text/css" href="./theme/gumby.css" />
+        <link rel="stylesheet" type="text/css" href="./theme/style.css" />
+        <link rel="stylesheet" type="text/css" href="./theme/pygment.css" />
+
+        <script src="./theme/js/libs/modernizr-2.6.2.min.js"></script>
+
+
+
+
+
+
+</head>
+
+<body id="index" class="home">
+
+
+    <div class="container">
+
+        <div class="row">
+
+          <header id="banner" class="body">
+                  <h1><a href=".">CsoundQt <strong></strong></a></h1>
+          </header><!-- /#banner -->
+
+            <div id="navigation" class="navbar row">
+              <a href="#" gumby-trigger="#navigation &gt; ul" class="toggle"><i class="icon-menu"></i></a>
+             
+              <ul class="columns">
+                <li><a href=".">Home</a></li>
+
+                <li><a href="/pages/about.html">About</a></li>
+                <li><a href="/pages/install.html">Install</a></li>
+                <li><a href="/pages/documentation.html">Documentation</a></li>
+                <li><a href="/pages/contribute.html">Contribute</a></li>
+                <li><a href="/pages/people.html">People</a></li>
+                <li><a href="/pages/help.html">Help</a></li>
+
+              </ul>
+            </div>
+
+<section id="content" class="body">
+
+   <div class="row">
+        <div class="eleven columns">
+
+
+            <header>
+              <h2 class="entry-title">
+                <a href="./release098.html" rel="bookmark"
+                   title="Permalink to Version 0.9.8.1 Released">Version 0.9.8.1 Released</a></h2>
+           
+            </header>
+            <footer class="post-info">
+              <abbr class="published" title="2020-07-03T00:00:00+02:00">
+                Fri 03 July 2020
+              </abbr>
+              <address class="vcard author">
+                By <a class="url fn" href="./author/tarmo-johannes.html">Tarmo Johannes</a>
+              </address>
+            </footer><!-- /.post-info -->
+            <div class="entry-content">
+              <p><img alt="" src="https://i.imgur.com/dStJTsQ.png"></p>
+<p>Version 0.9.8 is a major release, with multiple changes. Author of most of the improvements is <strong>Edoardo Mogillansky</strong>. Greatest thanks!</p>
+<p>There is an update with some fixes, v0.9.8.1, see the list of fixes below, that is meant for the final use.  </p>
+<p>The source and binaries can be downloaded from: <a href="https://github.com/CsoundQt/CsoundQt/releases/tag/v0.9.8.1">https://github.com/CsoundQt/CsoundQt/releases/tag/v0.9.8.1</a>.</p>
+<p>This version of <strong>CsoundQt</strong> works with <strong>csound</strong> <code>6.14</code> or higher</p>
+<h3>New in version 0.9.8:</h3>
+<ul>
+<li>New icon theme based on KDE's <em>"breeze"</em></li>
+<li>New color themes (for text, background and syntax highlighting): classic, light, dark.</li>
+<li><strong>New flat style and features for the knob widget</strong>.</li>
+<li><strong>New "Table Plot" widget allows to efficiently plot tables in real time</strong>.</li>
+<li>Graph widget (spectrum, signal display) has been <strong>highly optimized</strong>, drawing is between <strong>10x and 20x faster</strong></li>
+<li>Graph widget fixed for the use together with display opcode. Many display instances can be used simultaneously for one or multiple widgets without any loss in performance.</li>
+<li>Graph widget for tables <strong>optimized for big tables and soundfiles</strong>,  detects the actual size of the graph and does not draw superfluous points</li>
+<li>Spectrogram widget now reacts to different sample rates, gained a better grid and zoom. It can be customized to show/hide grid, scrollbars, menu, etc.</li>
+<li>Spectrogram widget can control the zoom with keyboard shortcuts (+, -). Also scrollbars can be hidden (user can scroll with scrollwheel/arrow keys). </li>
+<li>Spectrum graph: a graph can bow be frozen; <strong>clicking on a peak will show the peaks frequency 
+    with resolution independent of the fft size</strong> of the corresponding dispfft </li>
+<li>New icon / new splashscreen</li>
+<li>Meter / Controller widget gained many options to control its aspect (border, line width, background, etc)</li>
+<li>New action to test the audio setup</li>
+<li>Text labels allow to set a vertical alignment</li>
+<li>New settings dialogs, allows to use the current system sample rate and set the
+  number of channels without the need to modify the .csd</li>
+<li>Help panel received a more streamlined look</li>
+<li>More streamlined toolbar, removed toolbar buttons which are not commonly used
+  (these can still be reached from the menus), icon size can be set in the preferences, toolbar can be locked</li>
+<li>Many widgets gained the possibility to set their value by double-clicking (knob, scroll number)</li>
+<li>Now it is possible to move the widgets with the keyboard in edit mode. The arrow keys move the
+  widgets within a grid of 5 pixels (with the alt key widgets are nudged by 1 pixel).</li>
+<li>More nuanced syntax highlighting</li>
+<li>Syntax highlighting for user defined opcodes. The work for this lays the ground for features like autocomplete and code hints for UDOs.</li>
+<li>Button widget can set the size of the font</li>
+<li>Checkbox can be resized if the platform allows this (works on linux and windows, macOS uses native checkboxes which are fixed in size)</li>
+<li>Added a setting to control the update rate of the gui.</li>
+<li>New "Spectrum Analyzer" utility example</li>
+<li><strong>Initial support for color schemes, allowing csoundqt to use a dark theme matching the os</strong> (not yet available in this release). </li>
+<li>New action "goto line"</li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+<li>Race condition fixed which would cause CsoundQt to crash when started/stopped in very fast succession</li>
+<li>Locking issues fixed which prevented CsoundQt to stop properly when a graph widget was used.</li>
+<li>Saving issues where fixed. New option to prevent CsoundQt from asking if user wants to save a temporary file before playing.</li>
+<li>in macOS startup delay has been somewhat reduced.</li>
+<li>Wrong rendering for the Meter / Controller widget fixed is macOS</li>
+<li>Better font defaults for the different platforms</li>
+<li>CTRL-F now searches in manual if help dock is focused.</li>
+<li>Search bar is made visible and focused when clicked on search icon in the help widget</li>
+<li>Fixed a bug where activating the widgets panel when the widgets are in a separate window would
+  result in an empty widgets panel or, worse, a crash.</li>
+<li>Fixed selection and dragging of widgets. Now responds to usual keyboard modifiers, such as CTRL toggling selection, and shift adding an item to a selection, etc.</li>
+<li>Changing rt audio module now clears the device selection</li>
+<li>Fixes last used dir in linux falling back to /tmp</li>
+<li>macOS: fix to background color in widgets panel</li>
+<li>Better options for selecting an audio device if jack is selected as module (now the default does not connect to other ports other than the system)</li>
+<li>In the config dialog, if jack is not running then this is shown in the menu and jack can't be selected</li>
+<li>scope now has much lower latency</li>
+<li>native toolbar in macOS</li>
+<li>Less intrusive line numbers, adjust colors to the color theme</li>
+<li>Each platform has own defaults for fonts, sizes, etc., resulting in a better first time experience</li>
+<li>Lots of fixes in syntax highlighting</li>
+<li>Audio device is reset to default whenever the audio backend is modified</li>
+<li>Full-screen issues have been mostly resolved. Window state is remembered.</li>
+<li>Graph widget would cause a crash when adding a new table if a spectrum display was selected. This was fixed.</li>
+<li><code>Atsa</code> defaults were corrected</li>
+<li>Latched button acting wrong on event with negative duration fixed</li>
+<li>Application paths were fixed for macOS</li>
+<li>Toolbar rendering problems in mac were fixed, reverting back from using mac's unified toolbar. </li>
+</ul>
+<p><br></p>
+<h2>Fixes in 0.9.8.1</h2>
+<ul>
+<li>toolbar in mac now renders correctly, better padding</li>
+<li>virtual keyboard back in toolbar</li>
+<li>table plot not longer upside down</li>
+<li>graph widget changes tables as advertised when given a negative number</li>
+<li>macOS: many keyboard shortcuts now work out of the box</li>
+</ul>
+            </div><!-- /.entry-content -->
+
+
+        </div><!-- /.eleven.columns -->
+        
+<div class="three columns">
+
+<h4>Pages</h4>
+
+ <ul>
+      <li><a href="/pages/about.html">About</a></li>
+      <li><a href="/pages/install.html">Install</a></li>
+      <li><a href="/pages/documentation.html">Documentation</a></li>
+      <li><a href="/pages/contribute.html">Contribute</a></li>
+      <li><a href="/pages/people.html">People</a></li>
+      <li><a href="/pages/help.html">Help</a></li>
+  </ul>
+
+<h4>Categories</h4>
+<ul>
+		<li><a href="./category/misc.html">misc</a></li>
+</ul>
+
+
+<h4>Tags</h4>
+	<ul>
+</ul>
+
+
+
+</div> </div><!-- /.row -->
+
+
+</section>
+
+       </div><!-- /.row -->
+    </div><!-- /.container -->
+
+
+       <div class="container.nopad bg">
+
+    
+        <footer id="credits" class="row">
+          <div class="seven columns left-center">
+
+                   <address id="about" class="vcard body">
+                    Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
+                    which takes great advantage of <a href="http://python.org">Python</a>.
+                    <br />
+                    Based on the <a target="_blank" href="http://gumbyframework.com">Gumby Framework</a>
+                    </address>
+          </div>
+
+
+          <div class="seven columns">
+            <div class="row">
+              <ul class="socbtns">
+
+
+
+
+
+              </ul>
+            </div>
+          </div>
+        </footer>
+
+    </div>
+
+
+  <script src="./theme/js/libs/jquery-1.9.1.min.js"></script>
+  <script src="./theme/js/libs/gumby.min.js"></script>
+  <script src="./theme/js/plugins.js"></script>
+
+</body>
+</html>
