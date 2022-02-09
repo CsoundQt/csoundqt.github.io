@@ -46,3 +46,14 @@ MENUITEMS = (
     ('People', '/pages/people.html'),
     ('Help', '/pages/help.html'),
 )
+
+SIDEBARITEMS = (
+    ('About', '/pages/about.html'),
+    ('Install', '/pages/install.html'),
+    ('Documentation', '/pages/documentation.html'),
+    ('Contribute', '/pages/contribute.html'),
+    ('People', '/pages/people.html'),
+    ('Help', '/pages/help.html'),
+    ('Wiki', 'https://github.com/CsoundQt/CsoundQt/wiki'),
+    ('Sources', 'https://github.com/CsoundQt/CsoundQt'),
+)

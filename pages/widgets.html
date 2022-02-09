@@ -78,34 +78,29 @@
 <p>Widgets communicate with Csound via a channel name. As shown above, you set the channel name in the widgets properties. Choose a meaningful name:</p>
 <p><img alt="channel name" src="../images/doc_widgets_04.png"></p>
 <p>You can receive the values from a widget via two opcodes: <code>invalue</code> or <code>chnget</code>. If the widget channel is "frequency" (you type it blank but it is a string), the lines of Csound code would be either</p>
-<div class="highlight"><pre><span></span>kFreq invalue &quot;frequency&quot;
-</pre></div>
-
+<div class="highlight"><pre><span></span><code><span class="err">kFreq invalue &quot;frequency&quot;</span>
+</code></pre></div>
 
 <p>or</p>
-<div class="highlight"><pre><span></span>kFreq chnget &quot;frequency&quot;
-</pre></div>
-
+<div class="highlight"><pre><span></span><code><span class="err">kFreq chnget &quot;frequency&quot;</span>
+</code></pre></div>
 
 <p>Most of the widgets return numbers, but some (LineEdit and Button) can return strings. In this case, the Csound code will be something like this:</p>
-<div class="highlight"><pre><span></span>S_file invalue &quot;filename&quot;
-S_file chnget &quot;filename&quot;
-</pre></div>
-
+<div class="highlight"><pre><span></span><code><span class="err">S_file invalue &quot;filename&quot;</span>
+<span class="err">S_file chnget &quot;filename&quot;</span>
+</code></pre></div>
 
 <p>Whether you use <a href="http://csound.github.io/docs/manual/invalue.html">invalue</a> or <a href="http://csound.github.io/docs/manual/chnget.html">chnget</a>, is more or less up to your preferences. Both are slightly different implemented (have a look at the Csound Manual for details). For passing long strings to Csound, <code>chnget</code> is currently preferable. Also, the chnget/chnset system is much more effective for CsoundQt files which use a lot of widgets. Remember to declare the channels in the header of your csd file, for instance:</p>
-<div class="highlight"><pre><span></span>chn_S &quot;filename&quot;, 3
-chn_k &quot;frequency&quot;, 3
-</pre></div>
-
+<div class="highlight"><pre><span></span><code><span class="err">chn_S &quot;filename&quot;, 3</span>
+<span class="err">chn_k &quot;frequency&quot;, 3</span>
+</code></pre></div>
 
 <p>In the widget's submenu you will find an item "add chn_k to csd" which does this job for you. This declaration is in particular necessary if you want to receive the current values of the widgets on startup.</p>
 <p>The k-Variables in Csound, which get the numbers of any widget, will usually be smoothed, to avoid jumps or sudden transitions (in particular for amplitudes). This can be done easily with the <code>port</code> opcode. This is a typical code:</p>
-<div class="highlight"><pre><span></span>kDb invalue &quot;db&quot; ;receive dB value from a widget
-kDb port kDb, .1 ;smoothes the transitions
-out aSound * ampdb(kDb) ;applies as volume
-</pre></div>
-
+<div class="highlight"><pre><span></span><code><span class="err">kDb invalue &quot;db&quot; ;receive dB value from a widget</span>
+<span class="err">kDb port kDb, .1 ;smoothes the transitions</span>
+<span class="err">out aSound * ampdb(kDb) ;applies as volume</span>
+</code></pre></div>
 
 <h2>Reserved Channels</h2>
 <p>There are some channels which carry some particular functionality. They all start with the underscore character. The first four are for Control/Transport (and usually have no receiver in the Csound code), whereas <em>_Browse</em> and <em>_MBrowse</em> will pass a string to Csound.</p>
@@ -131,11 +126,10 @@ out aSound * ampdb(kDb) ;applies as volume
 <p>A preset is another reserved channel. Its goal is to store and recall a widget snapshot. The most simple and intuitive way to store and recall presets is to right-click in the widget panel, and the choose <em>Store Widget</em>. There is also a build-in example: Examples &gt; Widgets &gt; Presets.</p>
 <h2>Pass Values to a Widget</h2>
 <p>Widgets can also be used to show values which are changing in Csound, as visual feedback for the user or performer. Any k-variable can be shown by many widgets, like sliders, displays or spin boxes. Just set the widget channel to any useful name, and insert either <code>outvalue</code> or <code>chnset</code> in the Csound code, for instance:</p>
-<div class="highlight"><pre><span></span>kDb randomi -30, -10, 1/2, 3
-outvalue &quot;db&quot;, kDb
-chnset kDb, &quot;db&quot;
-</pre></div>
-
+<div class="highlight"><pre><span></span><code><span class="err">kDb randomi -30, -10, 1/2, 3</span>
+<span class="err">outvalue &quot;db&quot;, kDb</span>
+<span class="err">chnset kDb, &quot;db&quot;</span>
+</code></pre></div>
 
 <h2>Widget Types Overview</h2>
 <p>This is a short description, followed by a screenshot from the buildin widget examples.</p>
