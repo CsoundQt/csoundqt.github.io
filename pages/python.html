@@ -75,8 +75,8 @@
 <p><img alt="csd file generation" src="../images/12C_01.png"></p>
 <p>If you close this file and then execute the line <code>q.loadDocument('cs_floss_1.csd')</code>, you should see the file again as tab in CsoundQt.</p>
 <p>Let us have a look how these two methods <code>newDocument</code> and <code>loadDocument</code> are described in the sources:</p>
-<div class="highlight"><pre><span></span><code><span class="nb nb-Type">int</span> <span class="n">newDocument</span><span class="p">(</span><span class="n">QString</span> <span class="n">name</span><span class="p">)</span>
-<span class="nb nb-Type">int</span> <span class="n">loadDocument</span><span class="p">(</span><span class="n">QString</span> <span class="n">name</span><span class="p">,</span> <span class="nb nb-Type">bool</span> <span class="n">runNow</span> <span class="o">=</span> <span class="bp">false</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="err">int newDocument(QString name)</span>
+<span class="err">int loadDocument(QString name, bool runNow = false)</span>
 </code></pre></div>
 
 <p>The method <code>newDocument</code> needs a name as string ("QString") as argument, and returns an integer. The method <code>loadDocument</code> also takes a name as input string and returns an integer as index for this csd. The additional argument <code>runNow</code> is optional. It expects a boolean value (True/False or 1/0). The default is "false" which means "do not run immediately after loading". So if you type instead <code>q.loadDocument('cs_floss_1.csd', True)</code> or <code>q.loadDocument('cs_floss_1.csd', 1)</code>, the csd file should start immediately. </p>
@@ -467,11 +467,11 @@ i 1 0 10 ;will be overwritten by the python score generator
 <p>Now right-click in the widget panel and choose Store Preset -&gt; New Preset: </p>
 <p><img alt="preset" src="../images/12C_11.png"></p>
 <p>You can (but need not) enter a name for the preset. The important thing here is the number of the preset (here 0). - Now change the value of the slider and the text of the display widget. Save again as preset, now being preset 1. - Now execute this:</p>
-<div class="highlight"><pre><span></span><code><span class="n">q</span><span class="o">.</span><span class="n">loadPreset</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="err">q.loadPreset(0)</span>
 </code></pre></div>
 
 <p>You will see the content of the widgets reloaded to the first preset. Again, with</p>
-<div class="highlight"><pre><span></span><code><span class="n">q</span><span class="o">.</span><span class="n">loadPreset</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="err">q.loadPreset(1)</span>
 </code></pre></div>
 
 <p>you can switch to the second one.</p>
@@ -753,10 +753,10 @@ i 1 0 4 &quot;huhuu&quot;
 <p>Another nice example of Tarmo Johannes, <em>color-controller.py</em>, is included in the CsoundQt application.</p>
 <h2>List of PyQcsObject Methods in CsoundQt</h2>
 <h3>Load/Create/Activate a csd File</h3>
-<div class="highlight"><pre><span></span><code><span class="nb nb-Type">int</span> <span class="n">loadDocument</span><span class="p">(</span><span class="n">QString</span> <span class="n">name</span><span class="p">,</span> <span class="nb nb-Type">bool</span> <span class="n">runNow</span> <span class="o">=</span> <span class="bp">false</span><span class="p">)</span>
-<span class="nb nb-Type">int</span> <span class="n">getDocument</span><span class="p">(</span><span class="n">QString</span> <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
-<span class="nb nb-Type">int</span> <span class="n">newDocument</span><span class="p">(</span><span class="n">QString</span> <span class="n">name</span><span class="p">)</span>
-<span class="n">void</span> <span class="n">setDocument</span><span class="p">(</span><span class="nb nb-Type">int</span> <span class="n">index</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="err">int loadDocument(QString name, bool runNow = false)</span>
+<span class="err">int getDocument(QString name = &quot;&quot;)</span>
+<span class="err">int newDocument(QString name)</span>
+<span class="err">void setDocument(int index)</span>
 </code></pre></div>
 
 <h3>Play/Pause/Stop a csd File</h3>
@@ -841,7 +841,7 @@ i 1 0 4 &quot;huhuu&quot;
 </code></pre></div>
 
 <h3>Presets</h3>
-<div class="highlight"><pre><span></span><code><span class="n">void</span> <span class="n">loadPreset</span><span class="p">(</span><span class="nb nb-Type">int</span> <span class="n">presetIndex</span><span class="p">,</span> <span class="nb nb-Type">int</span> <span class="n">index</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="err">void loadPreset(int presetIndex, int index = -1)</span>
 </code></pre></div>
 
 <h3>Live Event Sheet</h3>

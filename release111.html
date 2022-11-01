@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+        <title>CsoundQt</title>
+        <meta charset="utf-8" />
+
+
+        <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+        <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+
+        <link rel="stylesheet" type="text/css" href="./theme/gumby.css" />
+        <link rel="stylesheet" type="text/css" href="./theme/style.css" />
+        <link rel="stylesheet" type="text/css" href="./theme/pygment.css" />
+
+        <script src="./theme/js/libs/modernizr-2.6.2.min.js"></script>
+
+
+
+
+
+
+</head>
+
+<body id="index" class="home">
+
+
+    <div class="container">
+
+        <div class="row">
+
+          <header id="banner" class="body">
+                  <h1><a href=".">CsoundQt <strong></strong></a></h1>
+          </header><!-- /#banner -->
+
+            <div id="navigation" class="navbar row">
+              <a href="#" gumby-trigger="#navigation &gt; ul" class="toggle"><i class="icon-menu"></i></a>
+             
+              <ul class="columns">
+                <li><a href=".">Home</a></li>
+
+                <li><a href="/pages/about.html">About</a></li>
+                <li><a href="/pages/install.html">Install</a></li>
+                <li><a href="/pages/documentation.html">Documentation</a></li>
+                <li><a href="/pages/contribute.html">Contribute</a></li>
+                <li><a href="/pages/people.html">People</a></li>
+                <li><a href="/pages/help.html">Help</a></li>
+
+              </ul>
+            </div>
+
+<section id="content" class="body">
+
+   <div class="row">
+        <div class="eleven columns">
+
+
+            <header>
+              <h2 class="entry-title">
+                <a href="./release111.html" rel="bookmark"
+                   title="Permalink to Version 1.1.1 Released">Version 1.1.1 Released</a></h2>
+           
+            </header>
+            <footer class="post-info">
+              <abbr class="published" title="2022-01-11T00:00:00+01:00">
+                T 11 jaanuar 2022
+              </abbr>
+              <address class="vcard author">
+                By <a class="url fn" href="./author/tarmo-johannes.html">Tarmo Johannes</a>
+              </address>
+            </footer><!-- /.post-info -->
+            <div class="entry-content">
+              <p>After a long break and lots of development a <strong>new release of CsoundQt</strong> is out!</p>
+<p><a href="https://github.com/CsoundQt/CsoundQt/releases/tag/v1.1.1">https://github.com/CsoundQt/CsoundQt/releases/tag/v1.1.1</a></p>
+<p>Version 1.1.1 is a major release, it follows 0.9.8 (due several reasons version numbers in between are skipped).</p>
+<p>Please note that under the assets there are also packages for MacOS, Windows and Linux including Csound - so there is no need to install Csound separately.</p>
+<h3>New in version 1.1.1:</h3>
+<ul>
+<li>initial support for <a href="https://github.com/csound-plugins/risset">risset</a>, detects risset being installed and adds syntax highlighting, completion and documentation for any installed plugins and opcodes</li>
+<li>Support for dark themes. If your os / desktop environment uses a dark theme this will be honoured within CsoundQt, keeping things like the help dock or menus usable.</li>
+<li>New dark icon theme, needed when using a dark theme. </li>
+<li>Proper support for momentary/toggle MIDI buttons</li>
+<li>Support for limiter (enabled by default, see Configure-&gt;Advanced). Requires Csound&gt;=6.16.</li>
+<li>Tab icons for Play/Paused.</li>
+<li>Tabs now movable.</li>
+<li>Convert MIDI bindings of widgets to independent instrument (for exporting out from CsoundQt)  <em>Edit-&gt;Insert MidiControlInstrument</em></li>
+<li>Autocomplete menu revamped <ul>
+<li>Autocomplete performance is much better</li>
+<li>Added a configurable delay so that the menu does not interfere with fast typing  </li>
+<li>Completion added for external plugins and command line options. </li>
+</ul>
+</li>
+</ul>
+<h3>Examples</h3>
+<ul>
+<li>Examples has new structure. The  menu is populated from folder src/Examples and the main examples are not compiled into the CsoundQt binary any more. All examples can share one common pool of resources (<code>src/Examples/SourceMaterials/</code>)</li>
+<li>Spectrum Analyzer: added a note to explain how the detected peak can be made audible</li>
+<li>Many improvements by several examples (Joachim Heintz).</li>
+</ul>
+<h3>Fixes/optimizations</h3>
+<ul>
+<li>Table plot widget: much better performance. Threading issues fixed. This is now the recommended way to display the contents of a table.</li>
+<li>Syntax highlighting has been heavily optimized. Very big files now load in a fraction of the time</li>
+<li>Many widget examples adapted to not assume a light background</li>
+<li>Inspector was optimized and now parses a csd file ~10x faster</li>
+<li>Parenthesis highlighting now works more reliably across multiple lines</li>
+<li>Syntax highlighting for score optional and off by default (useful when opening files with very long scores)</li>
+<li>Put back Utilities to taskbar</li>
+<li>Fixed current dir problem (like issue with <code>system_i</code>)</li>
+<li>More convenient MIDI Learn for widgets.</li>
+</ul>
+<h3>Other issues</h3>
+<ul>
+<li>fixed AudioMidiTest in windows</li>
+<li>fixed wrong characters in Help Window on Windows</li>
+<li>fixed font issues in the console (each platform now has a default console font part of the system fonts)</li>
+<li>fixed crash on opening deleted files</li>
+<li>fixed messed characters in help panel on Windows </li>
+<li>fixed hover text being too small in certain cases</li>
+<li>autocomplete on words in the same document optimized to not update every keystroke</li>
+<li>autocomplete menu code simplified</li>
+<li>autocomplete menu now somewhat tidier, switched to monospaced font to have arguments and rate line up across items</li>
+<li>changed graphs widget color when displaying tables to yellow for better contrast</li>
+<li>fixed bug of widgets changing position after MidiLearn dialog.</li>
+<li>remove play icon from tab when stopped in the end of score</li>
+<li>set default input to none on MacOS if portaudio is being used.</li>
+</ul>
+<h3>Internal changes</h3>
+<ul>
+<li>Ported most of regexes to QRegularExpression</li>
+<li>Compatibility corrections to build with older Qt5 versions</li>
+<li>Dropped support for Qt4 and Csound5</li>
+<li>RtMidi now a submodule, should always be available</li>
+<li>Hopefully fixed document always modified problem</li>
+<li>disable highlighting within data tags of a csd (for example CsFileB)</li>
+<li>Use showFullScreen only on Windows, others showMaximized.</li>
+</ul>
+<p>Eduardo Moguillansky, Tarmo Johannes</p>
+            </div><!-- /.entry-content -->
+
+
+        </div><!-- /.eleven.columns -->
+        
+<div class="three columns">
+
+<h4>CsoundQt</h4>
+
+ <ul>
+      <li><a href="/pages/about.html">About</a></li>
+      <li><a href="/pages/install.html">Install</a></li>
+      <li><a href="/pages/documentation.html">Documentation</a></li>
+      <li><a href="/pages/contribute.html">Contribute</a></li>
+      <li><a href="/pages/people.html">People</a></li>
+      <li><a href="/pages/help.html">Help</a></li>
+      <li><a href="https://github.com/CsoundQt/CsoundQt/wiki">Wiki</a></li>
+      <li><a href="https://github.com/CsoundQt/CsoundQt">Sources</a></li>
+  </ul>
+
+</div> </div><!-- /.row -->
+
+
+</section>
+
+       </div><!-- /.row -->
+    </div><!-- /.container -->
+
+
+       <div class="container.nopad bg">
+
+    
+        <footer id="credits" class="row">
+          <div class="seven columns left-center">
+
+                   <address id="about" class="vcard body">
+                    Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
+                    which takes great advantage of <a href="http://python.org">Python</a>.
+                    <br />
+                    Based on the <a target="_blank" href="http://gumbyframework.com">Gumby Framework</a>
+                    </address>
+          </div>
+
+
+          <div class="seven columns">
+            <div class="row">
+              <ul class="socbtns">
+
+
+
+
+
+              </ul>
+            </div>
+          </div>
+        </footer>
+
+    </div>
+
+
+  <script src="./theme/js/libs/jquery-1.9.1.min.js"></script>
+  <script src="./theme/js/libs/gumby.min.js"></script>
+  <script src="./theme/js/plugins.js"></script>
+
+</body>
+</html>
