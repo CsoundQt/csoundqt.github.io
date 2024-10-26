@@ -10,5 +10,3 @@ CsoundQt has a new documentation! Check it out at
 <https://csoundqt.github.io/doc/>
 
 Feedback is welcome for further improvements!
-
-	joachim heintz
