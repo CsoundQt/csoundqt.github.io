@@ -41,7 +41,7 @@
 
                 <li><a href="/pages/about.html">About</a></li>
                 <li><a href="/pages/install.html">Install</a></li>
-                <li><a href="/pages/documentation.html">Documentation</a></li>
+                <li><a href="https://csoundqt.github.io/doc/">Documentation</a></li>
                 <li><a href="/pages/contribute.html">Contribute</a></li>
                 <li><a href="/pages/people.html">People</a></li>
                 <li><a href="/pages/help.html">Help</a></li>
@@ -76,13 +76,13 @@
 <p><img alt="split view" src="../images/doc_editor_04.png"></p>
 <h2>Recompile / Evaluate Python Code</h2>
 <p>Since Csound 6, it is possible to change any instrument definition while Csound is running. CsoundQt provides an easy way of recompiling. This be your Csound code:</p>
-<div class="highlight"><pre><span></span><code><span class="err">instr 1</span>
-<span class="err">    schedkwhen metro(1), 0, 0, 2, 0, 1</span>
-<span class="err">endin</span>
-<span class="err">instr 2</span>
-<span class="err">    prints &quot;Hallo\n&quot;</span>
-<span class="err">endin</span>
-<span class="err">schedule(1,0,1000)</span>
+<div class="highlight"><pre><span></span><code>instr 1
+    schedkwhen metro(1), 0, 0, 2, 0, 1
+endin
+instr 2
+    prints &quot;Hallo\n&quot;
+endin
+schedule(1,0,1000)
 </code></pre></div>
 
 <p>Run this code and change the print statement in instrument 2 from "Hallo\n" to "HalloHallo\n" or whatever. Nothing will happen, as Csound needs a command to recompile instrument 2. Now place the cursor anywhere in instrument 2, go to the Edit menu, and select <em>Evaluate Section</em>. You will see a message in the console: "Csound code evaluated.", and after this message you will see the new printout.</p>

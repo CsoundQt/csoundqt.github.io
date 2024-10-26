@@ -41,7 +41,7 @@
 
                 <li><a href="/pages/about.html">About</a></li>
                 <li><a href="/pages/install.html">Install</a></li>
-                <li><a href="/pages/documentation.html">Documentation</a></li>
+                <li><a href="https://csoundqt.github.io/doc/">Documentation</a></li>
                 <li><a href="/pages/contribute.html">Contribute</a></li>
                 <li><a href="/pages/people.html">People</a></li>
                 <li><a href="/pages/help.html">Help</a></li>
@@ -56,7 +56,7 @@
 <p>CsoundQt's Live Event Sheets offer a wide range of possibilities to call csound instruments in real time. In "classic mode", Csound code consists of two fixed sections: a collection of instruments (called "orchestra"), and a list of time-based calls of these instruments (called "score"). Each score line which calls an instrument instance for a certain time, is called an "instrument event".</p>
 <p>Instead of deciding these events in advance and writing them in a fixed score, Csound offers many ways to fire instrument events in real time. One is the usage of a MIDI keyboard, which by default triggers an instrument (any note-on message in MIDI channel 1 triggers an instance of instrument 1, and so on). Another approach is using the Csound API. This means that any application can call and destroy instances of compiled instruments by means of certain methods. This is the way CsoundQt communicates with the Csound engine.</p>
 <p>The most simple way of firing live events in CsoundQt is to use a button. Create a button by right-clicking in the widget panel. In the properties, set the button to the "event" mode, and type a score line, for instance:</p>
-<div class="highlight"><pre><span></span><code><span class="err">i 1 0 1 400</span>
+<div class="highlight"><pre><span></span><code>i 1 0 1 400
 </code></pre></div>
 
 <p><img alt="button live" src="../images/doc_live_01.png"></p>
@@ -64,8 +64,8 @@
 <div class="highlight"><pre><span></span><code><span class="nt">&lt;CsoundSynthesizer&gt;</span>
 <span class="nt">&lt;CsInstruments&gt;</span>
 
-instr 1
-    out poscil(.2,p4)
+instr<span class="w"> </span>1
+<span class="w">    </span>out<span class="w"> </span>poscil(.2,p4)
 endin
 
 <span class="nt">&lt;/CsInstruments&gt;</span>

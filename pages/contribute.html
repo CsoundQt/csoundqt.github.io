@@ -41,7 +41,7 @@
 
                 <li><a href="/pages/about.html">About</a></li>
                 <li><a href="/pages/install.html">Install</a></li>
-                <li><a href="/pages/documentation.html">Documentation</a></li>
+                <li><a href="https://csoundqt.github.io/doc/">Documentation</a></li>
                 <li><a href="/pages/contribute.html">Contribute</a></li>
                 <li><a href="/pages/people.html">People</a></li>
                 <li><a href="/pages/help.html">Help</a></li>
@@ -59,12 +59,12 @@
 <p>&nbsp; </p>
 <h2>Contribute to improve the code, examples or design</h2>
 <p>CsoundQt's sources are hosted in <strong><a href="https://github.com/CsoundQt/CsoundQt">Github</a></strong>. Since version 0.9.2 the latest stable release is kept in <strong><em>master</em></strong> branch, the newest modifications and fixes in <strong><em>develop</em></strong> branch. To contribute to the development, please check out the <em>develop</em> branch. In Github you cans select the branch from menu (<em>Branch: master/develop</em>), in your computer use command</p>
-<div class="highlight"><pre><span></span><code>$ git checkout -b develop origin/develop
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>develop<span class="w"> </span>origin/develop
 </code></pre></div>
 
 <p>to activate the develop branch firt time. 
-To change between the branches use command <em>git checkout &lt;branchname ></em></p>
-<div class="highlight"><pre><span></span><code>$ git checkout develop <span class="c1"># or: git checkout master</span>
+To change between the branches use command <em>git checkout &lt;branchname &gt;</em></p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>develop<span class="w"> </span><span class="c1"># or: git checkout master</span>
 </code></pre></div>
 
 <p>If you would like to add an example, correct some mistakes or work on improving or extending the source code, the best way is <strong>forking the repository and making pull requests</strong>:</p>
@@ -76,26 +76,26 @@ To change between the branches use command <em>git checkout &lt;branchname ></em
 <li>you need git versioning system software and some knowledge how to use it. See <a href="https://git-scm.com/">https://git-scm.com/</a></li>
 <li>getting the sources from github to your computer is called "cloning" in git terms. Go to the direcotry where you want to have the local repository and execute in terminal:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="err">    $ git clone https://github.com/tarmoj/CsoundQt.git # replace it with your address, of course</span>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="err">$</span><span class="w"> </span><span class="nx">git</span><span class="w"> </span><span class="nx">clone</span><span class="w"> </span><span class="nx">https</span><span class="p">:</span><span class="c1">//github.com/tarmoj/CsoundQt.git # replace it with your address, of course</span>
 </code></pre></div>
 
 <ul>
 <li>When your changes are done, you need to commit the changes to your local repository (it is easy to do in QtCreator in Tools-&gt;Git-&gt;Local repository-&gt;Commit). For command line see <a href="https://git-scm.com/docs/git-commit">https://git-scm.com/docs/git-commit</a> For example:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="err">    $ git add &#39;file_you_changed&#39;</span>
-<span class="err">    $ git commit -m &quot;some meaningful message about the change&quot;</span>
+<div class="highlight"><pre><span></span><code>    $ git add &#39;file_you_changed&#39;
+    $ git commit -m &quot;some meaningful message about the change&quot;
 </code></pre></div>
 
 <ul>
 <li>Sending your changes to the remote repository (i.e the one by your account in Github) is called <strong>pushing</strong>:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="err">    $ git push</span>
+<div class="highlight"><pre><span></span><code>    $ git push
 </code></pre></div>
 
 <ul>
 <li>Next time you want to get the newest version from github again (if there has been is a change), you don't need to clone, just getting the change information is called <strong>pulling</strong>:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="err">    $ git pull</span>
+<div class="highlight"><pre><span></span><code>    $ git pull
 </code></pre></div>
 
 <p>5) To integrate your changes to the main CsoundQt repo, you need to do so called <strong>pull request</strong> -  it means that the manager(s) of the main repo get infomration about your work and  can merge it easily to the main sources and everybody can enjoy the result of your effort. Just click on the <strong>"Pull request"</strong> button on your Github repo's main page, add a comment and send it.</p>
