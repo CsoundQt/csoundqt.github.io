@@ -9,11 +9,11 @@
         <!-- Mobile viewport optimized: j.mp/bplateviewport -->
         <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
 
-        <link rel="stylesheet" type="text/css" href="../theme/gumby.css" />
-        <link rel="stylesheet" type="text/css" href="../theme/style.css" />
-        <link rel="stylesheet" type="text/css" href="../theme/pygment.css" />
+        <link rel="stylesheet" type="text/css" href="/theme/gumby.css" />
+        <link rel="stylesheet" type="text/css" href="/theme/style.css" />
+        <link rel="stylesheet" type="text/css" href="/theme/pygment.css" />
 
-        <script src="../theme/js/libs/modernizr-2.6.2.min.js"></script>
+        <script src="/theme/js/libs/modernizr-2.6.2.min.js"></script>
 
 
 
@@ -30,14 +30,14 @@
         <div class="row">
 
           <header id="banner" class="body">
-                  <h1><a href="..">CsoundQt <strong></strong></a></h1>
+                  <h1><a href="">CsoundQt <strong></strong></a></h1>
           </header><!-- /#banner -->
 
             <div id="navigation" class="navbar row">
               <a href="#" gumby-trigger="#navigation &gt; ul" class="toggle"><i class="icon-menu"></i></a>
              
               <ul class="columns">
-                <li><a href="..">Home</a></li>
+                <li><a href="">Home</a></li>
 
                 <li><a href="/pages/about.html">About</a></li>
                 <li><a href="/pages/install.html">Install</a></li>
@@ -56,9 +56,9 @@
 <p>You will find a built-in documentation of the widget in CsoundQt's Examples &gt; Widgets. It is recommended to read and click it in addition to the description here.</p>
 <h2>How to Create a Widget</h2>
 <p>Open the widget panel (push the "Widgets" button or go to View &gt; Widgets) and right-click in it. You get a submenu:</p>
-<p><img alt="widgets submenu" src="../images/doc_widgets_01.png"></p>
+<p><img alt="widgets submenu" src="/images/doc_widgets_01.png"></p>
 <p>Choose a widget, for instance a SpinBox. You will get a new panel with the properties of the widget:</p>
-<p><img alt="widgets properties" src="../images/doc_widgets_02.png"></p>
+<p><img alt="widgets properties" src="/images/doc_widgets_02.png"></p>
 <ul>
 <li><strong>x/y</strong> — absolute position in the panel in pixel  </li>
 <li><strong>Width/Height</strong> — size of the widget in pixel  </li>
@@ -70,13 +70,13 @@
 </ul>
 <h2>Edit and Play Mode</h2>
 <p>Once you clicked OK, you will see the SpinBox in the widget panel. If you want to change the position, go to <em>Edit &gt; Widget Edit Mode</em> (or Ctrl+E).</p>
-<p><img alt="edit mode" src="../images/doc_widgets_03.png"></p>
+<p><img alt="edit mode" src="/images/doc_widgets_03.png"></p>
 <p>If Edit Mode is on, you can move the widgets or change their size by dragging the right bottom corner. </p>
 <p>Like in <a href="http://puredata.info">PD</a> or <a href="http://cycling74.com/max">Max</a>, you can toggle all the time between Edit and Play Mode. If you want to change any of the preferences, double-click on a widget in Edit Mode, or right-click on it in Play Mode (and choose <em>Properties</em>).</p>
 <p>In Play Mode, you can change the widget values by the mouse and/or the computer keyboard. Note that a new value for the SpinBox will only be active when you hit the Return key.</p>
 <h2>Get Values from a Widget</h2>
 <p>Widgets communicate with Csound via a channel name. As shown above, you set the channel name in the widgets properties. Choose a meaningful name:</p>
-<p><img alt="channel name" src="../images/doc_widgets_04.png"></p>
+<p><img alt="channel name" src="/images/doc_widgets_04.png"></p>
 <p>You can receive the values from a widget via two opcodes: <code>invalue</code> or <code>chnget</code>. If the widget channel is "frequency" (you type it blank but it is a string), the lines of Csound code would be either</p>
 <div class="highlight"><pre><span></span><code>kFreq invalue &quot;frequency&quot;
 </code></pre></div>
@@ -135,52 +135,52 @@ chnset kDb, &quot;db&quot;
 <p>This is a short description, followed by a screenshot from the buildin widget examples.</p>
 <h3>Slider</h3>
 <p>The standard widget, well known in all Audio GUIs. It can be either vertical or horizontal.<br>
-<img alt="slider" src="../images/doc_widgets_07.png"></p>
+<img alt="slider" src="/images/doc_widgets_07.png"></p>
 <h3>Label</h3>
 <p>A textbox for comments or similar.<br>
-<img alt="label" src="../images/doc_widgets_05.png"></p>
+<img alt="label" src="/images/doc_widgets_05.png"></p>
 <h3>Display</h3>
 <p>Can display any value from Csound (numbers or strings).<br>
-<img alt="display" src="../images/doc_widgets_06.png"></p>
+<img alt="display" src="/images/doc_widgets_06.png"></p>
 <h3>ScrollNumber</h3>
 <p>Number box whichs values are changed by mouse scrolling.<br>
-<img alt="scroll number" src="../images/doc_widgets_08.png"></p>
+<img alt="scroll number" src="/images/doc_widgets_08.png"></p>
 <h3>LineEdit</h3>
 <p>A text field which can be used either for user input (passed to Csound as a string), or display any string (for instance a file name which is received by the _Browse reserved channel).<br>
-<img alt="line edit" src="../images/doc_widgets_09.png"></p>
+<img alt="line edit" src="/images/doc_widgets_09.png"></p>
 <h3>SpinBox</h3>
 <p>A number box either for user input (via type/return or the scroll bar), or to show any Csound k-value.<br>
-<img alt="spin box" src="../images/doc_widgets_10.png"></p>
+<img alt="spin box" src="/images/doc_widgets_10.png"></p>
 <h3>Button</h3>
 <p>A button can either fire an event (trigger an instrument or create a function table), or pass a value when pushed. A <em>latch</em> option transforms a button to a toggle.<br>
-<img alt="button" src="../images/doc_widgets_11.png"></p>
+<img alt="button" src="/images/doc_widgets_11.png"></p>
 <h3>Knob</h3>
 <p>Similar functionality as slider, just different design.<br>
-<img alt="knob" src="../images/doc_widgets_12.png"></p>
+<img alt="knob" src="/images/doc_widgets_12.png"></p>
 <h3>Checkbox</h3>
 <p>Sends 1/0 if checked/unchecked. So the behaviour is actually the same as a button in latch mode.<br>
-<img alt="checkbox" src="../images/doc_widgets_13.png"></p>
+<img alt="checkbox" src="/images/doc_widgets_13.png"></p>
 <h3>Menu</h3>
 <p>Shows names, but returns numbers (starting from zero) for the different items.<br>
-<img alt="menu" src="../images/doc_widgets_14.png"></p>
+<img alt="menu" src="/images/doc_widgets_14.png"></p>
 <h3>Controller</h3>
 <p>A widget with many possibilities. Can be used as x/y pad, or as slider, or as signal display.<br>
-<img alt="controller" src="../images/doc_widgets_15.png"></p>
+<img alt="controller" src="/images/doc_widgets_15.png"></p>
 <h3>Console</h3>
 <p>Displays the output of the Csound console in a widget.<br>
-<img alt="console" src="../images/doc_widgets_16.png"></p>
+<img alt="console" src="/images/doc_widgets_16.png"></p>
 <h3>Graph</h3>
 <p>Displays Csound's function tables, and FFT analysis, too.<br>
-<img alt="graph" src="../images/doc_widgets_17.png"></p>
+<img alt="graph" src="/images/doc_widgets_17.png"></p>
 <h3>Scope</h3>
 <p>Displays Csound's audio output, and some more ...<br>
-<img alt="scope" src="../images/doc_widgets_18.png"></p>
+<img alt="scope" src="/images/doc_widgets_18.png"></p>
 <h3>Virtual Keyboard</h3>
 <p>This widget is not under the <em>Create Widget</em> submenu, as it is not part of the widget panel. It is created by pushing the <em>Keyboard</em> button, and pops up as independent panel. It can substitute an external MIDI keyboard.<br>
-<img alt="midi keyboard" src="../images/doc_widgets_19.png"></p>
+<img alt="midi keyboard" src="/images/doc_widgets_19.png"></p>
 <h2>MIDI Integration</h2>
 <p>If your CsoundQt has been compiled with RtMidi support, you can assign any MIDI controller directly to any widget. Just open the properties and type in MIDI channel and Controller Number, or use the MIDI Learn functionality.<br>
-<img alt="midi learn" src="../images/doc_widgets_20.png"></p>
+<img alt="midi learn" src="/images/doc_widgets_20.png"></p>
 
        </div><!-- /.row -->
     </div><!-- /.container -->
@@ -217,9 +217,9 @@ chnset kDb, &quot;db&quot;
     </div>
 
 
-  <script src="../theme/js/libs/jquery-1.9.1.min.js"></script>
-  <script src="../theme/js/libs/gumby.min.js"></script>
-  <script src="../theme/js/plugins.js"></script>
+  <script src="/theme/js/libs/jquery-1.9.1.min.js"></script>
+  <script src="/theme/js/libs/gumby.min.js"></script>
+  <script src="/theme/js/plugins.js"></script>
 
 </body>
 </html>
