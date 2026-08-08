@@ -19,7 +19,7 @@ CsoundQt is a frontend for Csound, so **Csound needs to be installed first.**
 
 1. Download the **CsoundQt-[Version Number]-Win64.zip** from <https://github.com/CsoundQt/CsoundQt/releases>.  
 2. Unzip the file.  
-3. Go to the *bin* folder.  
+3. Go to the *CsoundQt (or bin)* folder.  
 4. Select and copy the whole content of the *bin* folder.  
 5. Go to *C: -> Program Files -> Csound6_x64 -> bin* and paste all the copied files here.  
 6. Send "CsoundQt-d-html-cs6.exe" from this folder as a shortcut to your desktop if you like. 

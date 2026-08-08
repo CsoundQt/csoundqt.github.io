@@ -41,7 +41,7 @@ DISPLAY_CATEGORIES_ON_MENU = False
 MENUITEMS = (
     ('About', '/pages/about.html'),
     ('Install', '/pages/install.html'),
-    ('Documentation', '/pages/documentation.html'),
+    ('Documentation', 'https://csoundqt.github.io/doc/'),
     ('Contribute', '/pages/contribute.html'),
     ('People', '/pages/people.html'),
     ('Help', '/pages/help.html'),
@@ -50,7 +50,7 @@ MENUITEMS = (
 SIDEBARITEMS = (
     ('About', '/pages/about.html'),
     ('Install', '/pages/install.html'),
-    ('Documentation', '/pages/documentation.html'),
+    ('Documentation', 'https://csoundqt.github.io/doc/'),
     ('Contribute', '/pages/contribute.html'),
     ('People', '/pages/people.html'),
     ('Help', '/pages/help.html'),
