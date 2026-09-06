@@ -1,0 +1,77 @@
+# MkDocs configuration for the CsoundQt website
+site_name: CsoundQt
+site_description: >-
+  CsoundQt is a frontend for Csound featuring a highlighting editor with
+  autocomplete, interactive widgets and integrated help.
+site_url: https://csoundqt.github.io/
+repo_url: https://github.com/CsoundQt/CsoundQt
+repo_name: CsoundQt
+edit_uri: ""
+
+copyright: >-
+  Copyright &copy; CsoundQt contributors &mdash; the CsoundQt application is
+  licensed under the LGPL v2 or, at your option, GPLv3.
+
+theme:
+  name: material
+  language: en
+  palette:
+    scheme: default
+    primary: green
+    accent: light green
+  features:
+    - navigation.expand
+    - navigation.indexes
+    - navigation.sections
+    - navigation.top
+    - toc.follow
+
+nav:
+  - Home: index.md
+  - About: about.md
+  - Install: install.md
+  - Contribute: contribute.md
+  - People: people.md
+  - Help: help.md
+  - News:
+      - Latest news: news/index.md
+  - Legacy documentation:
+      - legacy/index.md
+      - Overview: legacy/overview.md
+      - Menus: legacy/csoundqt-menus.md
+      - Configure: legacy/configuring-csoundqt.md
+      - Tips and Tricks: legacy/tips-and-tricks.md
+      - Editor: legacy/editor.md
+      - Widgets: legacy/widgets.md
+      - Run: legacy/run.md
+      - Live Event Sheet: legacy/live-event-sheet.md
+      - Python: legacy/python.md
+      - Utilities: legacy/utilities.md
+      - HTML5 support: legacy/html5-support.md
+
+plugins:
+  - search
+  - tags
+  - blog:
+      blog_dir: news
+      post_url_format: "{file}"
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/CsoundQt/CsoundQt

@@ -1,32 +1,59 @@
-# CsoundQt web site
+# CsoundQt website
 
+Source for the [CsoundQt](https://csoundqt.github.io) website, built with
+[MkDocs](https://www.mkdocs.org) and the
+[Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) theme.
 
-##To change the site:
+This repository replaces the old [Pelican](https://getpelican.com)-based
+website. Content that used to live in the Pelican site has been converted:
 
+- the top-level pages (`About`, `Install`, `Contribute`, `People`, `Help`)
+  live directly under `docs/`
+- the news/blog articles live under `docs/news/posts/`
+- the old (2015) manual pages are kept for reference under `docs/legacy/`
 
+## How to change the site
 
-* Get the source:
+You need Python 3 and pip. Install the build dependencies:
 
-`git clone https://github.com/CsoundQt/csoundqt.github.io.git` 
+```
+$ pip install -r requirements.txt
+```
 
-or fork the repository to your github account.
+To preview the site locally while editing:
 
+```
+$ make serve
+```
 
-* Edit or add .rst or .md files in folder **content**.
+To build the static site into `site/`:
 
-* You need [Pelican](http://docs.getpelican.com/en/3.6.3/index.html) and its youtube plugin to convert the content files to web page
+```
+$ make build
+```
 
-`$ sudo pip install pelican     
-$ sudo pip install pelican-youtube`
+Add or edit Markdown files under `docs/`. News items go into `docs/news/posts/`
+and must start with YAML front matter containing at least `title` and `date`,
+for example:
 
-* go to folder **manage** and use
-`make publish` to create the html output in the root directory. See `make help` for more options. *(`make github` and other uploading commands do not work now).*
+```yaml
+---
+title: Version 9.9.9 Released
+date: 2026-09-06
+authors:
+  - tarmo
+tags:
+  - release
+---
+```
 
-* commit your changes and push to git.  Make pull request via your github account, if you forked the repository.
+The navigation is defined in `mkdocs.yml`. Images referenced from content are
+stored in `docs/images/` and linked with site-relative paths such as
+`/images/screenshot.png`.
 
+## Publishing
 
-Site created by Andrés Cabrera      
-Current maintenance: Tarmo Johannes <trmjhnns@gmail.com> and others.
-
-
-
+On every push to the `main` branch a GitHub Actions workflow builds the site
+(`.github/workflows/build-site.yml`) and publishes it with GitHub Pages.
+The workflow also copies the `.well-known/` folder (used for FlatHub
+verification) into the build output.
