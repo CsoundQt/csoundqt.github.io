@@ -1,10 +1,44 @@
-## Install Csound first
+## CsoundQt 7
+
+csoundqt 7 is built to support csound >= 7 (this is the current, development 
+version of csound)
+
+See <https://github.com/CsoundQt/CsoundQt/releases>
+
+### Linux
+
+* AppImage: <https://github.com/CsoundQt/CsoundQt/releases/download/v7.0.2/CsoundQt-x86_64.AppImage>
+* Flatpak: <https://flathub.org/en/apps/io.github.CsoundQt.CsoundQt>
+
+In both cases csoundqt is shipped with its own version of csound
+
+### macOS
+
+1. Download the **CsoundQt.dmg** from
+   <https://github.com/CsoundQt/CsoundQt/releases>.
+
+2. Open the *.dmg* and drag the application into the
+   Applications folder.
+
+3. Install the csound `.pkg` inside the .dmg 
+
+
+### Windows
+
+1. Download and install csound: <https://github.com/CsoundQt/CsoundQt/releases/download/v7.0.2/Csound7-windows_x86_64.exe>
+2. Download and install csoundqt: <https://github.com/CsoundQt/CsoundQt/releases/download/v7.0.2/CsoundQt-7.0.2-windows_x86_64-140.exe>
+
+---------------------
+
+## CsoundQt 6
+
+### Install Csound first
 
 CsoundQt is a frontend for Csound, so **Csound needs to be installed first.**
 
 [*&rarr; Csound download page*](https://csound.com/download)
 
-## macOS
+### macOS
 
 1. Download the **CsoundQt-[Version Number]-MacOS.dmg** from
    <https://github.com/CsoundQt/CsoundQt/releases>.
@@ -15,7 +49,7 @@ CsoundQt is a frontend for Csound, so **Csound needs to be installed first.**
 2. Open the *.dmg* and drag the green CsoundQt application into the
    Applications folder.
 
-## Windows
+### Windows
 
 1. Download the **CsoundQt-[Version Number]-Win64.zip** from
    <https://github.com/CsoundQt/CsoundQt/releases>.
@@ -27,7 +61,7 @@ CsoundQt is a frontend for Csound, so **Csound needs to be installed first.**
 6. Send "CsoundQt-d-html-cs6.exe" from this folder as a shortcut to your
    desktop if you like.
 
-## Linux
+### Linux
 
 CsoundQt binaries are in most of the package managers.
 
@@ -37,8 +71,5 @@ Instructions can be found at <https://github.com/CsoundQt/CsoundQt/wiki> and
 in the [BUILDING.md](https://github.com/CsoundQt/CsoundQt/blob/master/BUILDING.md)
 file in the sources.
 
-## Building from source
+### Building from source
 
-For building CsoundQt yourself, follow the instructions in
-[BUILDING.md](https://github.com/CsoundQt/CsoundQt/blob/master/BUILDING.md)
-and on the [CsoundQt wiki](https://github.com/CsoundQt/CsoundQt/wiki).
