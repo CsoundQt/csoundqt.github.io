@@ -485,6 +485,8 @@
       
         
       
+        
+      
     
     
     
@@ -528,6 +530,36 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../news/archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -1438,29 +1470,29 @@
 
   <h1>Editor</h1>
 
-<div><p>You can find a short description of all Menu Items in the <a href="../csoundqt-menus/">Menu</a> section of this documentation. This page focusses on some features of the CsoundQt Editor.</p>
-<h2 id="code-completion">Code completion<a class="headerlink" href="#code-completion" title="Permanent link">¶</a></h2>
+<p>You can find a short description of all Menu Items in the <a href="../csoundqt-menus/">Menu</a> section of this documentation. This page focusses on some features of the CsoundQt Editor.</p>
+<h2 id="code-completion">Code completion<a class="headerlink" href="#code-completion" title="Permanent link">&para;</a></h2>
 <p>When you type, for instance, the letters "tab", you will see different options for code completion:</p>
-<p><img alt="code completion" src="../../images/doc_editor_01.png"></p>
-<p>Choose one of them with the mouse or the arrow key. You have two choices now:<br>
-— <strong>tab</strong> will only complete the opcode name;<br>
+<p><img alt="code completion" src="../../images/doc_editor_01.png" /></p>
+<p>Choose one of them with the mouse or the arrow key. You have two choices now:<br />
+— <strong>tab</strong> will only complete the opcode name;<br />
 — <strong>return</strong> will also insert the arguments with the names found in the manual.</p>
 <p>Any of your own variable names will offer self-completion, too.</p>
-<h2 id="access-to-the-csound-manual">Access to the Csound Manual<a class="headerlink" href="#access-to-the-csound-manual" title="Permanent link">¶</a></h2>
+<h2 id="access-to-the-csound-manual">Access to the Csound Manual<a class="headerlink" href="#access-to-the-csound-manual" title="Permanent link">&para;</a></h2>
 <p>When you select any opcode (double-click on it), or have the cursor in it, you can get the corresponding page of the Canonical Csound Manual by selecting <em>Help &gt; Shop Opcode Entry</em> (or Shift+F1).</p>
 <p>You can also find a short info about the opcode at the bottom of the Editor's panel.</p>
-<h2 id="code-graph">Code Graph<a class="headerlink" href="#code-graph" title="Permanent link">¶</a></h2>
+<h2 id="code-graph">Code Graph<a class="headerlink" href="#code-graph" title="Permanent link">&para;</a></h2>
 <p>Select <em>Examples &gt; Getting Started &gt; Toots &gt; Toot 1</em>, and then <em>View &gt; View Code Graph</em>. You should see this drawing:</p>
-<p><img alt="code graph" src="../../images/doc_editor_02.png"></p>
+<p><img alt="code graph" src="../../images/doc_editor_02.png" /></p>
 <p>It is not perfect, but quite useful to show the signal flow for simple csd files. If it is not working, try to set the graphviz dot application in <em>Configure &gt; External Programs &gt; Dot</em>.</p>
-<h2 id="inspector">Inspector<a class="headerlink" href="#inspector" title="Permanent link">¶</a></h2>
+<h2 id="inspector">Inspector<a class="headerlink" href="#inspector" title="Permanent link">&para;</a></h2>
 <p>When you click on the <em>Inspector</em> button (or <em>View &gt; Inspector</em>), you get a panel which is quite useful for extended Csound code:</p>
-<p><img alt="inspector" src="../../images/doc_editor_03.png"></p>
+<p><img alt="inspector" src="../../images/doc_editor_03.png" /></p>
 <p>You can navigate easily to any part of the code, or in the score.</p>
-<h2 id="split-view">Split View<a class="headerlink" href="#split-view" title="Permanent link">¶</a></h2>
+<h2 id="split-view">Split View<a class="headerlink" href="#split-view" title="Permanent link">&para;</a></h2>
 <p>Instead of the usual raw-text mode, CsoundQt offers a split view for both, the orchestra and the score. Go to <em>View &gt; Split View</em>, and you will see the score changed to a spread-sheet-like view, and the tags (CsOptions etc) disappeared. You can choose which sections to show or to hide:</p>
-<p><img alt="split view" src="../../images/doc_editor_04.png"></p>
-<h2 id="recompile-evaluate-python-code">Recompile / Evaluate Python Code<a class="headerlink" href="#recompile-evaluate-python-code" title="Permanent link">¶</a></h2>
+<p><img alt="split view" src="../../images/doc_editor_04.png" /></p>
+<h2 id="recompile-evaluate-python-code">Recompile / Evaluate Python Code<a class="headerlink" href="#recompile-evaluate-python-code" title="Permanent link">&para;</a></h2>
 <p>Since Csound 6, it is possible to change any instrument definition while Csound is running. CsoundQt provides an easy way of recompiling. This be your Csound code:</p>
 <div class="highlight"><pre><span></span><code>instr 1
     schedkwhen metro(1), 0, 0, 2, 0, 1
@@ -1470,7 +1502,7 @@ instr 2
 endin
 schedule(1,0,1000)
 </code></pre></div>
-<p>Run this code and change the print statement in instrument 2 from "Hallo\n" to "HalloHallo\n" or whatever. Nothing will happen, as Csound needs a command to recompile instrument 2. Now place the cursor anywhere in instrument 2, go to the Edit menu, and select <em>Evaluate Section</em>. You will see a message in the console: "Csound code evaluated.", and after this message you will see the new printout.</p></div>
+<p>Run this code and change the print statement in instrument 2 from "Hallo\n" to "HalloHallo\n" or whatever. Nothing will happen, as Csound needs a command to recompile instrument 2. Now place the cursor anywhere in instrument 2, go to the Edit menu, and select <em>Evaluate Section</em>. You will see a message in the console: "Csound code evaluated.", and after this message you will see the new printout.</p>
 
 
 

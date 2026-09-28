@@ -16,7 +16,7 @@
         <link rel="prev" href="../help/">
       
       
-        <link rel="next" href="archive/2025/">
+        <link rel="next" href="archive/2026/">
       
       
         
@@ -485,6 +485,8 @@
       
         
       
+        
+      
     
     
     
@@ -528,6 +530,36 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -1250,9 +1282,97 @@
   <div class="md-content" data-md-component="content">
     <div class="md-content__inner">
       <header class="md-typeset">
-        <div><h1 id="news">News<a class="headerlink" href="#news" title="Permanent link">¶</a></h1>
-<p>Release notes and announcements for CsoundQt.</p></div>
+        <h1 id="news">News<a class="headerlink" href="#news" title="Permanent link">&para;</a></h1>
+<p>Release notes and announcements for CsoundQt.</p>
       </header>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Tarmo Johannes">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2026-09-28 00:00:00+00:00">September 28, 2026</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="v72-new-widgets"><a class="toclink" href="v7-2-new-widgets/">v7.2: New Widgets</a></h2>
+<p><strong>CsoundQt 7.2</strong> brings a set of long-requested widget features: a brand new
+<strong>waveform widget</strong>, a <strong>scope</strong> that can display any Csound audio signal, and
+<strong>flat, fully themeable buttons</strong>. (Animating widgets from Csound with
+<code>outvalue</code> will be the subject of a separate post.)</p>
+<h3 id="waveform-widget"><a class="toclink" href="v7-2-new-widgets/#waveform-widget">Waveform widget</a></h3>
+<p>The new <strong>waveform widget</strong> draws the samples of a Csound f-table directly in
+the widget panel, so you can see exactly what a table (or a soundfile loaded
+into one) looks like while you work, zoom, pan, set a playback cursor, etc.</p>
+<video controls preload="metadata" style="width:100%; max-width:960px;">
+  <source src="/videos/csoundqt-waveform2.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<ul>
+<li>The f-table number is sent to the widget's channel; a second, string channel
+  carries the cursor position (readable <em>and</em> writable from the orchestra).</li>
+<li>Multichannel tables are drawn as one lane per channel, sharing a common time
+  axis.</li>
+<li>The mouse wheel zooms, Shift+wheel scrolls, and Ctrl+drag pans. The view
+  follows the cursor when it moves out of sight.</li>
+<li>The table is copied before the Csound instance is destroyed, so the waveform
+  stays visible after the performance stops.</li>
+<li>Try it with the updated example <strong><code>C Widgets/Waveform_Widget.csd</code></strong>.</li>
+</ul>
+<h3 id="scope-monitor-any-audio-channel"><a class="toclink" href="v7-2-new-widgets/#scope-monitor-any-audio-channel">Scope: monitor any audio channel</a></h3>
+<p>Until now a scope could only show what Csound sends to its audio outputs. The
+scope now has a second channel that names a Csound <strong>audio channel</strong>, making it
+easy to probe any signal, even if this signal is not sent to csound's outputs</p>
+<div class="highlight"><pre><span></span><code><span class="kd">instr</span><span class="w"> </span><span class="nf">1</span>
+<span class="w">  </span><span class="kt">a</span><span class="n">sig</span><span class="w"> </span><span class="nb">oscils</span><span class="w"> </span><span class="mf">0.8</span><span class="p">,</span><span class="w"> </span><span class="mi">220</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">  </span><span class="nb">chnset</span><span class="w"> </span><span class="kt">a</span><span class="n">sig</span><span class="p">,</span><span class="w"> </span><span class="s">"scopechan"</span><span class="w">   </span><span class="c1">; publish the signal on an audio channel</span>
+<span class="kd">endin</span>
+</code></pre></div>
+<p>Set the scope's <strong>Audio Channel</strong> to <code>scopechan</code> and it will display that
+signal. All the usual scope options — zoom, trigger and display type — apply to
+monitored channels as well.</p>
+<p><img alt="Scope widget monitoring a named audio channel" src="/images/scope-widget.png" /></p>
+<h3 id="flat-buttons"><a class="toclink" href="v7-2-new-widgets/#flat-buttons">Flat buttons</a></h3>
+<p>Buttons can now opt into a <strong>flat style</strong> that is drawn by CsoundQt itself
+instead of the native platform widget. The result looks identical on every
+platform and is fully configurable: background colour, pressed background,
+text and pressed-text colours, border colour, border width and corner radius.
+Pushed colours default to the normal colours when left unset.</p>
+<p>Enable <strong>Flat</strong> in a button's properties to try it — the updated
+<strong><code>C Widgets/Button_Widget.csd</code></strong> example now includes flat and flat-latched
+buttons.</p>
+<h3 id="getting-csoundqt-72"><a class="toclink" href="v7-2-new-widgets/#getting-csoundqt-72">Getting CsoundQt 7.2</a></h3>
+<p>Download the latest binaries from the
+<a href="https://github.com/CsoundQt/CsoundQt/releases/tag/v7.2.0">releases page</a>
+(AppImage, Flatpak, macOS <code>.dmg</code> and the Windows installer). The complete
+changelog is in the
+<a href="https://github.com/CsoundQt/CsoundQt/blob/csoundqt7/release_notes/Release%20notes%20v7.2.0.md">v7.2.0 release notes</a>.</p>
+    
+    
+  </div>
+</article>
       
         <article class="md-post md-post--excerpt">
   <header class="md-post__header">
@@ -1879,56 +1999,6 @@ https://github.com/CsoundQt/CsoundQt/wiki/Checking-out-develop,-qthtml-or-other-
 <p>Link to the documentation in Help menu (shortcut F1)</p>
 </li>
 </ul>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Joachim Heintz">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2016-05-18 00:00:00+00:00">May 18, 2016</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="better-documentation"><a class="toclink" href="documentation-updated-2016/">Better Documentation</a></h2>
-<p>The documentation for CsoundQt has been updated and improved. Check out the items on <a href="http://csoundqt.github.io/pages/documentation.html">Documentation</a>:</p>
-<ul>
-<li><a href="http://csoundqt.github.io/pages/overview.html">Overview</a></li>
-<li><a href="http://csoundqt.github.io/pages/csoundqt-menus.html">Menus</a></li>
-<li><a href="http://csoundqt.github.io/pages/configuring-csoundqt.html">Configure</a></li>
-<li><a href="http://csoundqt.github.io/pages/tips-and-tricks.html">Tips and Tricks</a></li>
-<li><a href="http://csoundqt.github.io/pages/editor.html">Editor</a></li>
-<li><a href="http://csoundqt.github.io/pages/widgets.html">Widgets</a></li>
-<li><a href="http://csoundqt.github.io/pages/run.html">Run</a></li>
-<li><a href="http://csoundqt.github.io/pages/live-event-sheet.html">Live Event Sheet</a></li>
-<li><a href="http://csoundqt.github.io/pages/python.html">PythonQt</a></li>
-<li><a href="http://csoundqt.github.io/pages/utilities.html">Utilities</a></li>
-</ul>
-<p>Thanks for reporting mistakes and suggestions to the <a href="https://github.com/CsoundQt/CsoundQt/issues">CsoundQt Tracker</a>!</p>
     
     
   </div>
