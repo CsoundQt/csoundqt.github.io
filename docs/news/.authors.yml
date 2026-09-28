@@ -1,7 +1,7 @@
 authors:
   andres:
     name: Andrés Cabrera
-    description: Main author of CsoundQt
+    description: Original author of CsoundQt
     avatar: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=
 
   tarmo:
@@ -12,4 +12,9 @@ authors:
   joachim:
     name: Joachim Heintz
     description: Maintainer and documentation author
+    avatar: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=
+
+  eduardo:
+    name: Eduardo Moguillansky
+    description: Maintainer of CsoundQt
     avatar: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=

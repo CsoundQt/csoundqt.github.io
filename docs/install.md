@@ -7,7 +7,7 @@ See <https://github.com/CsoundQt/CsoundQt/releases>
 
 ### Linux
 
-* AppImage: <https://github.com/CsoundQt/CsoundQt/releases/download/v7.0.2/CsoundQt-x86_64.AppImage>
+* AppImage: <https://github.com/CsoundQt/CsoundQt/releases/latest/download/CsoundQt-x86_64.AppImage>
 * Flatpak: <https://flathub.org/en/apps/io.github.CsoundQt.CsoundQt>
 
 In both cases csoundqt is shipped with its own version of csound
@@ -25,8 +25,8 @@ In both cases csoundqt is shipped with its own version of csound
 
 ### Windows
 
-1. Download and install csound: <https://github.com/CsoundQt/CsoundQt/releases/download/v7.0.2/Csound7-windows_x86_64.exe>
-2. Download and install csoundqt: <https://github.com/CsoundQt/CsoundQt/releases/download/v7.0.2/CsoundQt-7.0.2-windows_x86_64-140.exe>
+1. Download and install csound: <https://github.com/CsoundQt/CsoundQt/releases/latest/download/Csound7-windows-x86_64.exe>
+2. Download and install csoundqt: <https://github.com/CsoundQt/CsoundQt/releases/latest/download/CsoundQt-windows-x86_64.exe>
 
 ---------------------
 

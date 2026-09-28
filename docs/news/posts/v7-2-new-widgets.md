@@ -1,8 +1,8 @@
 ---
 title: "v7.2: New Widgets"
-date: 2026-09-28
+date: 2026-09-28 12:00:00
 authors:
-  - tarmo
+  - eduardo
 tags:
   - release
   - widgets
