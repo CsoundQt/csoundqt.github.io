@@ -1303,7 +1303,7 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Tarmo Johannes">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Eduardo Moguillansky">
           </span>
         
       </nav>
@@ -1311,7 +1311,7 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
-          <time datetime="2026-09-28 00:00:00+00:00">September 28, 2026</time></li>
+          <time datetime="2026-09-28 12:00:00+00:00">September 28, 2026</time></li>
         
         
           
@@ -1375,6 +1375,89 @@ Pushed colours default to the normal colours when left unset.</p>
 <strong><code>C Widgets/Button_Widget.csd</code></strong> example now includes flat and flat-latched
 buttons.</p>
 <h3 id="getting-csoundqt-72"><a class="toclink" href="../../v7-2-new-widgets/#getting-csoundqt-72">Getting CsoundQt 7.2</a></h3>
+<p>Download the latest binaries from the
+<a href="https://github.com/CsoundQt/CsoundQt/releases/tag/v7.2.0">releases page</a>
+(AppImage, Flatpak, macOS <code>.dmg</code> and the Windows installer). The complete
+changelog is in the
+<a href="https://github.com/CsoundQt/CsoundQt/blob/csoundqt7/release_notes/Release%20notes%20v7.2.0.md">v7.2.0 release notes</a>.</p>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Eduardo Moguillansky">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2026-09-28 11:00:00+00:00">September 28, 2026</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="v72-animating-widgets-from-csound"><a class="toclink" href="../../v7-2-animating-widgets/">v7.2: Animating Widgets from Csound</a></h2>
+<p>Widgets are not only a way for Csound to receive input — they can also be
+<strong>driven and animated from the orchestra</strong>. Any widget property can be changed
+at runtime with a <em>property message</em>:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">outvalue</span><span class="w"> </span><span class="s">"&lt;channel&gt;/&lt;property&gt;"</span><span class="p">,</span><span class="w"> </span><span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+</code></pre></div>
+<p>A property message never changes a widget's <em>value</em>, so you can move, resize,
+recolour or relabel a widget while it keeps controlling its Csound channel.</p>
+<video controls preload="metadata" style="width:100%; max-width:960px;">
+  <source src="/videos/csoundqt-animation2.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<h3 id="how-it-works"><a class="toclink" href="../../v7-2-animating-widgets/#how-it-works">How it works</a></h3>
+<p>Send messages at a display rate (for example from a <code>metro(30)</code> block, as in
+the example) rather than every k-cycle. Both numbers and strings are supported:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">; colour: a hex string</span>
+<span class="kt">S</span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">sprintfk</span><span class="p">(</span><span class="s">"#</span><span class="si">%02x%02x%02x</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="mi">127</span><span class="o">+</span><span class="mi">120</span><span class="o">*</span><span class="nb">sin</span><span class="p">(</span><span class="kt">k</span><span class="n">t</span><span class="o">*</span><span class="mf">0.8</span><span class="p">),</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">)</span>
+<span class="nb">outvalue</span><span class="w"> </span><span class="s">"cutoff/color"</span><span class="p">,</span><span class="w"> </span><span class="kt">S</span><span class="n">col</span>
+
+<span class="c1">; position: integers</span>
+<span class="nb">outvalue</span><span class="w"> </span><span class="s">"mover/x"</span><span class="p">,</span><span class="w"> </span><span class="nb">int</span><span class="p">(</span><span class="kt">k</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">outvalue</span><span class="w"> </span><span class="s">"mover/y"</span><span class="p">,</span><span class="w"> </span><span class="nb">int</span><span class="p">(</span><span class="kt">k</span><span class="n">y</span><span class="p">)</span>
+
+<span class="c1">; size, visibility, text ...</span>
+<span class="nb">outvalue</span><span class="w"> </span><span class="s">"meter/width"</span><span class="p">,</span><span class="w"> </span><span class="mi">240</span>
+<span class="nb">outvalue</span><span class="w"> </span><span class="s">"pulse/visible"</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="kt">k</span><span class="n">t</span><span class="o">*</span><span class="mf">1.5</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">outvalue</span><span class="w"> </span><span class="s">"pulse/text"</span><span class="p">,</span><span class="w"> </span><span class="nb">sprintfk</span><span class="p">(</span><span class="s">"t = </span><span class="si">%4.1f</span><span class="s"> s"</span><span class="p">,</span><span class="w"> </span><span class="kt">k</span><span class="n">t</span><span class="p">)</span>
+</code></pre></div>
+<p>The channel name is the widget's channel (the one it already uses to talk to
+Csound); the property is addressed <strong>without</strong> the internal <code>CSQT_</code> prefix.</p>
+<h3 id="discovering-the-properties"><a class="toclink" href="../../v7-2-animating-widgets/#discovering-the-properties">Discovering the properties</a></h3>
+<p>Every widget's Properties dialog has a <strong>Show Properties</strong> button which lists
+all the properties that can be addressed, with a filter box for long lists:</p>
+<p><img alt="A widget's Properties dialog with the Show Properties list, showing the property names that can be set from Csound" src="../../../images/screenshot-widget-properties.png" /></p>
+<h3 id="example"><a class="toclink" href="../../v7-2-animating-widgets/#example">Example</a></h3>
+<p>The example <strong><code>C Widgets/Widget_Animation.csd</code></strong> animates colours, position,
+width, visibility and text from instrument 99, on top of a small synth whose
+<code>amp</code> slider and <code>cutoff</code> knob still work normally. Open it from the
+<strong>Examples → CsoundQt → C Widgets</strong> menu.</p>
+<p>See the source:
+<a href="https://github.com/CsoundQt/CsoundQt/blob/csoundqt7/src/Examples/CsoundQt/C%20Widgets/Widget_Animation.csd">https://github.com/CsoundQt/CsoundQt/blob/csoundqt7/src/Examples/CsoundQt/C%20Widgets/Widget_Animation.csd</a></p>
+<h3 id="getting-csoundqt-72"><a class="toclink" href="../../v7-2-animating-widgets/#getting-csoundqt-72">Getting CsoundQt 7.2</a></h3>
 <p>Download the latest binaries from the
 <a href="https://github.com/CsoundQt/CsoundQt/releases/tag/v7.2.0">releases page</a>
 (AppImage, Flatpak, macOS <code>.dmg</code> and the Windows installer). The complete

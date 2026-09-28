@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://csoundqt.github.io/news/virtual-midi-keyboard/">
+        <link rel="canonical" href="https://csoundqt.github.io/news/v7-2-animating-widgets/">
       
       
-        <link rel="prev" href="../release-0.8.3/">
+        <link rel="prev" href="../release-7.0.0-beta/">
       
       
-        <link rel="next" href="../release-0.9.0/">
+        <link rel="next" href="../v7-2-new-widgets/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Virtual MIDI Keyboard - CsoundQt</title>
+        <title>v7.2: Animating Widgets from Csound - CsoundQt</title>
       
     
     
@@ -75,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#how-it-works" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -107,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Virtual MIDI Keyboard
+              v7.2: Animating Widgets from Csound
             
           </span>
         </div>
@@ -1269,6 +1274,58 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How it works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discovering-the-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Discovering the properties
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-csoundqt-72" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting CsoundQt 7.2
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1296,16 +1353,16 @@
                 
                   <div class="md-profile md-post__profile">
                     <span class="md-author md-author--long">
-                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Andrés Cabrera">
+                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Eduardo Moguillansky">
                     </span>
                     <span class="md-profile__description">
                       <strong>
                         
-                          Andrés Cabrera
+                          Eduardo Moguillansky
                         
                       </strong>
                       <br>
-                      Original author of CsoundQt
+                      Maintainer of CsoundQt
                     </span>
                   </div>
                 
@@ -1323,7 +1380,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
-                        <time datetime="2014-06-14 00:00:00+00:00" class="md-ellipsis">June 14, 2014</time>
+                        <time datetime="2026-09-28 11:00:00+00:00" class="md-ellipsis">September 28, 2026</time>
                       </div>
                     </li>
                     
@@ -1335,7 +1392,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              1 min read
+                              2 min read
                             
                           </span>
                         </div>
@@ -1363,17 +1420,69 @@
       
       
       
-        <span class="md-tag">feature</span>
+        <span class="md-tag">release</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">widgets</span>
       
     
   </nav>
 
 
 
-  <h1>Virtual MIDI Keyboard</h1>
+  <h1>v7.2: Animating Widgets from Csound</h1>
 
-<p>CsoundQt has a new virtual MIDI keyboard. It was long overdue, as the FLTK MIDI keyboard provided by Csound had constant issues because FLTK was clashing with Qt. The keyboard is written using QML, and because of this lays the basis for adding a Virtual Keyboard widget that you could add to the widget panel. I've also been dreaming about a generic QML widget for the widget panel after this...</p>
-<p><img alt="CsoundQt Virtual MIDI Keyboard" src="../../images/CsoundQt-virtual.png" /></p>
+<p>Widgets are not only a way for Csound to receive input — they can also be
+<strong>driven and animated from the orchestra</strong>. Any widget property can be changed
+at runtime with a <em>property message</em>:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">outvalue</span><span class="w"> </span><span class="s">"&lt;channel&gt;/&lt;property&gt;"</span><span class="p">,</span><span class="w"> </span><span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+</code></pre></div>
+<p>A property message never changes a widget's <em>value</em>, so you can move, resize,
+recolour or relabel a widget while it keeps controlling its Csound channel.</p>
+<video controls preload="metadata" style="width:100%; max-width:960px;">
+  <source src="/videos/csoundqt-animation2.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<h2 id="how-it-works">How it works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h2>
+<p>Send messages at a display rate (for example from a <code>metro(30)</code> block, as in
+the example) rather than every k-cycle. Both numbers and strings are supported:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">; colour: a hex string</span>
+<span class="kt">S</span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">sprintfk</span><span class="p">(</span><span class="s">"#</span><span class="si">%02x%02x%02x</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="mi">127</span><span class="o">+</span><span class="mi">120</span><span class="o">*</span><span class="nb">sin</span><span class="p">(</span><span class="kt">k</span><span class="n">t</span><span class="o">*</span><span class="mf">0.8</span><span class="p">),</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">)</span>
+<span class="nb">outvalue</span><span class="w"> </span><span class="s">"cutoff/color"</span><span class="p">,</span><span class="w"> </span><span class="kt">S</span><span class="n">col</span>
+
+<span class="c1">; position: integers</span>
+<span class="nb">outvalue</span><span class="w"> </span><span class="s">"mover/x"</span><span class="p">,</span><span class="w"> </span><span class="nb">int</span><span class="p">(</span><span class="kt">k</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">outvalue</span><span class="w"> </span><span class="s">"mover/y"</span><span class="p">,</span><span class="w"> </span><span class="nb">int</span><span class="p">(</span><span class="kt">k</span><span class="n">y</span><span class="p">)</span>
+
+<span class="c1">; size, visibility, text ...</span>
+<span class="nb">outvalue</span><span class="w"> </span><span class="s">"meter/width"</span><span class="p">,</span><span class="w"> </span><span class="mi">240</span>
+<span class="nb">outvalue</span><span class="w"> </span><span class="s">"pulse/visible"</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="kt">k</span><span class="n">t</span><span class="o">*</span><span class="mf">1.5</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">outvalue</span><span class="w"> </span><span class="s">"pulse/text"</span><span class="p">,</span><span class="w"> </span><span class="nb">sprintfk</span><span class="p">(</span><span class="s">"t = </span><span class="si">%4.1f</span><span class="s"> s"</span><span class="p">,</span><span class="w"> </span><span class="kt">k</span><span class="n">t</span><span class="p">)</span>
+</code></pre></div>
+<p>The channel name is the widget's channel (the one it already uses to talk to
+Csound); the property is addressed <strong>without</strong> the internal <code>CSQT_</code> prefix.</p>
+<h2 id="discovering-the-properties">Discovering the properties<a class="headerlink" href="#discovering-the-properties" title="Permanent link">&para;</a></h2>
+<p>Every widget's Properties dialog has a <strong>Show Properties</strong> button which lists
+all the properties that can be addressed, with a filter box for long lists:</p>
+<p><img alt="A widget's Properties dialog with the Show Properties list, showing the property names that can be set from Csound" src="../../images/screenshot-widget-properties.png" /></p>
+<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
+<p>The example <strong><code>C Widgets/Widget_Animation.csd</code></strong> animates colours, position,
+width, visibility and text from instrument 99, on top of a small synth whose
+<code>amp</code> slider and <code>cutoff</code> knob still work normally. Open it from the
+<strong>Examples → CsoundQt → C Widgets</strong> menu.</p>
+<p>See the source:
+<a href="https://github.com/CsoundQt/CsoundQt/blob/csoundqt7/src/Examples/CsoundQt/C%20Widgets/Widget_Animation.csd">https://github.com/CsoundQt/CsoundQt/blob/csoundqt7/src/Examples/CsoundQt/C%20Widgets/Widget_Animation.csd</a></p>
+<h2 id="getting-csoundqt-72">Getting CsoundQt 7.2<a class="headerlink" href="#getting-csoundqt-72" title="Permanent link">&para;</a></h2>
+<p>Download the latest binaries from the
+<a href="https://github.com/CsoundQt/CsoundQt/releases/tag/v7.2.0">releases page</a>
+(AppImage, Flatpak, macOS <code>.dmg</code> and the Windows installer). The complete
+changelog is in the
+<a href="https://github.com/CsoundQt/CsoundQt/blob/csoundqt7/release_notes/Release%20notes%20v7.2.0.md">v7.2.0 release notes</a>.</p>
 
 
 
