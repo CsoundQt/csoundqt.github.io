@@ -51,7 +51,7 @@ Set the scope's **Audio Channel** to `scopechan` and it will display that
 signal. All the usual scope options — zoom, trigger and display type — apply to
 monitored channels as well.
 
-![Scope widget monitoring a named audio channel](/images/scope-widget.png)
+![Scope widget monitoring a named audio channel](../../images/scope-widget.png)
 
 ## Flat buttons
 
