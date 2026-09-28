@@ -52,6 +52,7 @@ nav:
 plugins:
   - search
   - tags
+  - mkdocs-video
   - blog:
       blog_dir: news
       post_url_format: "{file}"

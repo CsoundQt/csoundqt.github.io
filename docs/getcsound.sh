@@ -3,7 +3,7 @@ set -euo pipefail
 
 usage() {
     cat <<'EOF'
-Usage: install.sh [OPTIONS] [-- BUNDLED-INSTALLER-OPTIONS]
+Usage: getcsound.sh [OPTIONS] [-- BUNDLED-INSTALLER-OPTIONS]
 
 Options:
   --help       Show this help without downloading the installer.
@@ -67,12 +67,12 @@ esac
 #
 # SAFER USAGE (recommended):
 #   curl -fsSL -o install-csound7-linux.sh \
-#       https://csound-plugins.github.io/installer/install.sh
+#       https://csound-plugins.github.io/getcsound.sh
 #   # Read the script, then run it:
 #   bash ./install-csound7-linux.sh
 #
 # One-line usage (convenient, but inspects nothing before execution):
-#   curl -fsSL https://csound-plugins.github.io/installer/install.sh | bash
+#   curl -fsSL https://csound-plugins.github.io/getcsound.sh | bash
 #
 # This script downloads the release asset named in CSOUND7_ASSET
 # (default: csound7-linux-full.zip), verifies its SHA-256 checksum,
