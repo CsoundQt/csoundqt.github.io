@@ -52,7 +52,12 @@ nav:
 plugins:
   - search
   - tags
-  - mkdocs-video
+  - mkdocs-video:
+      is_video: true
+      css_style:
+        width: "100%"
+        max-width: "960px"
+        height: "auto"
   - blog:
       blog_dir: news
       post_url_format: "{file}"
