@@ -9,7 +9,7 @@ tags:
 ---
 
 **CsoundQt 7.2** brings a set of long-requested widget features: a brand new
-**waveform widget**, a **scope** that can display any Csound audio channel, and
+**waveform widget**, a **scope** that can display any Csound audio signal, and
 **flat, fully themeable buttons**. (Animating widgets from Csound with
 `outvalue` will be the subject of a separate post.)
 
@@ -17,11 +17,12 @@ tags:
 
 The new **waveform widget** draws the samples of a Csound f-table directly in
 the widget panel, so you can see exactly what a table (or a soundfile loaded
-into one) looks like while you work.
+into one) looks like while you work, zoom, pan, set a playback cursor, etc.
 
-![type:video](/videos/csoundqt-waveform2.mp4)
-
-![Waveform widget](/images/waveform-widget.png)
+<video controls preload="metadata" style="width:100%; max-width:960px;">
+  <source src="/videos/csoundqt-waveform2.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 - The f-table number is sent to the widget's channel; a second, string channel
   carries the cursor position (readable *and* writable from the orchestra).
@@ -37,7 +38,7 @@ into one) looks like while you work.
 
 Until now a scope could only show what Csound sends to its audio outputs. The
 scope now has a second channel that names a Csound **audio channel**, making it
-easy to probe a signal that never reaches the outputs:
+easy to probe any signal, even if this signal is not sent to csound's outputs
 
 ```csound
 instr 1
