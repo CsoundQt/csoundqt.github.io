@@ -1,7 +1,10 @@
 ## CsoundQt 7
 
-csoundqt 7 is built to support csound >= 7 (this is the current, development 
-version of csound)
+CsoundQt 7 requires **Csound 7** and **Qt 6** (see
+[BUILDING.md](https://github.com/CsoundQt/CsoundQt/blob/csoundqt7/BUILDING.md)
+to build from source). The 7.2/7.3 releases add the waveform widget, flat
+themeable buttons, widget animation from Csound, the inline find bar, bundled
+fonts and Copy/Apply Style for widgets.
 
 See <https://github.com/CsoundQt/CsoundQt/releases>
 
@@ -30,7 +33,9 @@ In both cases csoundqt is shipped with its own version of csound
 
 ---------------------
 
-## CsoundQt 6
+## Older: CsoundQt 6
+
+> CsoundQt 6 (Qt 5, Csound 6) is no longer supported. Kept below for reference.
 
 ### Install Csound first
 

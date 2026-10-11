@@ -20,9 +20,7 @@ theme:
     primary: green
     accent: light green
   features:
-    - navigation.expand
     - navigation.indexes
-    - navigation.sections
     - navigation.top
     - toc.follow
 
@@ -31,10 +29,19 @@ nav:
   - About: about.md
   - Install: install.md
   - Contribute: contribute.md
-  - People: people.md
   - Help: help.md
   - News:
       - Latest news: news/index.md
+  - Reference:
+      - Manual index: reference/index.md
+      - Overview: reference/overview.md
+      - Menus: reference/csoundqt-menus.md
+      - Configure: reference/configuring-csoundqt.md
+      - Tips and Tricks: reference/tips-and-tricks.md
+      - Editor: reference/editor.md
+      - Widgets: reference/widgets.md
+      - Run: reference/run.md
+      - Utilities: reference/utilities.md
   - Legacy documentation:
       - legacy/index.md
       - Overview: legacy/overview.md
@@ -75,3 +82,6 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/CsoundQt/CsoundQt
+
+extra_javascript:
+  - javascripts/nav-defaults.js

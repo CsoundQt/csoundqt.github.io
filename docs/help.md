@@ -20,9 +20,9 @@ create a new article and share your knowledge!
 
 ## Documentation
 
-The up-to-date CsoundQt documentation lives at
-<https://csoundqt.github.io/doc/>. The old (2015) manual pages are kept for
-reference in the [legacy documentation](legacy/index.md).
+The CsoundQt manual lives in this site under [Reference](reference/index.md),
+updated for CsoundQt 7.x. The original 1.x pages are kept for reference under
+[Legacy documentation](legacy/index.md).
 
 ## Bug reports and feature requests
 
